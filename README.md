@@ -1,6 +1,6 @@
 www.vpnflix.xyz
 
-About
+About:
 
 Compare the Best VPN Services.
 
@@ -14,7 +14,11 @@ VPN Feature Comparison.
 
 
 Compare the key features of the top VPN services side by side to find the perfect match for your needs.
+
 Compare subscription plans and find the best value for your online privacy and security needs.Get the Best Deal on Your VPN Subscription
-Long-term plans offer the best value with savings of up to 83% compared to monthly plans. All major providers offer a money-back guarantee, so you can try risk-free.
+
+Long-term plans offer the best value with savings of up to 83% compared to monthly plans.
+
+All major providers offer a money-back guarantee, so you can try risk-free.
 
 
