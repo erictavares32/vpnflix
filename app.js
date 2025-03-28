@@ -197,24 +197,54 @@ async function fetchWithTimeout(resource, options = {}) {
 async function getStreamingInfo(contentId, country) {
   const cacheKey = `sources_${contentId}_${country}`;
   const cached = getCache(cacheKey);
-  if (cached) return cached;
+  
+  // Return cached data if available and not expired
+  if (cached) {
+    console.log('Using cached streaming data');
+    return cached;
+  }
 
   try {
+    console.log(`Fetching streaming info for ID: ${contentId} in ${country}`);
+    
     const response = await fetchWithTimeout(
       `https://api.watchmode.com/v1/title/${contentId}/sources/?apiKey=${WATCHMODE_API_KEY}&regions=${country}`,
-      { timeout: 5000 }
+      { timeout: 8000 }
     );
     
+    // Handle HTTP errors
     if (!response.ok) {
-      throw new Error(`Watchmode API Error: ${response.status}`);
+      if (response.status === 429) {
+        throw new Error('API rate limit exceeded. Please try again later.');
+      }
+      if (response.status === 404) {
+        throw new Error('Content not found in Watchmode database.');
+      }
+      throw new Error(`API error: ${response.status} ${response.statusText}`);
     }
     
     const sources = await response.json();
+    
+    // Validate the response
+    if (!Array.isArray(sources)) {
+      throw new Error('Invalid response format from Watchmode');
+    }
+    
+    // Cache successful responses
     setCache(cacheKey, sources);
     return sources;
+    
   } catch (error) {
     console.error('Streaming info error:', error);
-    throw new Error('Failed to get streaming information');
+    
+    // Special handling for timeout errors
+    if (error.name === 'AbortError') {
+      throw new Error('Request timed out. Please check your connection.');
+    }
+    
+    // For other errors, return an empty array rather than throwing
+    // This allows the rest of the results to display
+    return [];
   }
 }
 
@@ -223,19 +253,31 @@ function displayResults(results) {
   const resultsDiv = document.getElementById('results');
   const emptyState = document.getElementById('emptyState');
   
+  resultsDiv.innerHTML = '';
+
   if (results.length === 0) {
-    showEmptyState('No streaming information available');
+    showEmptyState('No results found for your search');
     return;
   }
 
   emptyState.style.display = 'none';
-  resultsDiv.innerHTML = '';
 
   results.forEach(item => {
     const { content, sources, error } = item;
     
     const card = document.createElement('div');
     card.className = 'col';
+    
+    // Improved error display
+    const streamingInfo = error 
+      ? `<div class="alert alert-warning p-2 mb-0">
+           <i class="bi bi-exclamation-triangle me-1"></i>
+           ${error}
+         </div>`
+      : sources && sources.length > 0
+        ? renderStreamingBadges(sources)
+        : '<p class="text-muted">Not available in selected country</p>';
+    
     card.innerHTML = `
       <div class="card content-card h-100">
         <img src="${
@@ -253,39 +295,42 @@ function displayResults(results) {
           
           <div class="mt-3">
             <h6 class="mb-2">Where to watch:</h6>
-            ${error 
-              ? `<div class="alert alert-warning p-2 mb-0">${error}</div>` 
-              : sources && sources.length > 0 
-                ? `<div class="d-flex flex-wrap">${
-                    sources.slice(0, 5).map(source => `
-                      <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
-                        ${source.name} (${source.type})
-                      </a>
-                    `).join('')
-                  }</div>${
-                    sources.length > 5 
-                      ? `<button class="btn btn-link btn-sm p-0 mt-2" data-bs-toggle="collapse" data-bs-target="#moreSources-${content.id}">
-                          + ${sources.length - 5} more
-                        </button>
-                        <div class="collapse mt-2" id="moreSources-${content.id}">
-                          <div class="d-flex flex-wrap">${
-                            sources.slice(5).map(source => `
-                              <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
-                                ${source.name} (${source.type})
-                              </a>
-                            `).join('')
-                          }</div>
-                        </div>`
-                      : ''
-                  }`
-                : '<p class="text-muted">Not available in selected country</p>'
-            }
+            ${streamingInfo}
           </div>
         </div>
       </div>
     `;
     resultsDiv.appendChild(card);
   });
+}
+
+function renderStreamingBadges(sources) {
+  const visibleSources = sources.slice(0, 5);
+  const extraSources = sources.slice(5);
+  
+  return `
+    <div class="d-flex flex-wrap">
+      ${visibleSources.map(source => `
+        <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
+          ${source.name} (${source.type})
+        </a>
+      `).join('')}
+    </div>
+    ${extraSources.length > 0 ? `
+      <button class="btn btn-link btn-sm p-0 mt-2" data-bs-toggle="collapse" data-bs-target="#moreSources-${content.id}">
+        + ${extraSources.length} more
+      </button>
+      <div class="collapse mt-2" id="moreSources-${content.id}">
+        <div class="d-flex flex-wrap">
+          ${extraSources.map(source => `
+            <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
+              ${source.name} (${source.type})
+            </a>
+          `).join('')}
+        </div>
+      </div>
+    ` : ''}
+  `;
 }
 
 // UI Helper Functions
