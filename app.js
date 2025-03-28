@@ -197,110 +197,79 @@ async function fetchWithTimeout(resource, options = {}) {
 async function getStreamingInfo(contentId, country) {
   const cacheKey = `sources_${contentId}_${country}`;
   const cached = getCache(cacheKey);
-  
-  // Return cached data if available and not expired
-  if (cached) {
-    console.log('Using cached streaming data');
-    return cached;
-  }
+  if (cached) return cached;
 
   try {
-    console.log(`Fetching streaming info for ID: ${contentId} in ${country}`);
-    
     const response = await fetchWithTimeout(
       `https://api.watchmode.com/v1/title/${contentId}/sources/?apiKey=${WATCHMODE_API_KEY}&regions=${country}`,
       { timeout: 8000 }
     );
-    
-    // Handle HTTP errors
+
     if (!response.ok) {
-      if (response.status === 429) {
-        throw new Error('API rate limit exceeded. Please try again later.');
-      }
-      if (response.status === 404) {
-        throw new Error('Content not found in Watchmode database.');
-      }
-      throw new Error(`API error: ${response.status} ${response.statusText}`);
+      // Special case: 404 might mean content exists but no sources
+      if (response.status === 404) return null; // Different from error
+      throw new Error(`API error: ${response.status}`);
     }
+
+    const data = await response.json();
     
-    const sources = await response.json();
-    
-    // Validate the response
-    if (!Array.isArray(sources)) {
-      throw new Error('Invalid response format from Watchmode');
+    // Handle cases where Watchmode returns { message: "No sources found" }
+    if (data.message && data.message.includes("No sources")) {
+      return null;
     }
-    
-    // Cache successful responses
-    setCache(cacheKey, sources);
-    return sources;
-    
+
+    // Ensure we have a proper array response
+    if (!Array.isArray(data)) {
+      console.warn("Unexpected Watchmode response format:", data);
+      return null;
+    }
+
+    // Filter out invalid sources
+    const validSources = data.filter(source => 
+      source.name && source.web_url && source.type
+    );
+
+    setCache(cacheKey, validSources);
+    return validSources.length > 0 ? validSources : null;
+
   } catch (error) {
-    console.error('Streaming info error:', error);
-    
-    // Special handling for timeout errors
-    if (error.name === 'AbortError') {
-      throw new Error('Request timed out. Please check your connection.');
-    }
-    
-    // For other errors, return an empty array rather than throwing
-    // This allows the rest of the results to display
-    return [];
+    console.error("Watchmode API error:", error);
+    return null; // Not the same as error - means "no data"
   }
 }
 
 // Display Results
 function displayResults(results) {
-  const resultsDiv = document.getElementById('results');
-  const emptyState = document.getElementById('emptyState');
-  
-  resultsDiv.innerHTML = '';
-
-  if (results.length === 0) {
-    showEmptyState('No results found for your search');
-    return;
-  }
-
-  emptyState.style.display = 'none';
+  // ... existing setup code ...
 
   results.forEach(item => {
     const { content, sources, error } = item;
     
-    const card = document.createElement('div');
-    card.className = 'col';
-    
-    // Improved error display
-    const streamingInfo = error 
-      ? `<div class="alert alert-warning p-2 mb-0">
-           <i class="bi bi-exclamation-triangle me-1"></i>
-           ${error}
-         </div>`
-      : sources && sources.length > 0
-        ? renderStreamingBadges(sources)
-        : '<p class="text-muted">Not available in selected country</p>';
-    
-    card.innerHTML = `
-      <div class="card content-card h-100">
-        <img src="${
-          content.poster_path 
-            ? `https://image.tmdb.org/t/p/w500${content.poster_path}` 
-            : 'https://via.placeholder.com/500x750?text=No+Poster'
-        }" class="card-img-top poster" alt="${content.title || content.name}">
-        <div class="card-body">
-          <h5 class="card-title">${content.title || content.name}</h5>
-          <p class="card-text text-muted">
-            ${content.release_date?.split('-')[0] || content.first_air_date?.split('-')[0] || 'Year unknown'}
-            • ${content.media_type === 'movie' ? 'Movie' : 'TV Show'}
-          </p>
-          <p class="card-text text-truncate">${content.overview || 'No description available'}</p>
-          
-          <div class="mt-3">
-            <h6 class="mb-2">Where to watch:</h6>
-            ${streamingInfo}
-          </div>
+    let availabilityMessage = '';
+    if (error) {
+      availabilityMessage = `
+        <div class="alert alert-warning p-2 mb-0">
+          <i class="bi bi-exclamation-triangle me-1"></i>
+          ${error}
         </div>
-      </div>
-    `;
-    resultsDiv.appendChild(card);
+      `;
+    } else if (sources === null) {
+      // Special case - we couldn't determine availability
+      availabilityMessage = `
+        <div class="alert alert-info p-2 mb-0">
+          <i class="bi bi-info-circle me-1"></i>
+          Availability unknown for this country
+        </div>
+      `;
+    } else if (sources.length === 0) {
+      // Confirmed no sources
+      availabilityMessage = '<p class="text-muted">Not available in selected country</p>';
+    } else {
+      // Has sources - display them
+      availabilityMessage = renderStreamingBadges(sources, content.id);
+    }
+
+    // ... rest of your card HTML ...
   });
 }
 
