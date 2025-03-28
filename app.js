@@ -71,30 +71,41 @@ async function searchTMDB(query) {
     }));
 }
 
-// Get streaming availability from RapidAPI
-async function getStreamingAvailability(id, type, country) {
-    const url = `https://streaming-availability.p.rapidapi.com/shows/${type}/${id}?country=${country}`;
-    
-    const options = {
-        method: 'GET',
-        headers: {
-            'x-rapidapi-key': RAPIDAPI_KEY,
-            'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
-        }
-    };
-    
-    try {
-        const response = await fetch(url, options);
-        const data = await response.json();
+// Get streaming availability from RapidAPI using XMLHttpRequest as in your example
+function getStreamingAvailability(id, type, country) {
+    return new Promise((resolve, reject) => {
+        const xhr = new XMLHttpRequest();
+        const url = `https://streaming-availability.p.rapidapi.com/shows/${type}/${id}?country=${country}`;
         
-        if (data && data.streamingInfo && data.streamingInfo[country]) {
-            return data.streamingInfo[country];
-        }
-        return [];
-    } catch (error) {
-        console.error('Error fetching streaming info:', error);
-        return [];
-    }
+        xhr.withCredentials = true;
+        
+        xhr.addEventListener('readystatechange', function() {
+            if (this.readyState === this.DONE) {
+                if (this.status === 200) {
+                    try {
+                        const response = JSON.parse(this.responseText);
+                        if (response && response.streamingInfo && response.streamingInfo[country]) {
+                            resolve(response.streamingInfo[country]);
+                        } else {
+                            resolve([]);
+                        }
+                    } catch (e) {
+                        console.error('Error parsing response:', e);
+                        resolve([]);
+                    }
+                } else {
+                    console.error('API request failed with status:', this.status);
+                    resolve([]);
+                }
+            }
+        });
+        
+        xhr.open('GET', url);
+        xhr.setRequestHeader('x-rapidapi-key', RAPIDAPI_KEY);
+        xhr.setRequestHeader('x-rapidapi-host', 'streaming-availability.p.rapidapi.com');
+        
+        xhr.send();
+    });
 }
 
 // Display a result card
