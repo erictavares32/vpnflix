@@ -72,34 +72,35 @@ async function searchTMDB(query) {
 }
 
 // Get streaming availability from RapidAPI using XMLHttpRequest as in your example
-function getStreamingAvailability(id, type, country) {
-    return new Promise((resolve, reject) => {
-        const xhr = new XMLHttpRequest();
-        const url = `https://streaming-availability.p.rapidapi.com/shows/${type}/${id}?country=${country}`;
+async function getStreamingAvailability(id, type, country) {
+    try {
+        const url = `https://streaming-availability.p.rapidapi.com/get/basic?country=${country}&tmdb_id=${id}&output_language=en`;
         
-        xhr.withCredentials = true;
-        
-        xhr.addEventListener('readystatechange', function() {
-            if (this.readyState === this.DONE) {
-                if (this.status === 200) {
-                    try {
-                        const response = JSON.parse(this.responseText);
-                        if (response && response.streamingInfo && response.streamingInfo[country]) {
-                            resolve(response.streamingInfo[country]);
-                        } else {
-                            resolve([]);
-                        }
-                    } catch (e) {
-                        console.error('Error parsing response:', e);
-                        resolve([]);
-                    }
-                } else {
-                    console.error('API request failed with status:', this.status);
-                    resolve([]);
-                }
+        const response = await fetch(url, {
+            method: 'GET',
+            headers: {
+                'x-rapidapi-key': RAPIDAPI_KEY,
+                'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
             }
         });
         
+        const data = await response.json();
+        
+        // Handle different response structures
+        if (data.streamingInfo) {
+            return data.streamingInfo[country] || [];
+        } 
+        if (data.result?.streamingInfo) {
+            return data.result.streamingInfo[country] || [];
+        }
+        
+        return [];
+        
+    } catch (error) {
+        console.error('Streaming availability error:', error);
+        return [];
+    }
+}
         xhr.open('GET', url);
         xhr.setRequestHeader('x-rapidapi-key', RAPIDAPI_KEY);
         xhr.setRequestHeader('x-rapidapi-host', 'streaming-availability.p.rapidapi.com');
