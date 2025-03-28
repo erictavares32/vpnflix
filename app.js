@@ -49,23 +49,28 @@ document.addEventListener('DOMContentLoaded', function() {
     }
   }
 
-  async function getStreamingInfo(tmdbId, mediaType) {
-    try {
-      const type = mediaType === 'movie' ? 'movies' : 'shows';
-      const response = await fetch(`https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=${tmdbId}&type=${type}`, {
-        headers: {
-          'X-RapidAPI-Key': RAPIDAPI_KEY,
-          'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-        }
-      });
+async function getStreamingAvailability(tmdbId, mediaType) {
+  const type = mediaType === 'movie' ? 'movies' : 'shows';
+  const url = `https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=${tmdbId}&type=${type}`;
+  
+  try {
+    const response = await fetch(url, {
+      headers: {
+        'X-RapidAPI-Key': '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df',
+        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
+      }
+    });
 
-      if (!response.ok) throw new Error('API request failed');
-      return await response.json();
-    } catch (error) {
-      console.error('Streaming info error:', error);
-      return null;
-    }
+    if (!response.ok) throw new Error('API request failed');
+    
+    const data = await response.json();
+    return data.streamingInfo?.us || null;
+    
+  } catch (error) {
+    console.error('Streaming availability error:', error);
+    return null;
   }
+}
 
   function displayContentInfo(content) {
     resultsDiv.innerHTML = `
