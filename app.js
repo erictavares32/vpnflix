@@ -1,164 +1,150 @@
-document.addEventListener('DOMContentLoaded', function() {
-  // Configuration
-  const RAPIDAPI_KEY = '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df';
-  const TMDB_API_KEY = '8015f104741271883e610d9c704183e4';
+// API configuration
+const TMDB_API_KEY = '8015f104741271883e610d9c704183e4'; // Replace with your TMDB API key
+const RAPIDAPI_KEY = '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df'; // Your RapidAPI key
 
-  // Elements
-  const searchBtn = document.getElementById('searchBtn');
-  const searchInput = document.getElementById('searchInput');
-  const resultsDiv = document.getElementById('results');
-  const loadingDiv = document.getElementById('loading');
-  const errorDiv = document.getElementById('error');
+// DOM elements
+const searchInput = document.getElementById('search-input');
+const searchButton = document.getElementById('search-button');
+const countrySelect = document.getElementById('country-select');
+const resultsContainer = document.getElementById('results');
+const loadingElement = document.getElementById('loading');
+const errorElement = document.getElementById('error-message');
 
-  // Event Listeners
-  searchBtn.addEventListener('click', searchContent);
-  searchInput.addEventListener('keypress', (e) => e.key === 'Enter' && searchContent());
+// Event listeners
+searchButton.addEventListener('click', searchMedia);
+searchInput.addEventListener('keypress', function(e) {
+    if (e.key === 'Enter') {
+        searchMedia();
+    }
+});
 
-  async function searchContent() {
+// Main search function
+async function searchMedia() {
     const query = searchInput.value.trim();
+    const country = countrySelect.value;
+    
     if (!query) {
-      showError('Please enter a movie or TV show name');
-      return;
-    }
-
-    showLoading(true);
-    clearResults();
-
-    try {
-      // 1. Search TMDB
-      const tmdbResponse = await fetch(`https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`);
-      const tmdbData = await tmdbResponse.json();
-
-      if (!tmdbData.results?.length) {
-        showError('No results found');
+        showError('Please enter a movie or TV show name');
         return;
-      }
-
-      const content = tmdbData.results[0];
-      displayContentInfo(content);
-
-      // 2. Get streaming info
-      const streamingInfo = await getStreamingInfo(content.id, content.media_type);
-      displayStreamingInfo(streamingInfo);
-
-    } catch (error) {
-      showError('Failed to get streaming information');
-      console.error('Search error:', error);
-    } finally {
-      showLoading(false);
     }
-  }
-
-async function getStreamingAvailability(tmdbId, mediaType) {
-  const type = mediaType === 'movie' ? 'movies' : 'shows';
-  const url = `https://streaming-availability.p.rapidapi.com/get/basic?country=us&tmdb_id=${tmdbId}&type=${type}`;
-  
-  try {
-    const response = await fetch(url, {
-      headers: {
-        'X-RapidAPI-Key': '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df',
-        'X-RapidAPI-Host': 'streaming-availability.p.rapidapi.com'
-      }
-    });
-
-    if (!response.ok) throw new Error('API request failed');
     
-    const data = await response.json();
-    return data.streamingInfo?.us || null;
+    clearResults();
+    showLoading();
+    hideError();
     
-  } catch (error) {
-    console.error('Streaming availability error:', error);
-    return null;
-  }
+    try {
+        // First search TMDB for the movie/show
+        const tmdbResults = await searchTMDB(query);
+        
+        if (tmdbResults.length === 0) {
+            showError('No results found. Try a different search term.');
+            return;
+        }
+        
+        // For each result, get streaming availability
+        for (const item of tmdbResults) {
+            const streamingInfo = await getStreamingAvailability(item.id, item.media_type, country);
+            displayResult(item, streamingInfo);
+        }
+    } catch (error) {
+        console.error('Error:', error);
+        showError('An error occurred while fetching data. Please try again.');
+    } finally {
+        hideLoading();
+    }
 }
 
-  function displayContentInfo(content) {
-    resultsDiv.innerHTML = `
-      <div class="card mb-4">
-        <div class="row g-0">
-          <div class="col-md-4">
-            <img src="${content.poster_path ? `https://image.tmdb.org/t/p/w500${content.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster'}" 
-                 class="img-fluid rounded-start" alt="${content.title || content.name}">
-          </div>
-          <div class="col-md-8">
-            <div class="card-body">
-              <h2 class="card-title">${content.title || content.name}</h2>
-              <p class="card-text">${content.overview || 'No description available'}</p>
-              <p class="card-text">
-                <small class="text-muted">
-                  ${content.release_date || content.first_air_date || 'Unknown date'} • 
-                  ${content.media_type === 'movie' ? 'Movie' : 'TV Show'}
-                </small>
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
-      <div class="card">
-        <div class="card-header">
-          <h3>Streaming Availability</h3>
-        </div>
-        <div id="streamingResults" class="card-body"></div>
-      </div>
-    `;
-  }
-
-  function displayStreamingInfo(data) {
-    const streamingResults = document.getElementById('streamingResults');
+// Search TMDB for movies/shows
+async function searchTMDB(query) {
+    const url = `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`;
     
-    if (!data?.streamingInfo?.us) {
-      streamingResults.innerHTML = `
-        <div class="alert alert-warning">
-          No streaming information available for this title.
-          <br><small>Try searching for more popular titles.</small>
-        </div>
-      `;
-      return;
+    const response = await fetch(url);
+    const data = await response.json();
+    
+    return data.results.map(item => ({
+        id: item.id,
+        title: item.title || item.name,
+        overview: item.overview,
+        poster_path: item.poster_path,
+        media_type: item.media_type,
+        year: (item.release_date || item.first_air_date) ? (item.release_date || item.first_air_date).substring(0, 4) : 'N/A'
+    }));
+}
+
+// Get streaming availability from RapidAPI
+async function getStreamingAvailability(id, type, country) {
+    const url = `https://streaming-availability.p.rapidapi.com/shows/${type}/${id}?country=${country}`;
+    
+    const options = {
+        method: 'GET',
+        headers: {
+            'x-rapidapi-key': RAPIDAPI_KEY,
+            'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
+        }
+    };
+    
+    try {
+        const response = await fetch(url, options);
+        const data = await response.json();
+        
+        if (data && data.streamingInfo && data.streamingInfo[country]) {
+            return data.streamingInfo[country];
+        }
+        return [];
+    } catch (error) {
+        console.error('Error fetching streaming info:', error);
+        return [];
     }
+}
 
-    const services = data.streamingInfo.us;
-    let html = '<div class="row">';
-
-    services.forEach(service => {
-      html += `
-        <div class="col-md-6 mb-3">
-          <div class="card h-100">
-            <div class="card-body">
-              <div class="d-flex align-items-center mb-2">
-                <img src="${service.logo}" alt="${service.platform}" 
-                     style="width: 40px; height: 40px; margin-right: 10px;">
-                <h5 class="card-title mb-0">${service.platform}</h5>
-              </div>
-              <p class="card-text">
-                <span class="badge bg-primary">${service.type}</span>
-                ${service.price ? `<span class="badge bg-success ms-2">${service.price}</span>` : ''}
-              </p>
-              <a href="${service.link}" target="_blank" class="btn btn-sm btn-primary">Watch Now</a>
+// Display a result card
+function displayResult(item, streamingInfo) {
+    const posterUrl = item.poster_path 
+        ? `https://image.tmdb.org/t/p/w500${item.poster_path}`
+        : 'https://via.placeholder.com/500x750?text=No+Poster';
+    
+    const card = document.createElement('div');
+    card.className = 'movie-card';
+    
+    card.innerHTML = `
+        <img src="${posterUrl}" alt="${item.title}" class="movie-poster">
+        <div class="movie-info">
+            <h3 class="movie-title">${item.title}</h3>
+            <p class="movie-year">${item.year} • ${item.media_type === 'movie' ? 'Movie' : 'TV Show'}</p>
+            <p>${item.overview || 'No overview available.'}</p>
+            
+            <div class="streaming-info">
+                <h4>Available on:</h4>
+                ${streamingInfo.length > 0 
+                    ? streamingInfo.map(service => 
+                        `<span class="streaming-service">${service.service}</span>`
+                      ).join('')
+                    : '<p>Not available on any streaming service in this country.</p>'}
             </div>
-          </div>
         </div>
-      `;
-    });
-
-    html += '</div>';
-    streamingResults.innerHTML = html || `
-      <div class="alert alert-warning">
-        No active streaming services found for this title.
-      </div>
     `;
-  }
+    
+    resultsContainer.appendChild(card);
+}
 
-  function showLoading(show) {
-    loadingDiv.style.display = show ? 'block' : 'none';
-  }
+// Helper functions
+function clearResults() {
+    resultsContainer.innerHTML = '';
+}
 
-  function clearResults() {
-    errorDiv.style.display = 'none';
-    resultsDiv.innerHTML = '';
-  }
+function showLoading() {
+    loadingElement.style.display = 'block';
+}
 
-  function showError(message) {
-    errorDiv.textContent = message;
-    errorDiv.style.display = 'block';
-  }
-});
+function hideLoading() {
+    loadingElement.style.display = 'none';
+}
+
+function showError(message) {
+    errorElement.textContent = message;
+    errorElement.style.display = 'block';
+}
+
+function hideError() {
+    errorElement.style.display = 'none';
+}
