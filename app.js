@@ -1,12 +1,15 @@
-// =============================================
-// STREAMFINDER - GLOBAL AVAILABILITY CHECKER
-// =============================================
+// ======================
+// StreamFinder App
+// ======================
 
-// 1. ADD YOUR API KEYS HERE (get them for free)
 const TMDB_API_KEY = '8015f104741271883e610d9c704183e4'; // 
 const WATCHMODE_API_KEY = 'NgObMKWGQPhz4UH6Zs8xwidmsw6s8JZdRstAbtio'; // 
 
-// 2. LIST OF COUNTRIES WE CHECK (50+ countries)
+// 2. BASIC CONFIGURATION
+const API_LIMIT = 1000; // Your Watchmode daily limit
+let apiRequestsMade = 0;
+
+// 3. COUNTRIES WE CHECK (limited to stay under API limits)
 const COUNTRIES = [
   {code: 'AR', name: 'Argentina', flag: '🇦🇷'},
   {code: 'AU', name: 'Australia', flag: '🇦🇺'},
@@ -62,49 +65,55 @@ const COUNTRIES = [
   {code: 'GB', name: 'United Kingdom', flag: '🇬🇧'},
   {code: 'US', name: 'United States', flag: '🇺🇸'},
   {code: 'VN', name: 'Vietnam', flag: '🇻🇳'}
- 
 ];
-
-// 3. WHEN PAGE LOADS, SET UP THE SEARCH
+// 4. WHEN PAGE LOADS
 window.addEventListener('DOMContentLoaded', function() {
-  // Make search work when button clicked or Enter pressed
+  // Set up search functionality
   document.getElementById('searchBtn').addEventListener('click', doSearch);
   document.getElementById('searchInput').addEventListener('keypress', function(e) {
     if (e.key === 'Enter') doSearch();
   });
   
-  // Focus on search box automatically
+  // Focus on search box
   document.getElementById('searchInput').focus();
+  
+  // Show API counter
+  updateApiCounter();
 });
 
-// 4. MAIN SEARCH FUNCTION
+// 5. MAIN SEARCH FUNCTION
 async function doSearch() {
-  // Get what user typed
-  const searchTerm = document.getElementById('searchInput').value.trim();
-  if (!searchTerm) {
-    showError('Please type a movie or TV show name');
+  // Check API limits
+  if (apiRequestsMade >= API_LIMIT) {
+    showError('Daily API limit reached. Try again tomorrow.');
     return;
   }
 
-  // Show loading animation
+  // Get search query
+  const query = document.getElementById('searchInput').value.trim();
+  if (!query) {
+    showError('Please enter a movie or TV show name');
+    return;
+  }
+
+  // Show loading state
   showLoading(true, 'Searching...');
   clearResults();
 
   try {
-    // First search TMDB
-    const results = await searchTMDB(searchTerm);
+    // Search TMDB
+    const results = await searchTMDB(query);
     
     if (!results || results.length === 0) {
-      showEmptyState('Nothing found. Try a different name.');
+      showEmptyState('No results found. Try a different name.');
       return;
     }
     
-    // If multiple results, let user choose
+    // Show results
     if (results.length > 1) {
       showMultipleResults(results);
     } else {
-      // If one result, show its availability
-      checkAllCountries(results[0]);
+      checkAvailability(results[0]);
     }
   } catch (error) {
     showError('Search failed. Please try again later.');
@@ -114,14 +123,14 @@ async function doSearch() {
   }
 }
 
-// 5. SEARCH TMDB DATABASE
+// 6. SEARCH TMDB DATABASE
 async function searchTMDB(query) {
   try {
     const response = await fetch(
       `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
     );
     
-    if (!response.ok) throw new Error('TMDB API error');
+    if (!response.ok) throw new Error('API error');
     
     const data = await response.json();
     return data.results
@@ -133,11 +142,11 @@ async function searchTMDB(query) {
   }
 }
 
-// 6. CHECK AVAILABILITY IN ALL COUNTRIES
-async function checkAllCountries(movie) {
-  showLoading(true, 'Checking countries...');
+// 7. CHECK AVAILABILITY FOR A SINGLE TITLE
+async function checkAvailability(movie) {
+  showLoading(true, 'Checking availability...');
   
-  // Create container for results
+  // Create results container
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = `
     <div class="card mb-4">
@@ -156,8 +165,9 @@ async function checkAllCountries(movie) {
       </div>
     </div>
     <div class="card">
-      <div class="card-header">
-        <h3 class="mb-0">Available In These Countries</h3>
+      <div class="card-header d-flex justify-content-between align-items-center">
+        <h3 class="mb-0">Where to Watch</h3>
+        <span class="badge bg-primary">${COUNTRIES.length} countries checked</span>
       </div>
       <div class="card-body p-0">
         <div class="list-group list-group-flush" id="countryResults"></div>
@@ -166,16 +176,19 @@ async function checkAllCountries(movie) {
   `;
 
   const countryList = document.getElementById('countryResults');
-  
-  // Check each country one by one (simpler than batches)
+  let availableCountries = 0;
+
+  // Check each country
   for (const country of COUNTRIES) {
-    // Show we're checking this country
+    if (apiRequestsMade >= API_LIMIT) break;
+    
+    // Show loading state for this country
     const countryItem = document.createElement('div');
     countryItem.className = 'list-group-item';
     countryItem.innerHTML = `
       <div class="d-flex justify-content-between align-items-center">
         <div>${country.flag} ${country.name}</div>
-        <div class="spinner-border spinner-border-sm text-primary" role="status">
+        <div class="spinner-border spinner-border-sm" role="status">
           <span class="visually-hidden">Loading...</span>
         </div>
       </div>
@@ -184,57 +197,59 @@ async function checkAllCountries(movie) {
     
     try {
       // Check availability in this country
-      const sources = await checkSingleCountry(movie.id, country.code);
+      const sources = await checkCountryAvailability(movie.id, country.code);
       
-      // Update the display
+      // Update display
       if (sources && sources.length > 0) {
+        availableCountries++;
         countryItem.innerHTML = `
           <div class="d-flex justify-content-between align-items-center">
             <div>${country.flag} <strong>${country.name}</strong></div>
-            <button class="btn btn-sm btn-outline-primary toggle-sources" 
-                    data-bs-toggle="collapse" 
-                    data-bs-target="#sources-${country.code}">
-              ${sources.length} service${sources.length > 1 ? 's' : ''}
-            </button>
+            <span class="badge bg-success">Available</span>
           </div>
-          <div class="collapse mt-2" id="sources-${country.code}">
-            <div class="d-flex flex-wrap">
-              ${sources.map(source => `
-                <a href="${source.web_url}" target="_blank" class="btn btn-sm btn-outline-secondary me-2 mb-2">
-                  ${source.name} (${source.type})
-                </a>
-              `).join('')}
-            </div>
+          <div class="mt-2">
+            ${formatServices(sources)}
           </div>
         `;
       } else {
         countryItem.innerHTML = `
-          <div class="d-flex justify-content-between align-items-center text-muted">
+          <div class="d-flex justify-content-between align-items-center">
             <div>${country.flag} ${country.name}</div>
-            <span class="badge bg-light text-dark">Not available</span>
+            <span class="badge bg-secondary">Not available</span>
           </div>
         `;
       }
     } catch (error) {
       console.error(`Error checking ${country.name}:`, error);
       countryItem.innerHTML = `
-        <div class="d-flex justify-content-between align-items-center text-danger">
+        <div class="d-flex justify-content-between align-items-center">
           <div>${country.flag} ${country.name}</div>
-          <span class="badge bg-light text-dark">Check failed</span>
+          <span class="badge bg-warning">Check failed</span>
         </div>
       `;
     }
     
-    // Small delay between countries to avoid rate limits
+    // Small delay between requests
     await new Promise(resolve => setTimeout(resolve, 300));
+    updateApiCounter();
   }
-  
-  showLoading(false);
+
+  // Add summary
+  if (availableCountries > 0) {
+    const summary = document.createElement('div');
+    summary.className = 'list-group-item bg-light';
+    summary.innerHTML = `
+      <p class="mb-0"><strong>Found in ${availableCountries} countries</strong></p>
+      <small class="text-muted">Click on service names to watch</small>
+    `;
+    countryList.prepend(summary);
+  }
 }
 
-// 7. CHECK AVAILABILITY IN ONE COUNTRY
-async function checkSingleCountry(movieId, countryCode) {
+// 8. CHECK AVAILABILITY IN ONE COUNTRY
+async function checkCountryAvailability(movieId, countryCode) {
   try {
+    apiRequestsMade++;
     const response = await fetch(
       `https://api.watchmode.com/v1/title/${movieId}/sources/?apiKey=${WATCHMODE_API_KEY}&regions=${countryCode}`
     );
@@ -244,17 +259,62 @@ async function checkSingleCountry(movieId, countryCode) {
     const sources = await response.json();
     if (!Array.isArray(sources)) return null;
     
-    // Only keep sources with valid data
+    // Filter valid sources
     return sources.filter(source => 
-      source.name && source.web_url && source.type
-    );
+      source.name && 
+      (source.web_url || source.type === 'theatrical') &&
+      source.type
+    ).map(source => ({
+      name: source.name,
+      type: source.type,
+      web_url: source.web_url || '#',
+      price: source.price || null
+    }));
   } catch (error) {
-    console.error('Check country error:', error);
+    console.error('Country check error:', error);
     return null;
   }
 }
 
-// 8. SHOW MULTIPLE RESULTS WHEN SEARCH FINDS MANY
+// 9. FORMAT STREAMING SERVICES FOR DISPLAY
+function formatServices(sources) {
+  let html = '';
+  
+  // Group by type
+  const groups = {
+    subscription: [],
+    free: [],
+    rental: [],
+    purchase: [],
+    other: []
+  };
+  
+  sources.forEach(source => {
+    const type = source.type.toLowerCase();
+    if (type.includes('sub')) groups.subscription.push(source);
+    else if (type.includes('free')) groups.free.push(source);
+    else if (type.includes('rent')) groups.rental.push(source);
+    else if (type.includes('buy') || type.includes('purchase')) groups.purchase.push(source);
+    else groups.other.push(source);
+  });
+  
+  // Build HTML for each group
+  for (const [type, items] of Object.entries(groups)) {
+    if (items.length > 0) {
+      html += `<div class="mb-2"><small>${type.toUpperCase()}:</small> `;
+      html += items.map(item => `
+        <a href="${item.web_url}" target="_blank" class="btn btn-sm btn-${type} stream-badge">
+          ${item.name}${item.price ? ` (${item.price})` : ''}
+        </a>
+      `).join('');
+      html += '</div>';
+    }
+  }
+  
+  return html;
+}
+
+// 10. SHOW MULTIPLE RESULTS
 function showMultipleResults(results) {
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = `
@@ -289,16 +349,20 @@ function showMultipleResults(results) {
     `;
     
     item.addEventListener('click', () => {
-      checkAllCountries(movie);
+      checkAvailability(movie);
     });
     
     list.appendChild(item);
   });
 }
 
-// =============================================
-// HELPER FUNCTIONS (you don't need to change these)
-// =============================================
+// ======================
+// HELPER FUNCTIONS
+// ======================
+
+function updateApiCounter() {
+  document.getElementById('apiCounter').textContent = `API used: ${apiRequestsMade}/${API_LIMIT}`;
+}
 
 function showLoading(show, message = 'Loading...') {
   const loadingDiv = document.getElementById('loading');
@@ -334,9 +398,9 @@ function showError(message) {
 function showEmptyState(message) {
   const emptyState = document.getElementById('emptyState');
   emptyState.innerHTML = `
-    <i class="bi bi-film" style="font-size: 3rem; color: #dee2e6;"></i>
-    <h4 class="mt-3 text-muted">${message}</h4>
-    <p class="text-muted">Try a different search term</p>
+    <i class="bi bi-film" style="font-size: 3rem;"></i>
+    <h4 class="mt-3">${message}</h4>
+    <p>Try a different search term</p>
   `;
   emptyState.style.display = 'block';
 }
