@@ -3,7 +3,7 @@ const TMDB_API_KEY = '8015f104741271883e610d9c704183e4';
 const WATCHMODE_API_KEY = 'NgObMKWGQPhz4UH6Zs8xwidmsw6s8JZdRstAbtio';
 const CACHE_EXPIRY = 24 * 60 * 60 * 1000; // 24 hours cache
 
-// Supported Countries with flags
+// Supported Countries (50+ countries)
 const COUNTRIES = [
   {code: 'AR', name: 'Argentina', flag: '🇦🇷'},
   {code: 'AU', name: 'Australia', flag: '🇦🇺'},
@@ -61,7 +61,226 @@ const COUNTRIES = [
   {code: 'VN', name: 'Vietnam', flag: '🇻🇳'}
 ];
 
-// Cache Functions
+// Initialize the page
+document.addEventListener('DOMContentLoaded', function() {
+  setupSearch();
+});
+
+function setupSearch() {
+  const searchBtn = document.getElementById('searchBtn');
+  const searchInput = document.getElementById('searchInput');
+  
+  searchBtn.addEventListener('click', searchContent);
+  searchInput.addEventListener('keypress', (e) => {
+    if (e.key === 'Enter') searchContent();
+  });
+}
+
+async function searchContent() {
+  const query = document.getElementById('searchInput').value.trim();
+  if (!query) {
+    showError('Please enter a movie or TV show name');
+    return;
+  }
+
+  showLoading(true);
+  clearResults();
+
+  try {
+    // Search TMDB for the content
+    const tmdbResults = await searchTMDB(query);
+    if (!tmdbResults || tmdbResults.length === 0) {
+      showEmptyState('No results found for your search');
+      return;
+    }
+
+    // Display content selector if multiple results
+    if (tmdbResults.length > 1) {
+      displayContentSelector(tmdbResults);
+    } else {
+      // If only one result, proceed directly
+      await displayGlobalAvailability(tmdbResults[0]);
+    }
+  } catch (error) {
+    showError(`Search failed: ${error.message}`);
+  } finally {
+    showLoading(false);
+  }
+}
+
+async function searchTMDB(query) {
+  const cacheKey = `tmdb_search_${query.toLowerCase()}`;
+  const cached = getCache(cacheKey);
+  if (cached) return cached;
+
+  try {
+    const response = await fetch(
+      `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
+    );
+    
+    if (!response.ok) throw new Error(`TMDB API error: ${response.status}`);
+    
+    const data = await response.json();
+    const results = data.results
+      .filter(item => item.media_type === 'movie' || item.media_type === 'tv')
+      .slice(0, 5); // Limit to top 5 results
+    
+    setCache(cacheKey, results);
+    return results;
+  } catch (error) {
+    console.error('TMDB search error:', error);
+    throw error;
+  }
+}
+
+async function displayGlobalAvailability(content) {
+  showLoading(true, 'Checking global availability...');
+  
+  try {
+    // Get availability from Watchmode
+    const availability = await checkGlobalAvailability(content.id);
+    
+    // Display the results
+    displayAvailabilityResults(content, availability);
+  } catch (error) {
+    showError(`Failed to check availability: ${error.message}`);
+  } finally {
+    showLoading(false);
+  }
+}
+
+async function checkGlobalAvailability(contentId) {
+  const cacheKey = `global_availability_${contentId}`;
+  const cached = getCache(cacheKey);
+  if (cached) return cached;
+
+  try {
+    // Get all sources for this content
+    const response = await fetch(
+      `https://api.watchmode.com/v1/title/${contentId}/sources/?apiKey=${WATCHMODE_API_KEY}`
+    );
+    
+    if (!response.ok) throw new Error(`Watchmode API error: ${response.status}`);
+    
+    const sources = await response.json();
+    
+    // Organize by country
+    const availabilityMap = {};
+    
+    sources.forEach(source => {
+      if (!source.regions) return;
+      
+      source.regions.split(',').forEach(region => {
+        if (!availabilityMap[region]) {
+          availabilityMap[region] = [];
+        }
+        availabilityMap[region].push({
+          name: source.name,
+          type: source.type,
+          web_url: source.web_url
+        });
+      });
+    });
+    
+    setCache(cacheKey, availabilityMap);
+    return availabilityMap;
+  } catch (error) {
+    console.error('Global availability error:', error);
+    throw error;
+  }
+}
+
+function displayAvailabilityResults(content, availabilityMap) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = '';
+
+  // Display content header
+  resultsDiv.innerHTML += `
+    <div class="card mb-4">
+      <div class="row g-0">
+        <div class="col-md-3">
+          <img src="${
+            content.poster_path 
+              ? `https://image.tmdb.org/t/p/w500${content.poster_path}` 
+              : 'https://via.placeholder.com/500x750?text=No+Poster'
+          }" class="img-fluid rounded-start" alt="${content.title || content.name}">
+        </div>
+        <div class="col-md-9">
+          <div class="card-body">
+            <h2 class="card-title">${content.title || content.name}</h2>
+            <p class="card-text">${content.overview || 'No description available'}</p>
+            <p class="card-text">
+              <small class="text-muted">
+                ${content.release_date || content.first_air_date || 'Unknown date'} • 
+                ${content.media_type === 'movie' ? 'Movie' : 'TV Show'}
+              </small>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+    
+    <div class="card">
+      <div class="card-header">
+        <h3 class="mb-0">Global Availability</h3>
+      </div>
+      <div class="card-body p-0">
+        <div class="list-group list-group-flush" id="countryList"></div>
+      </div>
+    </div>
+  `;
+
+  const countryList = document.getElementById('countryList');
+  
+  // Show countries with availability
+  COUNTRIES.forEach(country => {
+    const sources = availabilityMap[country.code];
+    const countryItem = document.createElement('div');
+    countryItem.className = 'list-group-item';
+    
+    if (sources && sources.length > 0) {
+      countryItem.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center">
+          <div>
+            <span class="country-flag">${country.flag}</span>
+            <strong>${country.name}</strong>
+          </div>
+          <div>
+            <button class="btn btn-sm btn-outline-primary toggle-sources" 
+                    data-bs-toggle="collapse" 
+                    data-bs-target="#sources-${country.code}">
+              Show ${sources.length} services
+            </button>
+          </div>
+        </div>
+        <div class="collapse mt-2" id="sources-${country.code}">
+          <div class="d-flex flex-wrap">
+            ${sources.map(source => `
+              <a href="${source.web_url}" target="_blank" 
+                 class="btn btn-sm btn-outline-secondary me-2 mb-2">
+                ${source.name} (${source.type})
+              </a>
+            `).join('')}
+          </div>
+        </div>
+      `;
+    } else {
+      countryItem.innerHTML = `
+        <div class="d-flex justify-content-between align-items-center text-muted">
+          <div>
+            <span class="country-flag">${country.flag}</span>
+            ${country.name}
+          </div>
+          <span class="badge bg-light text-dark">Not available</span>
+        </div>
+      `;
+    }
+    
+    countryList.appendChild(countryItem);
+  });
+}
+
+// Helper functions (same as before with small improvements)
 function getCache(key) {
   const cached = localStorage.getItem(`streamfinder_${key}`);
   if (!cached) return null;
@@ -82,252 +301,88 @@ function setCache(key, data) {
   localStorage.setItem(`streamfinder_${key}`, JSON.stringify(cacheItem));
 }
 
-// Initialize the page
-document.addEventListener('DOMContentLoaded', function() {
-  // Populate country dropdown
-  const countrySelect = document.getElementById('countrySelect');
-  COUNTRIES.forEach(country => {
-    const option = document.createElement('option');
-    option.value = country.code;
-    option.textContent = `${country.flag} ${country.name}`;
-    countrySelect.appendChild(option);
-  });
-
-  // Set default country to user's location or US
-  const userCountry = Intl.DateTimeFormat().resolvedOptions().timeZone;
-  const matchedCountry = COUNTRIES.find(c => userCountry.includes(c.name))?.code || 'US';
-  countrySelect.value = matchedCountry;
-
-  // Add search button event
-  document.getElementById('searchBtn').addEventListener('click', searchContent);
-  
-  // Add search on Enter key
-  document.getElementById('searchInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') searchContent();
-  });
-});
-
-// Main Search Function
-async function searchContent() {
-  const query = document.getElementById('searchInput').value.trim();
-  const country = document.getElementById('countrySelect').value;
-  
-  if (!query) {
-    showError('Please enter a movie or TV show name');
-    return;
-  }
-
-  showLoading(true);
-  clearResults();
-
-  try {
-    // Check cache first
-    const cacheKey = `search_${query.toLowerCase()}_${country}`;
-    const cachedResults = getCache(cacheKey);
-    
-    if (cachedResults) {
-      displayResults(cachedResults);
-      return;
-    }
-
-    // Step 1: Search TMDB for the content
-    const tmdbResponse = await fetchWithTimeout(
-      `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}&page=1`,
-      { timeout: 5000 }
-    );
-    
-    if (!tmdbResponse.ok) {
-      throw new Error(`TMDB API Error: ${tmdbResponse.status}`);
-    }
-    
-    const tmdbData = await tmdbResponse.json();
-
-    if (!tmdbData.results || tmdbData.results.length === 0) {
-      showEmptyState('No results found for your search');
-      return;
-    }
-
-    // Get top 10 results
-    const topResults = tmdbData.results.slice(0, 10);
-    
-    // Get streaming info for each result
-    const resultsWithStreaming = await Promise.all(
-      topResults.map(async (content) => {
-        try {
-          const sources = await getStreamingInfo(content.id, country);
-          return { content, sources };
-        } catch (error) {
-          console.error(`Error getting streaming info for ${content.id}:`, error);
-          return { content, sources: null, error: error.message };
-        }
-      })
-    );
-
-    // Cache the results
-    setCache(cacheKey, resultsWithStreaming);
-    
-    // Display results
-    displayResults(resultsWithStreaming);
-
-  } catch (error) {
-    showError(`Failed to search: ${error.message}`);
-    console.error('Search error:', error);
-  } finally {
-    showLoading(false);
-  }
-}
-
-// Helper function for fetch with timeout
-async function fetchWithTimeout(resource, options = {}) {
-  const { timeout = 8000 } = options;
-  
-  const controller = new AbortController();
-  const id = setTimeout(() => controller.abort(), timeout);
-
-  const response = await fetch(resource, {
-    ...options,
-    signal: controller.signal  
-  });
-  clearTimeout(id);
-
-  return response;
-}
-
-// Get streaming info with caching
-async function getStreamingInfo(contentId, country) {
-  const cacheKey = `sources_${contentId}_${country}`;
-  const cached = getCache(cacheKey);
-  if (cached) return cached;
-
-  try {
-    const response = await fetchWithTimeout(
-      `https://api.watchmode.com/v1/title/${contentId}/sources/?apiKey=${WATCHMODE_API_KEY}&regions=${country}`,
-      { timeout: 8000 }
-    );
-
-    if (!response.ok) {
-      // Special case: 404 might mean content exists but no sources
-      if (response.status === 404) return null; // Different from error
-      throw new Error(`API error: ${response.status}`);
-    }
-
-    const data = await response.json();
-    
-    // Handle cases where Watchmode returns { message: "No sources found" }
-    if (data.message && data.message.includes("No sources")) {
-      return null;
-    }
-
-    // Ensure we have a proper array response
-    if (!Array.isArray(data)) {
-      console.warn("Unexpected Watchmode response format:", data);
-      return null;
-    }
-
-    // Filter out invalid sources
-    const validSources = data.filter(source => 
-      source.name && source.web_url && source.type
-    );
-
-    setCache(cacheKey, validSources);
-    return validSources.length > 0 ? validSources : null;
-
-  } catch (error) {
-    console.error("Watchmode API error:", error);
-    return null; // Not the same as error - means "no data"
-  }
-}
-
-// Display Results
-function displayResults(results) {
-  // ... existing setup code ...
-
-  results.forEach(item => {
-    const { content, sources, error } = item;
-    
-    let availabilityMessage = '';
-    if (error) {
-      availabilityMessage = `
-        <div class="alert alert-warning p-2 mb-0">
-          <i class="bi bi-exclamation-triangle me-1"></i>
-          ${error}
-        </div>
-      `;
-    } else if (sources === null) {
-      // Special case - we couldn't determine availability
-      availabilityMessage = `
-        <div class="alert alert-info p-2 mb-0">
-          <i class="bi bi-info-circle me-1"></i>
-          Availability unknown for this country
-        </div>
-      `;
-    } else if (sources.length === 0) {
-      // Confirmed no sources
-      availabilityMessage = '<p class="text-muted">Not available in selected country</p>';
-    } else {
-      // Has sources - display them
-      availabilityMessage = renderStreamingBadges(sources, content.id);
-    }
-
-    // ... rest of your card HTML ...
-  });
-}
-
-function renderStreamingBadges(sources) {
-  const visibleSources = sources.slice(0, 5);
-  const extraSources = sources.slice(5);
-  
-  return `
-    <div class="d-flex flex-wrap">
-      ${visibleSources.map(source => `
-        <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
-          ${source.name} (${source.type})
-        </a>
-      `).join('')}
-    </div>
-    ${extraSources.length > 0 ? `
-      <button class="btn btn-link btn-sm p-0 mt-2" data-bs-toggle="collapse" data-bs-target="#moreSources-${content.id}">
-        + ${extraSources.length} more
-      </button>
-      <div class="collapse mt-2" id="moreSources-${content.id}">
-        <div class="d-flex flex-wrap">
-          ${extraSources.map(source => `
-            <a href="${source.web_url}" target="_blank" class="btn btn-outline-primary btn-sm stream-badge">
-              ${source.name} (${source.type})
-            </a>
-          `).join('')}
-        </div>
+function showLoading(show, message = 'Loading...') {
+  const loadingDiv = document.getElementById('loading');
+  if (show) {
+    loadingDiv.innerHTML = `
+      <div class="spinner-border text-primary" role="status">
+        <span class="visually-hidden">Loading...</span>
       </div>
-    ` : ''}
-  `;
-}
-
-// UI Helper Functions
-function showLoading(show) {
-  document.getElementById('loading').style.display = show ? 'block' : 'none';
+      <p class="mt-2">${message}</p>
+    `;
+    loadingDiv.style.display = 'block';
+  } else {
+    loadingDiv.style.display = 'none';
+  }
 }
 
 function clearResults() {
   document.getElementById('error').style.display = 'none';
   document.getElementById('results').innerHTML = '';
+  document.getElementById('emptyState').style.display = 'none';
 }
 
 function showError(message) {
   const errorDiv = document.getElementById('error');
-  errorDiv.style.display = 'block';
   errorDiv.innerHTML = `
     <i class="bi bi-exclamation-triangle-fill me-2"></i>
     ${message}
     <button type="button" class="btn-close float-end" onclick="this.parentElement.style.display='none'"></button>
   `;
+  errorDiv.style.display = 'block';
 }
 
 function showEmptyState(message) {
   const emptyState = document.getElementById('emptyState');
   emptyState.innerHTML = `
-    <i class="bi bi-emoji-frown" style="font-size: 3rem; color: #dee2e6;"></i>
+    <i class="bi bi-film" style="font-size: 3rem; color: #dee2e6;"></i>
     <h4 class="mt-3 text-muted">${message}</h4>
-    <p class="text-muted">Try a different search term or country</p>
+    <p class="text-muted">Try a different search term</p>
   `;
   emptyState.style.display = 'block';
+}
+
+function displayContentSelector(results) {
+  const resultsDiv = document.getElementById('results');
+  resultsDiv.innerHTML = `
+    <div class="card">
+      <div class="card-header">
+        <h3 class="mb-0">Multiple Results Found</h3>
+      </div>
+      <div class="card-body">
+        <p>Please select the correct title:</p>
+        <div class="list-group" id="contentSelector"></div>
+      </div>
+    </div>
+  `;
+
+  const selectorDiv = document.getElementById('contentSelector');
+  
+  results.forEach(item => {
+    const btn = document.createElement('button');
+    btn.type = 'button';
+    btn.className = 'list-group-item list-group-item-action';
+    btn.innerHTML = `
+      <div class="d-flex align-items-center">
+        <img src="${
+          item.poster_path 
+            ? `https://image.tmdb.org/t/p/w92${item.poster_path}` 
+            : 'https://via.placeholder.com/92x138?text=No+Poster'
+        }" style="width: 46px; height: 69px; object-fit: cover; margin-right: 15px;">
+        <div>
+          <h6 class="mb-1">${item.title || item.name}</h6>
+          <small class="text-muted">
+            ${item.release_date || item.first_air_date || ''} • 
+            ${item.media_type === 'movie' ? 'Movie' : 'TV Show'}
+          </small>
+        </div>
+      </div>
+    `;
+    
+    btn.addEventListener('click', async () => {
+      await displayGlobalAvailability(item);
+    });
+    
+    selectorDiv.appendChild(btn);
+  });
 }
