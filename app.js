@@ -1,406 +1,225 @@
-// ======================
-// StreamFinder App
-// ======================
+// API Keys - Replace with your own
+const TMDB_API_KEY = '8015f104741271883e610d9c704183e4';
+const WATCHMODE_API_KEY = 'NgObMKWGQPhz4UH6Zs8xwidmsw6s8JZdRstAbtio';
 
-const TMDB_API_KEY = '8015f104741271883e610d9c704183e4'; // 
-const WATCHMODE_API_KEY = 'NgObMKWGQPhz4UH6Zs8xwidmsw6s8JZdRstAbtio'; // 
-
-// 2. BASIC CONFIGURATION
-const API_LIMIT = 1000; // Your Watchmode daily limit
-let apiRequestsMade = 0;
-
-// 3. COUNTRIES WE CHECK (limited to stay under API limits)
-const COUNTRIES = [
-  {code: 'AR', name: 'Argentina', flag: '🇦🇷'},
-  {code: 'AU', name: 'Australia', flag: '🇦🇺'},
-  {code: 'AT', name: 'Austria', flag: '🇦🇹'},
-  {code: 'BE', name: 'Belgium', flag: '🇧🇪'},
-  {code: 'BR', name: 'Brazil', flag: '🇧🇷'},
-  {code: 'BG', name: 'Bulgaria', flag: '🇧🇬'},
-  {code: 'CA', name: 'Canada', flag: '🇨🇦'},
-  {code: 'CL', name: 'Chile', flag: '🇨🇱'},
-  {code: 'CO', name: 'Colombia', flag: '🇨🇴'},
-  {code: 'HR', name: 'Croatia', flag: '🇭🇷'},
-  {code: 'CZ', name: 'Czech Republic', flag: '🇨🇿'},
-  {code: 'DK', name: 'Denmark', flag: '🇩🇰'},
-  {code: 'EE', name: 'Estonia', flag: '🇪🇪'},
-  {code: 'FI', name: 'Finland', flag: '🇫🇮'},
-  {code: 'FR', name: 'France', flag: '🇫🇷'},
-  {code: 'DE', name: 'Germany', flag: '🇩🇪'},
-  {code: 'GR', name: 'Greece', flag: '🇬🇷'},
-  {code: 'HK', name: 'Hong Kong', flag: '🇭🇰'},
-  {code: 'HU', name: 'Hungary', flag: '🇭🇺'},
-  {code: 'IS', name: 'Iceland', flag: '🇮🇸'},
-  {code: 'IN', name: 'India', flag: '🇮🇳'},
-  {code: 'ID', name: 'Indonesia', flag: '🇮🇩'},
-  {code: 'IE', name: 'Ireland', flag: '🇮🇪'},
-  {code: 'IL', name: 'Israel', flag: '🇮🇱'},
-  {code: 'IT', name: 'Italy', flag: '🇮🇹'},
-  {code: 'JP', name: 'Japan', flag: '🇯🇵'},
-  {code: 'LV', name: 'Latvia', flag: '🇱🇻'},
-  {code: 'LT', name: 'Lithuania', flag: '🇱🇹'},
-  {code: 'MY', name: 'Malaysia', flag: '🇲🇾'},
-  {code: 'MX', name: 'Mexico', flag: '🇲🇽'},
-  {code: 'NL', name: 'Netherlands', flag: '🇳🇱'},
-  {code: 'NZ', name: 'New Zealand', flag: '🇳🇿'},
-  {code: 'NO', name: 'Norway', flag: '🇳🇴'},
-  {code: 'PE', name: 'Peru', flag: '🇵🇪'},
-  {code: 'PH', name: 'Philippines', flag: '🇵🇭'},
-  {code: 'PL', name: 'Poland', flag: '🇵🇱'},
-  {code: 'PT', name: 'Portugal', flag: '🇵🇹'},
-  {code: 'RO', name: 'Romania', flag: '🇷🇴'},
-  {code: 'RU', name: 'Russia', flag: '🇷🇺'},
-  {code: 'SA', name: 'Saudi Arabia', flag: '🇸🇦'},
-  {code: 'SG', name: 'Singapore', flag: '🇸🇬'},
-  {code: 'SK', name: 'Slovakia', flag: '🇸🇰'},
-  {code: 'ZA', name: 'South Africa', flag: '🇿🇦'},
-  {code: 'KR', name: 'South Korea', flag: '🇰🇷'},
-  {code: 'ES', name: 'Spain', flag: '🇪🇸'},
-  {code: 'SE', name: 'Sweden', flag: '🇸🇪'},
-  {code: 'CH', name: 'Switzerland', flag: '🇨🇭'},
-  {code: 'TW', name: 'Taiwan', flag: '🇹🇼'},
-  {code: 'TH', name: 'Thailand', flag: '🇹🇭'},
-  {code: 'TR', name: 'Turkey', flag: '🇹🇷'},
-  {code: 'UA', name: 'Ukraine', flag: '🇺🇦'},
-  {code: 'GB', name: 'United Kingdom', flag: '🇬🇧'},
-  {code: 'US', name: 'United States', flag: '🇺🇸'},
-  {code: 'VN', name: 'Vietnam', flag: '🇻🇳'}
-];
-// 4. WHEN PAGE LOADS
-window.addEventListener('DOMContentLoaded', function() {
-  // Set up search functionality
-  document.getElementById('searchBtn').addEventListener('click', doSearch);
+document.addEventListener('DOMContentLoaded', function() {
+  document.getElementById('searchBtn').addEventListener('click', search);
   document.getElementById('searchInput').addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') doSearch();
+    if (e.key === 'Enter') search();
   });
-  
-  // Focus on search box
-  document.getElementById('searchInput').focus();
-  
-  // Show API counter
-  updateApiCounter();
 });
 
-// 5. MAIN SEARCH FUNCTION
-async function doSearch() {
-  // Check API limits
-  if (apiRequestsMade >= API_LIMIT) {
-    showError('Daily API limit reached. Try again tomorrow.');
-    return;
-  }
-
-  // Get search query
+async function search() {
   const query = document.getElementById('searchInput').value.trim();
   if (!query) {
-    showError('Please enter a movie or TV show name');
+    showError('Please enter a title to search');
     return;
   }
 
-  // Show loading state
-  showLoading(true, 'Searching...');
+  showLoading(true);
   clearResults();
 
   try {
-    // Search TMDB
-    const results = await searchTMDB(query);
-    
-    if (!results || results.length === 0) {
-      showEmptyState('No results found. Try a different name.');
+    // 1. Search TMDB for content ID
+    const tmdbResponse = await fetch(
+      `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
+    );
+    const tmdbData = await tmdbResponse.json();
+
+    if (!tmdbData.results || tmdbData.results.length === 0) {
+      showError('No results found');
       return;
     }
-    
-    // Show results
-    if (results.length > 1) {
-      showMultipleResults(results);
-    } else {
-      checkAvailability(results[0]);
+
+    // Take first result (most relevant)
+    const content = tmdbData.results[0];
+    displayContentInfo(content);
+
+    // 2. Get Watchmode ID using TMDB ID
+    const watchmodeId = await getWatchmodeId(content.id, content.media_type);
+    if (!watchmodeId) {
+      showError('Streaming data not available for this title');
+      return;
     }
+
+    // 3. Get detailed sources from Watchmode
+    const sources = await getWatchmodeSources(watchmodeId);
+    displaySources(sources);
+
   } catch (error) {
-    showError('Search failed. Please try again later.');
+    showError('Failed to get streaming information');
     console.error('Search error:', error);
   } finally {
     showLoading(false);
   }
 }
 
-// 6. SEARCH TMDB DATABASE
-async function searchTMDB(query) {
+async function getWatchmodeId(tmdbId, mediaType) {
   try {
+    // Convert TMDB ID to Watchmode ID
     const response = await fetch(
-      `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
+      `https://api.watchmode.com/v1/search/?apiKey=${WATCHMODE_API_KEY}&search_field=imdb_id&search_value=${tmdbId}&search_type=${mediaType}`
     );
-    
-    if (!response.ok) throw new Error('API error');
-    
     const data = await response.json();
-    return data.results
-      .filter(item => item.media_type === 'movie' || item.media_type === 'tv')
-      .slice(0, 5); // Get top 5 results
-  } catch (error) {
-    console.error('TMDB error:', error);
-    throw error;
-  }
-}
-
-// 7. CHECK AVAILABILITY FOR A SINGLE TITLE
-async function checkAvailability(movie) {
-  showLoading(true, 'Checking availability...');
-  
-  // Create results container
-  const resultsDiv = document.getElementById('results');
-  resultsDiv.innerHTML = `
-    <div class="card mb-4">
-      <div class="row g-0">
-        <div class="col-md-3">
-          <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w500${movie.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster'}" 
-               class="img-fluid rounded-start" alt="${movie.title || movie.name}">
-        </div>
-        <div class="col-md-9">
-          <div class="card-body">
-            <h2 class="card-title">${movie.title || movie.name}</h2>
-            <p class="card-text">${movie.overview || 'No description available'}</p>
-            <p class="card-text"><small class="text-muted">${movie.release_date || movie.first_air_date || ''} • ${movie.media_type === 'movie' ? 'Movie' : 'TV Show'}</small></p>
-          </div>
-        </div>
-      </div>
-    </div>
-    <div class="card">
-      <div class="card-header d-flex justify-content-between align-items-center">
-        <h3 class="mb-0">Where to Watch</h3>
-        <span class="badge bg-primary">${COUNTRIES.length} countries checked</span>
-      </div>
-      <div class="card-body p-0">
-        <div class="list-group list-group-flush" id="countryResults"></div>
-      </div>
-    </div>
-  `;
-
-  const countryList = document.getElementById('countryResults');
-  let availableCountries = 0;
-
-  // Check each country
-  for (const country of COUNTRIES) {
-    if (apiRequestsMade >= API_LIMIT) break;
     
-    // Show loading state for this country
-    const countryItem = document.createElement('div');
-    countryItem.className = 'list-group-item';
-    countryItem.innerHTML = `
-      <div class="d-flex justify-content-between align-items-center">
-        <div>${country.flag} ${country.name}</div>
-        <div class="spinner-border spinner-border-sm" role="status">
-          <span class="visually-hidden">Loading...</span>
-        </div>
-      </div>
-    `;
-    countryList.appendChild(countryItem);
-    
-    try {
-      // Check availability in this country
-      const sources = await checkCountryAvailability(movie.id, country.code);
-      
-      // Update display
-      if (sources && sources.length > 0) {
-        availableCountries++;
-        countryItem.innerHTML = `
-          <div class="d-flex justify-content-between align-items-center">
-            <div>${country.flag} <strong>${country.name}</strong></div>
-            <span class="badge bg-success">Available</span>
-          </div>
-          <div class="mt-2">
-            ${formatServices(sources)}
-          </div>
-        `;
-      } else {
-        countryItem.innerHTML = `
-          <div class="d-flex justify-content-between align-items-center">
-            <div>${country.flag} ${country.name}</div>
-            <span class="badge bg-secondary">Not available</span>
-          </div>
-        `;
-      }
-    } catch (error) {
-      console.error(`Error checking ${country.name}:`, error);
-      countryItem.innerHTML = `
-        <div class="d-flex justify-content-between align-items-center">
-          <div>${country.flag} ${country.name}</div>
-          <span class="badge bg-warning">Check failed</span>
-        </div>
-      `;
+    // Return the first matching Watchmode ID
+    if (data.title_results && data.title_results.length > 0) {
+      return data.title_results[0].id;
     }
-    
-    // Small delay between requests
-    await new Promise(resolve => setTimeout(resolve, 300));
-    updateApiCounter();
-  }
-
-  // Add summary
-  if (availableCountries > 0) {
-    const summary = document.createElement('div');
-    summary.className = 'list-group-item bg-light';
-    summary.innerHTML = `
-      <p class="mb-0"><strong>Found in ${availableCountries} countries</strong></p>
-      <small class="text-muted">Click on service names to watch</small>
-    `;
-    countryList.prepend(summary);
-  }
-}
-
-// 8. CHECK AVAILABILITY IN ONE COUNTRY
-async function checkCountryAvailability(movieId, countryCode) {
-  try {
-    apiRequestsMade++;
-    const response = await fetch(
-      `https://api.watchmode.com/v1/title/${movieId}/sources/?apiKey=${WATCHMODE_API_KEY}&regions=${countryCode}`
-    );
-    
-    if (!response.ok) return null;
-    
-    const sources = await response.json();
-    if (!Array.isArray(sources)) return null;
-    
-    // Filter valid sources
-    return sources.filter(source => 
-      source.name && 
-      (source.web_url || source.type === 'theatrical') &&
-      source.type
-    ).map(source => ({
-      name: source.name,
-      type: source.type,
-      web_url: source.web_url || '#',
-      price: source.price || null
-    }));
+    return null;
   } catch (error) {
-    console.error('Country check error:', error);
+    console.error('Error getting Watchmode ID:', error);
     return null;
   }
 }
 
-// 9. FORMAT STREAMING SERVICES FOR DISPLAY
-function formatServices(sources) {
-  let html = '';
-  
-  // Group by type
-  const groups = {
-    subscription: [],
-    free: [],
-    rental: [],
-    purchase: [],
-    other: []
-  };
-  
-  sources.forEach(source => {
-    const type = source.type.toLowerCase();
-    if (type.includes('sub')) groups.subscription.push(source);
-    else if (type.includes('free')) groups.free.push(source);
-    else if (type.includes('rent')) groups.rental.push(source);
-    else if (type.includes('buy') || type.includes('purchase')) groups.purchase.push(source);
-    else groups.other.push(source);
-  });
-  
-  // Build HTML for each group
-  for (const [type, items] of Object.entries(groups)) {
-    if (items.length > 0) {
-      html += `<div class="mb-2"><small>${type.toUpperCase()}:</small> `;
-      html += items.map(item => `
-        <a href="${item.web_url}" target="_blank" class="btn btn-sm btn-${type} stream-badge">
-          ${item.name}${item.price ? ` (${item.price})` : ''}
-        </a>
-      `).join('');
-      html += '</div>';
-    }
+async function getWatchmodeSources(watchmodeId) {
+  try {
+    // Get all sources for this title
+    const response = await fetch(
+      `https://api.watchmode.com/v1/title/${watchmodeId}/sources/?apiKey=${WATCHMODE_API_KEY}`
+    );
+    const data = await response.json();
+    
+    // Filter valid sources
+    return data.filter(source => 
+      source.name && 
+      source.type && 
+      (source.web_url || source.type === 'theatrical')
+    );
+  } catch (error) {
+    console.error('Error getting sources:', error);
+    return [];
   }
-  
-  return html;
 }
 
-// 10. SHOW MULTIPLE RESULTS
-function showMultipleResults(results) {
+function displayContentInfo(content) {
   const resultsDiv = document.getElementById('results');
   resultsDiv.innerHTML = `
-    <div class="card">
-      <div class="card-header">
-        <h3 class="mb-0">Multiple Results Found</h3>
-      </div>
-      <div class="card-body">
-        <p>Which one are you looking for?</p>
-        <div class="list-group" id="resultsList"></div>
-      </div>
-    </div>
-  `;
-
-  const list = document.getElementById('resultsList');
-  
-  results.forEach(movie => {
-    const item = document.createElement('button');
-    item.className = 'list-group-item list-group-item-action';
-    item.innerHTML = `
-      <div class="d-flex align-items-center">
-        <img src="${movie.poster_path ? `https://image.tmdb.org/t/p/w92${movie.poster_path}` : 'https://via.placeholder.com/92x138?text=No+Poster'}" 
-             style="width: 46px; height: 69px; object-fit: cover; margin-right: 15px;">
-        <div>
-          <h6 class="mb-1">${movie.title || movie.name}</h6>
-          <small class="text-muted">
-            ${movie.release_date || movie.first_air_date || ''} • 
-            ${movie.media_type === 'movie' ? 'Movie' : 'TV Show'}
-          </small>
+    <div class="card mb-4">
+      <div class="row g-0">
+        <div class="col-md-4">
+          <img src="${content.poster_path ? `https://image.tmdb.org/t/p/w500${content.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster'}" 
+               class="poster card-img-top" alt="${content.title || content.name}">
+        </div>
+        <div class="col-md-8">
+          <div class="card-body">
+            <h2 class="card-title">${content.title || content.name}</h2>
+            <p class="card-text">${content.overview || 'No description available'}</p>
+            <p class="card-text">
+              <small class="text-muted">
+                ${content.release_date || content.first_air_date || 'Unknown date'} • 
+                ${content.media_type === 'movie' ? 'Movie' : 'TV Show'}
+              </small>
+            </p>
+          </div>
         </div>
       </div>
-    `;
-    
-    item.addEventListener('click', () => {
-      checkAvailability(movie);
-    });
-    
-    list.appendChild(item);
-  });
-}
-
-// ======================
-// HELPER FUNCTIONS
-// ======================
-
-function updateApiCounter() {
-  document.getElementById('apiCounter').textContent = `API used: ${apiRequestsMade}/${API_LIMIT}`;
-}
-
-function showLoading(show, message = 'Loading...') {
-  const loadingDiv = document.getElementById('loading');
-  if (show) {
-    loadingDiv.innerHTML = `
-      <div class="spinner-border text-primary" role="status">
-        <span class="visually-hidden">Loading...</span>
+    </div>
+    <div class="card">
+      <div class="card-header">
+        <h3>Streaming Availability</h3>
       </div>
-      <p class="mt-2">${message}</p>
-    `;
-    loadingDiv.style.display = 'block';
-  } else {
-    loadingDiv.style.display = 'none';
+      <div id="sourcesList" class="card-body"></div>
+    </div>
+  `;
+}
+
+function displaySources(sources) {
+  const sourcesList = document.getElementById('sourcesList');
+  
+  if (sources.length === 0) {
+    sourcesList.innerHTML = '<p>No streaming services found for this title.</p>';
+    return;
   }
+
+  // Group sources by region
+  const sourcesByRegion = {};
+  sources.forEach(source => {
+    if (!source.regions) return;
+    
+    source.regions.split(',').forEach(region => {
+      if (!sourcesByRegion[region]) {
+        sourcesByRegion[region] = [];
+      }
+      sourcesByRegion[region].push(source);
+    });
+  });
+
+  // Display grouped sources
+  for (const [region, regionSources] of Object.entries(sourcesByRegion)) {
+    const regionHeader = document.createElement('h5');
+    regionHeader.className = 'mt-3 mb-2';
+    regionHeader.textContent = `Region: ${getRegionName(region)}`;
+    sourcesList.appendChild(regionHeader);
+
+    regionSources.forEach(source => {
+      const sourceItem = document.createElement('div');
+      sourceItem.className = 'd-flex justify-content-between align-items-center mb-2 p-2 bg-light rounded';
+      sourceItem.innerHTML = `
+        <div>
+          <strong>${source.name}</strong>
+          <div class="text-muted small">${formatSourceType(source.type)}</div>
+        </div>
+        <a href="${source.web_url || '#'}" target="_blank" class="btn btn-sm ${getButtonClass(source.type)}">
+          ${source.price ? `${source.price}` : 'View'}
+        </a>
+      `;
+      sourcesList.appendChild(sourceItem);
+    });
+  }
+}
+
+function getRegionName(code) {
+  const regions = {
+    US: 'United States',
+    GB: 'United Kingdom',
+    CA: 'Canada',
+    AU: 'Australia',
+    DE: 'Germany',
+    FR: 'France',
+    JP: 'Japan',
+    IN: 'India',
+    BR: 'Brazil',
+    MX: 'Mexico'
+  };
+  return regions[code] || `Region: ${code}`;
+}
+
+function formatSourceType(type) {
+  const types = {
+    'subscription': 'Subscription',
+    'free': 'Free',
+    'rental': 'Rental',
+    'purchase': 'Purchase',
+    'theatrical': 'In Theaters'
+  };
+  return types[type] || type;
+}
+
+function getButtonClass(type) {
+  const classes = {
+    'subscription': 'btn-primary',
+    'free': 'btn-success',
+    'rental': 'btn-warning',
+    'purchase': 'btn-danger',
+    'theatrical': 'btn-info'
+  };
+  return `btn ${classes[type] || 'btn-secondary'}`;
+}
+
+// Helper functions
+function showLoading(show) {
+  document.getElementById('loading').style.display = show ? 'block' : 'none';
 }
 
 function clearResults() {
   document.getElementById('error').style.display = 'none';
   document.getElementById('results').innerHTML = '';
-  document.getElementById('emptyState').style.display = 'none';
 }
 
 function showError(message) {
   const errorDiv = document.getElementById('error');
-  errorDiv.innerHTML = `
-    <i class="bi bi-exclamation-triangle-fill me-2"></i>
-    ${message}
-    <button type="button" class="btn-close float-end" onclick="this.parentElement.style.display='none'"></button>
-  `;
+  errorDiv.textContent = message;
   errorDiv.style.display = 'block';
-}
-
-function showEmptyState(message) {
-  const emptyState = document.getElementById('emptyState');
-  emptyState.innerHTML = `
-    <i class="bi bi-film" style="font-size: 3rem;"></i>
-    <h4 class="mt-3">${message}</h4>
-    <p>Try a different search term</p>
-  `;
-  emptyState.style.display = 'block';
 }
