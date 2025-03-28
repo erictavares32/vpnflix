@@ -1,21 +1,24 @@
-// app.js - Complete Streaming Availability Checker
+// app.js - Complete Browser-Compatible Version
 document.addEventListener('DOMContentLoaded', function() {
+  // Elements
   const searchBtn = document.getElementById('searchBtn');
   const searchInput = document.getElementById('searchInput');
   const resultsDiv = document.getElementById('results');
   const loadingDiv = document.getElementById('loading');
   const errorDiv = document.getElementById('error');
+  const emptyState = document.getElementById('empty-state');
 
-  // Configure API
+  // API Configuration
   const RAPIDAPI_KEY = '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df';
-  const TMDB_API_KEY = '8015f104741271883e610d9c704183e4';
+  const TMDB_API_KEY = '8015f104741271883e610d9c704183e4'; 
 
-  searchBtn.addEventListener('click', search);
+  // Event Listeners
+  searchBtn.addEventListener('click', executeSearch);
   searchInput.addEventListener('keypress', function(e) {
-    if (e.key === 'Enter') search();
+    if (e.key === 'Enter') executeSearch();
   });
 
-  async function search() {
+  async function executeSearch() {
     const query = searchInput.value.trim();
     if (!query) {
       showError('Please enter a movie or TV show name');
@@ -26,76 +29,74 @@ document.addEventListener('DOMContentLoaded', function() {
     clearResults();
 
     try {
-      // 1. First search TMDB for the content
-      const tmdbResponse = await fetch(
-        `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
-      );
-      const tmdbData = await tmdbResponse.json();
-
-      if (!tmdbData.results || tmdbData.results.length === 0) {
-        showError('No results found');
+      // 1. Search TMDB first
+      const content = await searchTMDB(query);
+      if (!content) {
+        showError('Content not found');
         return;
       }
 
-      // Take first result (most relevant)
-      const content = tmdbData.results[0];
       displayContentInfo(content);
 
-      // 2. Get streaming availability from RapidAPI
+      // 2. Get streaming availability
       const contentType = content.media_type === 'movie' ? 'movie' : 'show';
-      const streamingData = await getStreamingAvailability(content.id, contentType);
-      displayStreamingInfo(streamingData);
+      const streamingData = await fetchStreamingInfo(content.id, contentType);
+      
+      if (!streamingData) {
+        showError('No streaming data available');
+        return;
+      }
 
+      displayStreamingInfo(streamingData);
+      
     } catch (error) {
-      showError('Failed to get streaming information: ' + error.message);
+      showError(`Failed to get streaming information: ${error.message}`);
       console.error('Search error:', error);
     } finally {
       showLoading(false);
     }
   }
 
-  async function getStreamingAvailability(id, type) {
-    const options = {
-      method: 'GET',
-      hostname: 'streaming-availability.p.rapidapi.com',
-      path: `/${type}/${id}`,
-      headers: {
-        'x-rapidapi-key': RAPIDAPI_KEY,
-        'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
-      }
-    };
+  async function searchTMDB(query) {
+    try {
+      const response = await fetch(
+        `https://api.themoviedb.org/3/search/multi?api_key=${TMDB_API_KEY}&query=${encodeURIComponent(query)}`
+      );
+      const data = await response.json();
+      return data.results?.[0]; // Return first result
+    } catch (error) {
+      console.error('TMDB search error:', error);
+      return null;
+    }
+  }
 
-    return new Promise((resolve, reject) => {
-      const req = http.request(options, (res) => {
-        let data = '';
-
-        res.on('data', (chunk) => {
-          data += chunk;
-        });
-
-        res.on('end', () => {
-          try {
-            resolve(JSON.parse(data));
-          } catch (e) {
-            reject(new Error('Failed to parse response'));
+  async function fetchStreamingInfo(id, type) {
+    try {
+      const response = await fetch(
+        `https://streaming-availability.p.rapidapi.com/${type}/${id}`,
+        {
+          headers: {
+            'x-rapidapi-key': RAPIDAPI_KEY,
+            'x-rapidapi-host': 'streaming-availability.p.rapidapi.com'
           }
-        });
-      });
-
-      req.on('error', (error) => {
-        reject(error);
-      });
-
-      req.end();
-    });
+        }
+      );
+      return await response.json();
+    } catch (error) {
+      console.error('Streaming info error:', error);
+      return null;
+    }
   }
 
   function displayContentInfo(content) {
+    emptyState.style.display = 'none';
     resultsDiv.innerHTML = `
-      <div class="card mb-4">
+      <div class="card mb-4 shadow-sm">
         <div class="row g-0">
           <div class="col-md-4">
-            <img src="${content.poster_path ? `https://image.tmdb.org/t/p/w500${content.poster_path}` : 'https://via.placeholder.com/500x750?text=No+Poster'}" 
+            <img src="${content.poster_path ? 
+              `https://image.tmdb.org/t/p/w500${content.poster_path}` : 
+              'https://via.placeholder.com/500x750?text=No+Poster'}" 
                  class="poster card-img-top" alt="${content.title || content.name}">
           </div>
           <div class="col-md-8">
@@ -112,9 +113,9 @@ document.addEventListener('DOMContentLoaded', function() {
           </div>
         </div>
       </div>
-      <div class="card">
-        <div class="card-header">
-          <h3>Where to Watch</h3>
+      <div class="card shadow-sm">
+        <div class="card-header bg-primary text-white">
+          <h3 class="mb-0"><i class="bi bi-play-btn"></i> Where to Watch</h3>
         </div>
         <div id="streamingInfo" class="card-body"></div>
       </div>
@@ -124,40 +125,67 @@ document.addEventListener('DOMContentLoaded', function() {
   function displayStreamingInfo(data) {
     const streamingInfo = document.getElementById('streamingInfo');
     
-    if (!data || !data.streamingInfo || Object.keys(data.streamingInfo).length === 0) {
-      streamingInfo.innerHTML = '<p>No streaming information available</p>';
+    if (!data?.streamingInfo || Object.keys(data.streamingInfo).length === 0) {
+      streamingInfo.innerHTML = `
+        <div class="alert alert-info">
+          <i class="bi bi-info-circle"></i> No streaming information available
+        </div>
+      `;
       return;
     }
 
     let html = '';
     for (const [country, services] of Object.entries(data.streamingInfo)) {
-      html += `<h5 class="mt-3">${country.toUpperCase()}</h5>`;
+      if (!services || services.length === 0) continue;
       
-      if (!services || services.length === 0) {
-        html += '<p>Not available in this country</p>';
-        continue;
-      }
-
+      html += `
+        <div class="country-header">
+          <i class="bi bi-globe"></i> ${country.toUpperCase()}
+        </div>
+        <div class="row row-cols-1 row-cols-md-2 g-3">
+      `;
+      
       services.forEach(service => {
         html += `
-          <div class="d-flex justify-content-between align-items-center mb-3 p-2 bg-light rounded">
-            <div>
-              <strong>${service.platform}</strong>
-              <div class="text-muted small">${service.type} ${service.price ? `• ${service.price}` : ''}</div>
+          <div class="col">
+            <div class="card h-100">
+              <div class="card-body">
+                <div class="d-flex align-items-center mb-2">
+                  ${service.logo ? 
+                    `<img src="${service.logo}" alt="${service.platform}" 
+                          style="width: 40px; height: 40px; margin-right: 10px;">` : 
+                    `<i class="bi bi-tv" style="font-size: 1.5rem; margin-right: 10px;"></i>`}
+                  <h5 class="card-title mb-0">${service.platform}</h5>
+                </div>
+                <div class="mb-2">
+                  <span class="badge bg-primary">${service.type}</span>
+                  ${service.price ? `<span class="badge bg-success ms-2">${service.price}</span>` : ''}
+                </div>
+                <a href="${service.link || '#'}" target="_blank" 
+                   class="btn btn-sm btn-outline-primary w-100">
+                  <i class="bi bi-play-fill"></i> Watch Now
+                </a>
+              </div>
             </div>
-            <a href="${service.link}" target="_blank" class="btn btn-sm btn-primary">
-              Watch Now
-            </a>
           </div>
         `;
       });
+      
+      html += `</div>`; // Close row
     }
 
-    streamingInfo.innerHTML = html;
+    streamingInfo.innerHTML = html || `
+      <div class="alert alert-warning">
+        <i class="bi bi-exclamation-triangle"></i> No available services found
+      </div>
+    `;
   }
 
   function showLoading(show) {
-    loadingDiv.style.display = show ? 'block' : 'none';
+    loadingDiv.style.display = show ? 'flex' : 'none';
+    if (show) {
+      emptyState.style.display = 'none';
+    }
   }
 
   function clearResults() {
@@ -166,7 +194,7 @@ document.addEventListener('DOMContentLoaded', function() {
   }
 
   function showError(message) {
-    errorDiv.textContent = message;
+    document.getElementById('error-message').textContent = message;
     errorDiv.style.display = 'block';
   }
 });
