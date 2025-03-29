@@ -1,5 +1,4 @@
-const tmdbAPIKey = '8015f104741271883e610d9c704183e4';
-const rapidAPIKey = '9a3cca925dmsha133c7c1b3afc32p16c631jsn210637e396df';
+
 
 async function searchContent() {
     const query = document.getElementById('searchQuery').value;
