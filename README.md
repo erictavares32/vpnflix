@@ -1,4 +1,4 @@
-www.vpnflix.xyz
+www.vpnflix.online
 
 About:
 
