@@ -9467,139 +9467,101 @@ body, div, p {
     </div>
   </div>
 
-  <!-- JavaScript for form submission and interactions -->
-  <script>
-    // FAQ toggle functionality
-    function toggleFaq(button) {
-      const content = button.nextElementSibling;
-      const arrow = button.querySelector('svg');
-      
-      if (content.classList.contains('hidden')) {
-        content.classList.remove('hidden');
-        arrow.classList.add('rotate-180');
-      } else {
-        content.classList.add('hidden');
-        arrow.classList.remove('rotate-180');
-      }
-    }
-    
-    // Modal functionality
-    let lastFocusedElement;
-    const body = document.body;
-    const successModal = document.getElementById('success-modal');
-    const modalContent = successModal.querySelector('[tabindex="-1"]');
-    
-    function openSuccessModal() {
-      // Store the element that was focused before opening modal
-      lastFocusedElement = document.activeElement;
-      
-      // Show modal with animation
-      successModal.classList.remove('hidden');
-      setTimeout(() => {
-        modalContent.classList.remove('scale-95', 'opacity-0');
-        modalContent.classList.add('scale-100', 'opacity-100');
-      }, 10);
-      
-      // Set focus to the modal
-      modalContent.focus();
-      
-      // Prevent body scrolling
-      body.style.overflow = 'hidden';
-      
-      // Add event listeners
-      successModal.querySelector('.modal-overlay').addEventListener('click', closeSuccessModal);
-      document.addEventListener('keydown', handleEscKey);
-      
-      // Set aria attributes
-      successModal.setAttribute('aria-hidden', 'false');
-      
-      // Setup focus trap
-      setupFocusTrap(successModal);
-    }
-    
-    function closeSuccessModal() {
-      // Hide modal with animation
-      modalContent.classList.remove('scale-100', 'opacity-100');
-      modalContent.classList.add('scale-95', 'opacity-0');
-      
-      setTimeout(() => {
-        successModal.classList.add('hidden');
-        
-        // Restore focus
-        if (lastFocusedElement) {
-          lastFocusedElement.focus();
-        }
-      }, 300);
-      
-      // Enable body scrolling
-      body.style.overflow = '';
-      
-      // Remove event listeners
-      document.removeEventListener('keydown', handleEscKey);
-      
-      // Set aria attributes
-      successModal.setAttribute('aria-hidden', 'true');
-    }
-    
-    function handleEscKey(event) {
-      if (event.key === 'Escape') {
-        closeSuccessModal();
-      }
-    }
-    
-    function setupFocusTrap(modal) {
-      const focusableElements = modal.querySelectorAll('button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])');
-      if (focusableElements.length === 0) return;
-      
-      const firstElement = focusableElements[0];
-      const lastElement = focusableElements[focusableElements.length - 1];
-      
-      modal.addEventListener('keydown', function(e) {
-        if (e.key === 'Tab') {
-          // Shift + Tab
-          if (e.shiftKey && document.activeElement === firstElement) {
-            e.preventDefault();
-            lastElement.focus();
-          }
-          // Tab
-          else if (!e.shiftKey && document.activeElement === lastElement) {
-            e.preventDefault();
-            firstElement.focus();
-          }
-        }
-      });
-    }
-    
-    // Form submission handling
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      
-      // Simulate form submission (in a real implementation, this would send the data to a server)
-      const submitButton = document.getElementById('submit-contact-form');
-      const originalText = submitButton.textContent;
-      
-      // Show loading state
-      submitButton.disabled = true;
-      submitButton.textContent = 'Sending...';
-      
-      // Simulate network request
-      setTimeout(() => {
-        submitButton.disabled = false;
-        submitButton.textContent = originalText;
-        
-        // Reset form
-        document.getElementById('contact-form').reset();
-        
-        // Show success modal
-        openSuccessModal();
-      }, 1500);
-    });
-  </script>
-</div>
+<!-- JavaScript for form submission and interactions -->
+<script>
+(function () {
+  // FAQ toggle functionality
+  function toggleFaq(button) {
+    const content = button.nextElementSibling;
+    const arrow = button.querySelector('svg');
 
-              
-</element></div>
-      </main>
+    if (content.classList.contains('hidden')) {
+      content.classList.remove('hidden');
+      arrow.classList.add('rotate-180');
+    } else {
+      content.classList.add('hidden');
+      arrow.classList.remove('rotate-180');
+    }
+  }
+
+  // Modal functionality
+  let lastFocusedElement;
+  const body = document.body;
+  const successModal = document.getElementById('success-modal');
+  const modalContent = successModal?.querySelector('[tabindex="-1"]');
+
+  function openSuccessModal() {
+    lastFocusedElement = document.activeElement;
+    successModal.classList.remove('hidden');
+    setTimeout(() => {
+      modalContent.classList.remove('scale-95', 'opacity-0');
+      modalContent.classList.add('scale-100', 'opacity-100');
+    }, 10);
+    modalContent.focus();
+    body.style.overflow = 'hidden';
+    successModal.querySelector('.modal-overlay').addEventListener('click', closeSuccessModal);
+    document.addEventListener('keydown', handleEscKey);
+    successModal.setAttribute('aria-hidden', 'false');
+    setupFocusTrap(successModal);
+  }
+
+  function closeSuccessModal() {
+    modalContent.classList.remove('scale-100', 'opacity-100');
+    modalContent.classList.add('scale-95', 'opacity-0');
+    setTimeout(() => {
+      successModal.classList.add('hidden');
+      if (lastFocusedElement) lastFocusedElement.focus();
+    }, 300);
+    body.style.overflow = '';
+    document.removeEventListener('keydown', handleEscKey);
+    successModal.setAttribute('aria-hidden', 'true');
+  }
+
+  function handleEscKey(event) {
+    if (event.key === 'Escape') {
+      closeSuccessModal();
+    }
+  }
+
+  function setupFocusTrap(modal) {
+    const focusableElements = modal.querySelectorAll(
+      'button, [href], input, select, textarea, [tabindex]:not([tabindex="-1"])'
+    );
+    if (focusableElements.length === 0) return;
+
+    const firstElement = focusableElements[0];
+    const lastElement = focusableElements[focusableElements.length - 1];
+
+    modal.addEventListener('keydown', function (e) {
+      if (e.key === 'Tab') {
+        if (e.shiftKey && document.activeElement === firstElement) {
+          e.preventDefault();
+          lastElement.focus();
+        } else if (!e.shiftKey && document.activeElement === lastElement) {
+          e.preventDefault();
+          firstElement.focus();
+        }
+      }
+    });
+  }
+
+  // Form submission handling
+  document.getElementById('contact-form').addEventListener('submit', function (e) {
+    e.preventDefault();
+    const submitButton = document.getElementById('submit-contact-form');
+    const originalText = submitButton.textContent;
+    submitButton.disabled = true;
+    submitButton.textContent = 'Sending...';
+
+    setTimeout(() => {
+      submitButton.disabled = false;
+      submitButton.textContent = originalText;
+      document.getElementById('contact-form').reset();
+      openSuccessModal();
+    }, 1500);
+  });
+})();
+</script>
 
       <!-- {bodyScripts} -->
    <script async src="https://www.googletagmanager.com/gtag/js?id=G-EJJMFE5YXW"></script>
