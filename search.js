@@ -152,18 +152,50 @@ document.addEventListener("DOMContentLoaded", () => {
     resultElement.className = "search-result"
 
     // Get the URL from the result
-    let url = result.url
+    const url = result.url
 
-    // Handle internal links (those starting with #)
-    if (url.startsWith("#")) {
-      // For internal links, we need to make sure they point to the current page
-      url = window.location.pathname + url
-    }
-
+    // Create the link element
     const titleElement = document.createElement("a")
     titleElement.href = url
     titleElement.className = "search-result-title"
     titleElement.textContent = result.title
+
+    // If this is a text search result (for internal content), add a click handler
+    if (result.searchText) {
+      titleElement.addEventListener("click", (e) => {
+        e.preventDefault()
+
+        // Navigate to the page first if needed
+        if (window.location.pathname !== url && url !== "./") {
+          window.location.href = url
+          return
+        }
+
+        // Search for the text on the page
+        const searchText = result.searchText.toLowerCase()
+        const textNodes = getTextNodesIn(document.body)
+
+        // Find the first occurrence of the search text
+        for (let i = 0; i < textNodes.length; i++) {
+          const node = textNodes[i]
+          const text = node.nodeValue.toLowerCase()
+
+          if (text.includes(searchText)) {
+            // Found the text, scroll to it
+            node.parentElement.scrollIntoView({ behavior: "smooth", block: "center" })
+
+            // Optionally highlight the element temporarily
+            const originalBackground = node.parentElement.style.backgroundColor
+            node.parentElement.style.backgroundColor = "#ffff99"
+            setTimeout(() => {
+              node.parentElement.style.backgroundColor = originalBackground
+            }, 2000)
+
+            break
+          }
+        }
+      })
+    }
 
     const snippetElement = document.createElement("div")
     snippetElement.className = "search-result-snippet"
@@ -178,6 +210,27 @@ document.addEventListener("DOMContentLoaded", () => {
     resultElement.appendChild(urlElement)
 
     return resultElement
+  }
+
+  // Helper function to get all text nodes in an element
+  function getTextNodesIn(node) {
+    var textNodes = []
+
+    function getTextNodes(node) {
+      if (node.nodeType === 3) {
+        // Text node
+        textNodes.push(node)
+      } else if (node.nodeType === 1) {
+        // Element node
+        var children = node.childNodes
+        for (var i = 0; i < children.length; i++) {
+          getTextNodes(children[i])
+        }
+      }
+    }
+
+    getTextNodes(node)
+    return textNodes
   }
 
   // Initialize search with placeholder text
