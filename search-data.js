@@ -1,4 +1,4 @@
-// Comprehensive search data using existing internal links and structure
+// Comprehensive search data with EXACT URL matching
 window.searchData = [
   // General VPN queries - main page
   {
@@ -10,33 +10,33 @@ window.searchData = [
     exactMatch: ["vpn comparison", "best vpn", "best vpn 2025"],
   },
 
-  // VPN Provider Specific Queries
+  // VPN Provider Specific Queries - with EXACT URLs
   {
     query: ["expressvpn", "express vpn", "express", "fastest vpn"],
     title: "ExpressVPN Review & Features",
     snippet: "Detailed analysis of ExpressVPN including speed tests, server network, and security features.",
-    url: "expressvpn-vs-nordvpn-2025.html",
+    url: "ExpressVPN-vs-NordVPN-2025.html",
     exactMatch: ["expressvpn", "express vpn"],
   },
   {
     query: ["nordvpn", "nord vpn", "nord", "secure vpn"],
     title: "NordVPN Security Features",
     snippet: "Comprehensive review of NordVPN's advanced security features including Double VPN and CyberSec.",
-    url: "nordvpn-vs-expressvpn-2025.html",
+    url: "NordVPN-vs-ExpressVPN-2025.html",
     exactMatch: ["nordvpn", "nord vpn"],
   },
   {
     query: ["protonvpn", "proton vpn", "proton", "swiss vpn", "free vpn tier"],
     title: "ProtonVPN Privacy Analysis",
     snippet: "Evaluation of ProtonVPN's Swiss jurisdiction, no-logs policy, and free tier limitations.",
-    url: "nordvpn-vs-protonvpn-2025.html",
+    url: "NordVPN-vs-ProtonVPN-2025.html",
     exactMatch: ["protonvpn", "proton vpn"],
   },
   {
     query: ["surfshark", "surf shark", "unlimited devices", "affordable vpn", "cheap vpn"],
     title: "Surfshark VPN Features",
     snippet: "Analysis of Surfshark's unlimited connections policy, CleanWeb feature, and budget-friendly pricing.",
-    url: "surfshark-vs-expressvpn-2025.html",
+    url: "Surfshark-vs-ExpressVPN-2025.html",
     exactMatch: ["surfshark", "surf shark"],
   },
   {
@@ -52,31 +52,31 @@ window.searchData = [
     title: "Windscribe Free & Premium Plans",
     snippet:
       "Comparison of Windscribe's free and premium tiers, including data limits, server access, and R.O.B.E.R.T feature.",
-    url: "nordvpn-vs-windscribe-2025.html",
+    url: "NordVPN-vs-Windscribe-2025.html",
     exactMatch: ["windscribe", "wind scribe"],
   },
 
-  // VPN Comparison Queries
+  // VPN Comparison Queries - with EXACT URLs
   {
     query: ["expressvpn vs nordvpn", "nordvpn vs expressvpn", "express vs nord", "best premium vpn"],
     title: "ExpressVPN vs NordVPN Comparison",
     snippet:
       "Head-to-head comparison of ExpressVPN and NordVPN across speed, security, streaming capabilities, and price.",
-    url: "expressvpn-vs-nordvpn-2025.html",
+    url: "ExpressVPN-vs-NordVPN-2025.html",
     exactMatch: ["expressvpn vs nordvpn", "nordvpn vs expressvpn"],
   },
   {
     query: ["nordvpn vs protonvpn", "protonvpn vs nordvpn", "nord vs proton"],
     title: "NordVPN vs ProtonVPN Comparison",
     snippet: "Detailed comparison between NordVPN and ProtonVPN, analyzing security features, speed, and value.",
-    url: "nordvpn-vs-protonvpn-2025.html",
+    url: "NordVPN-vs-ProtonVPN-2025.html",
     exactMatch: ["nordvpn vs protonvpn", "protonvpn vs nordvpn"],
   },
   {
     query: ["surfshark vs expressvpn", "expressvpn vs surfshark", "affordable vs premium"],
     title: "Surfshark vs ExpressVPN Comparison",
     snippet: "Comparison of Surfshark and ExpressVPN, focusing on price-to-performance ratio and feature sets.",
-    url: "surfshark-vs-expressvpn-2025.html",
+    url: "Surfshark-vs-ExpressVPN-2025.html",
     exactMatch: ["surfshark vs expressvpn", "expressvpn vs surfshark"],
   },
   {
@@ -90,18 +90,18 @@ window.searchData = [
     query: ["nordvpn vs windscribe", "windscribe vs nordvpn", "free vs premium"],
     title: "NordVPN vs Windscribe Comparison",
     snippet: "Comparison between NordVPN's premium features and Windscribe's flexible pricing model.",
-    url: "nordvpn-vs-windscribe-2025.html",
+    url: "NordVPN-vs-Windscribe-2025.html",
     exactMatch: ["nordvpn vs windscribe", "windscribe vs nordvpn"],
   },
   {
     query: ["nordvpn vs surfshark", "surfshark vs nordvpn", "value comparison"],
     title: "NordVPN vs Surfshark Value Comparison",
     snippet: "Analysis of which VPN provides better value: NordVPN or Surfshark, comparing features and pricing.",
-    url: "nordvpn-vs-Surfshark-2025.html",
+    url: "NordVPN-vs-Surfshark-2025.html",
     exactMatch: ["nordvpn vs surfshark", "surfshark vs nordvpn"],
   },
 
-  // Other specific pages
+  // Other specific pages - with EXACT URLs
   {
     query: ["streaming", "netflix vpn", "disney plus vpn", "hulu vpn", "bbc iplayer vpn", "streaming guide"],
     title: "VPN Streaming Guide 2025",
@@ -125,7 +125,7 @@ window.searchData = [
     exactMatch: ["privacy policy", "data collection", "logs policy"],
   },
 
-  // Technical VPN Topics
+  // Technical VPN Topics - using exact section IDs
   {
     query: ["vpn protocols", "wireguard", "openvpn", "ikev2", "l2tp", "pptp", "sstp", "protocols comparison"],
     title: "VPN Protocols Explained",
@@ -157,7 +157,7 @@ window.searchData = [
     exactMatch: ["dns leak", "ip leak", "webrtc leak", "leak test"],
   },
 
-  // VPN Use Cases
+  // VPN Use Cases - with exact section IDs
   {
     query: ["torrenting", "p2p", "bittorrent", "file sharing", "torrent vpn", "download safely"],
     title: "VPNs for Safe Torrenting",
@@ -188,24 +188,24 @@ window.searchData = [
     exactMatch: ["business vpn", "team vpn", "corporate vpn", "remote work"],
   },
 
-  // Privacy Topics
+  // Privacy Topics - with exact section IDs
   {
     query: ["no logs", "zero logs", "logging policy", "data retention", "audit verified"],
     title: "VPN No-Logs Policies Explained",
     snippet:
       "Analysis of VPN logging policies, what 'no logs' really means, and which providers have been independently audited.",
-    url: "privacy-policy.html",
+    url: "privacy-policy.html#no-logs",
     exactMatch: ["no logs", "zero logs", "logging policy", "data retention"],
   },
   {
     query: ["jurisdiction", "five eyes", "fourteen eyes", "nine eyes", "surveillance alliance"],
     title: "VPN Jurisdictions & Privacy",
     snippet: "How a VPN's country of registration affects your privacy and which jurisdictions to avoid.",
-    url: "privacy-policy.html",
+    url: "privacy-policy.html#jurisdiction",
     exactMatch: ["jurisdiction", "five eyes", "fourteen eyes", "nine eyes"],
   },
 
-  // Advanced VPN Features
+  // Advanced VPN Features - with exact section IDs
   {
     query: ["double vpn", "multi hop", "cascading vpn", "chained connection", "double encryption"],
     title: "Double VPN Technology Explained",
@@ -229,7 +229,7 @@ window.searchData = [
     exactMatch: ["dedicated ip", "static ip", "personal ip"],
   },
 
-  // Regional VPN Topics
+  // Regional VPN Topics - with exact section IDs
   {
     query: ["vpn for china", "great firewall", "censorship bypass", "obfuscated servers", "stealth vpn"],
     title: "VPNs That Work in China",
@@ -245,7 +245,7 @@ window.searchData = [
     exactMatch: ["vpn for travel", "travel security", "public wifi protection"],
   },
 
-  // Mobile and Device-Specific VPN
+  // Mobile and Device-Specific VPN - with exact section IDs
   {
     query: ["mobile vpn", "android vpn", "ios vpn", "iphone vpn", "smartphone vpn", "tablet vpn"],
     title: "VPNs for Mobile Devices",
@@ -261,7 +261,7 @@ window.searchData = [
     exactMatch: ["router vpn", "vpn router", "whole home vpn"],
   },
 
-  // VPN Performance
+  // VPN Performance - with exact section IDs
   {
     query: ["vpn speed", "fastest vpn", "speed test", "performance comparison", "bandwidth", "latency"],
     title: "VPN Speed Comparison",
@@ -277,7 +277,7 @@ window.searchData = [
     exactMatch: ["server network", "server locations", "global coverage"],
   },
 
-  // VPN Pricing and Value
+  // VPN Pricing and Value - with exact section IDs
   {
     query: ["vpn price", "vpn cost", "subscription price", "monthly cost", "annual plan", "pricing comparison"],
     title: "VPN Price Comparison",
