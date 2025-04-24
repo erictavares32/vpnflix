@@ -3,7 +3,7 @@
   position: relative;
   max-width: 600px;
   margin: 20px auto;
-  z-index: 100;
+  z-index: 1000; /* Ensure it's above other elements */
 }
 
 .search-box {
@@ -13,6 +13,7 @@
   overflow: hidden;
   box-shadow: 0 1px 6px rgba(32, 33, 36, 0.28);
   transition: box-shadow 0.3s;
+  background-color: white;
 }
 
 .search-box:hover,
@@ -27,6 +28,8 @@
   font-size: 16px;
   outline: none;
   width: 100%;
+  background-color: white;
+  color: #333;
 }
 
 #search-button {
@@ -61,7 +64,8 @@
   margin-top: 8px;
   max-height: 400px;
   overflow-y: auto;
-  z-index: 101;
+  z-index: 1001;
+  color: #333;
 }
 
 .search-result {
@@ -111,7 +115,7 @@
 }
 
 .hidden {
-  display: none;
+  display: none !important;
 }
 
 /* Responsive adjustments */
