@@ -1,5 +1,48 @@
 // Search data with EXACT URLs from your sitemap
 window.searchData = [
+  // Entertainment-related queries - direct to app.vpnflix.online
+  {
+    query: [
+      "movies",
+      "shows",
+      "tv shows",
+      "films",
+      "series",
+      "watch",
+      "streaming",
+      "netflix",
+      "disney plus",
+      "hulu",
+      "prime video",
+      "max",
+      "peacock",
+      "paramount plus",
+      "apple tv",
+      "actor",
+      "actress",
+      "director",
+      "cast",
+      "where to watch",
+      "how to watch",
+      "geo-blocked",
+      "unblock",
+      "region",
+      "country",
+      "international",
+      "worldwide",
+      "movie finder",
+      "show finder",
+      "streaming finder",
+      "vpn streaming",
+    ],
+    title: "VPNFlix Streaming Finder",
+    snippet:
+      "Find where to watch movies and TV shows across Netflix, Disney+, Hulu, and 100+ streaming services worldwide with a VPN.",
+    url: "https://app.vpnflix.online",
+    exactMatch: ["movies", "shows", "streaming", "netflix", "disney plus", "hulu", "where to watch"],
+    type: "external",
+  },
+
   // External pages with exact URLs from sitemap
   {
     query: ["nordvpn vs expressvpn", "expressvpn vs nordvpn", "express vs nord", "best premium vpn"],
@@ -67,7 +110,7 @@ window.searchData = [
     type: "external",
   },
   {
-    query: ["streaming", "netflix vpn", "disney plus vpn", "hulu vpn", "bbc iplayer vpn", "streaming guide"],
+    query: ["streaming guide", "netflix vpn", "disney plus vpn", "hulu vpn", "bbc iplayer vpn"],
     title: "VPN Streaming Guide 2025",
     snippet: "Comprehensive guide to using VPNs with streaming services including Netflix, Disney+, and BBC iPlayer.",
     url: "https://www.vpnflix.online/Streaming-Guide-2025",
@@ -144,6 +187,75 @@ window.searchData = [
     type: "internal",
   },
 ]
+
+// Add specific movie and TV show titles that should redirect to app.vpnflix.online
+// This list can be expanded with popular titles
+const popularTitles = [
+  // Popular Movies
+  "avatar",
+  "avengers",
+  "star wars",
+  "jurassic park",
+  "harry potter",
+  "lord of the rings",
+  "fast and furious",
+  "james bond",
+  "mission impossible",
+  "batman",
+  "spider-man",
+  "joker",
+  "inception",
+  "titanic",
+  "the godfather",
+  "pulp fiction",
+  "forrest gump",
+  "the matrix",
+
+  // Popular TV Shows
+  "game of thrones",
+  "stranger things",
+  "breaking bad",
+  "the office",
+  "friends",
+  "the mandalorian",
+  "the witcher",
+  "the crown",
+  "bridgerton",
+  "squid game",
+  "euphoria",
+  "succession",
+  "the last of us",
+  "wednesday",
+  "house of the dragon",
+
+  // Popular Actors/Actresses
+  "tom cruise",
+  "jennifer lawrence",
+  "dwayne johnson",
+  "scarlett johansson",
+  "leonardo dicaprio",
+  "meryl streep",
+  "brad pitt",
+  "angelina jolie",
+  "denzel washington",
+  "emma stone",
+  "robert downey jr",
+  "chris hemsworth",
+  "tom hanks",
+  "morgan freeman",
+]
+
+// Add each popular title as a separate entry
+popularTitles.forEach((title) => {
+  window.searchData.push({
+    query: [title],
+    title: `Find where to watch "${title.charAt(0).toUpperCase() + title.slice(1)}"`,
+    snippet: "Discover which streaming services offer this title in your region with VPN location options.",
+    url: "https://app.vpnflix.online",
+    exactMatch: [title],
+    type: "external",
+  })
+})
 
 // Add a special entry for any search term not explicitly matched
 window.searchData.push({
