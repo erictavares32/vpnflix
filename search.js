@@ -1,24 +1,23 @@
 document.addEventListener("DOMContentLoaded", () => {
+  // Get DOM elements
   const searchInput = document.getElementById("search-input")
   const searchButton = document.getElementById("search-button")
   const searchResults = document.getElementById("search-results")
   const searchContainer = document.getElementById("search-container")
 
-  // Sample search data (replace with your actual data source)
-  const searchData = [
-    {
-      query: ["example", "page"],
-      title: "Example Page",
-      url: "example.html",
-      snippet: "This is an example page with some content.",
-    },
-    {
-      query: ["another", "test"],
-      title: "Another Test Page",
-      url: "another.html",
-      snippet: "This is another test page for searching.",
-    },
-  ]
+  // Check if elements exist (prevent errors if not found)
+  if (!searchInput || !searchButton || !searchResults || !searchContainer) {
+    console.error("Search elements not found in the DOM")
+    return
+  }
+
+  // Make sure searchData is defined (from search-data.js)
+  if (typeof searchData === "undefined") {
+    console.error("searchData is not defined. Make sure search-data.js is loaded before search.js")
+    // Create a fallback searchData if it's not defined
+    window.searchData = []
+    return
+  }
 
   // Toggle search results visibility when clicking outside
   document.addEventListener("click", (event) => {
@@ -120,7 +119,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const urlElement = document.createElement("div")
     urlElement.className = "search-result-url"
-    urlElement.textContent = window.location.origin + "/" + result.url
+    urlElement.textContent = result.url
 
     resultElement.appendChild(titleElement)
     resultElement.appendChild(snippetElement)
@@ -128,4 +127,15 @@ document.addEventListener("DOMContentLoaded", () => {
 
     return resultElement
   }
+
+  // Initialize search with placeholder text
+  searchInput.placeholder = "Search for VPN information..."
+
+  // Add a debug function to test if search is working
+  window.testSearch = (query) => {
+    searchInput.value = query
+    performSearch()
+  }
+
+  console.log("Search functionality initialized successfully")
 })
