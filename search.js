@@ -151,8 +151,11 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultElement = document.createElement("div")
     resultElement.className = "search-result"
 
+    // Use the exact URL as provided in the data - no modifications
+    const url = result.url
+
     const titleElement = document.createElement("a")
-    titleElement.href = result.url
+    titleElement.href = url
     titleElement.className = "search-result-title"
     titleElement.textContent = result.title
 
@@ -162,7 +165,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const urlElement = document.createElement("div")
     urlElement.className = "search-result-url"
-    urlElement.textContent = result.url
+    urlElement.textContent = url
 
     resultElement.appendChild(titleElement)
     resultElement.appendChild(snippetElement)
