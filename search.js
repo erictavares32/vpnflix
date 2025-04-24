@@ -165,35 +165,11 @@ document.addEventListener("DOMContentLoaded", () => {
       titleElement.addEventListener("click", (e) => {
         e.preventDefault()
 
-        // Navigate to the page first if needed
-        if (window.location.pathname !== url && url !== "./") {
-          window.location.href = url
-          return
-        }
+        // Navigate to the page
+        window.location.href = url
 
-        // Search for the text on the page
-        const searchText = result.searchText.toLowerCase()
-        const textNodes = getTextNodesIn(document.body)
-
-        // Find the first occurrence of the search text
-        for (let i = 0; i < textNodes.length; i++) {
-          const node = textNodes[i]
-          const text = node.nodeValue.toLowerCase()
-
-          if (text.includes(searchText)) {
-            // Found the text, scroll to it
-            node.parentElement.scrollIntoView({ behavior: "smooth", block: "center" })
-
-            // Optionally highlight the element temporarily
-            const originalBackground = node.parentElement.style.backgroundColor
-            node.parentElement.style.backgroundColor = "#ffff99"
-            setTimeout(() => {
-              node.parentElement.style.backgroundColor = originalBackground
-            }, 2000)
-
-            break
-          }
-        }
+        // Store the search text in sessionStorage to be used after page load
+        sessionStorage.setItem("vpnflixSearchText", result.searchText)
       })
     }
 
@@ -210,6 +186,42 @@ document.addEventListener("DOMContentLoaded", () => {
     resultElement.appendChild(urlElement)
 
     return resultElement
+  }
+
+  // Check if we need to search for text on page load (for internal content links)
+  function checkForStoredSearch() {
+    const searchText = sessionStorage.getItem("vpnflixSearchText")
+    if (searchText) {
+      // Clear the stored search text
+      sessionStorage.removeItem("vpnflixSearchText")
+
+      // Wait for page to fully load
+      setTimeout(() => {
+        // Search for the text on the page
+        const textNodes = getTextNodesIn(document.body)
+        const searchTextLower = searchText.toLowerCase()
+
+        // Find the first occurrence of the search text
+        for (let i = 0; i < textNodes.length; i++) {
+          const node = textNodes[i]
+          const text = node.nodeValue.toLowerCase()
+
+          if (text.includes(searchTextLower)) {
+            // Found the text, scroll to it
+            node.parentElement.scrollIntoView({ behavior: "smooth", block: "center" })
+
+            // Optionally highlight the element temporarily
+            const originalBackground = node.parentElement.style.backgroundColor
+            node.parentElement.style.backgroundColor = "#ffff99"
+            setTimeout(() => {
+              node.parentElement.style.backgroundColor = originalBackground
+            }, 2000)
+
+            break
+          }
+        }
+      }, 1000) // Wait 1 second for page to load
+    }
   }
 
   // Helper function to get all text nodes in an element
@@ -235,6 +247,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Initialize search with placeholder text
   searchInput.placeholder = "Search for VPN information..."
+
+  // Check for stored search on page load
+  checkForStoredSearch()
 
   // Add a debug function to test if search is working
   window.testSearch = (query) => {
