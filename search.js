@@ -12,7 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   // Make sure searchData is defined (from search-data.js)
-  if (typeof searchData === "undefined") {
+  if (typeof window.searchData === "undefined") {
     console.error("searchData is not defined. Make sure search-data.js is loaded before search.js")
     // Create a fallback searchData if it's not defined
     window.searchData = []
@@ -64,7 +64,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear previous results
     searchResults.innerHTML = ""
 
-    // Find matching results
+    // Find matching results with improved algorithm
     const matches = findMatches(query)
 
     if (matches.length === 0) {
@@ -83,25 +83,68 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Show results container
     searchResults.classList.remove("hidden")
+
+    // Log search activity for debugging
+    console.log(`Search query: "${query}" - Found ${matches.length} results`)
   }
 
   function findMatches(query) {
-    const results = []
-    const words = query.split(" ")
+    // Split query into individual words for better matching
+    const queryWords = query.split(" ").filter((word) => word.length > 1)
 
-    // Search through our data
-    searchData.forEach((item) => {
-      // Check if any query terms match this item's keywords
-      const isMatch = item.query.some((keyword) => {
-        return words.some((word) => keyword.includes(word)) || keyword.includes(query)
-      })
+    // Array to store matches with their relevance score
+    const matchesWithScores = []
 
-      if (isMatch) {
-        results.push(item)
+    // Search through our data with improved matching
+    window.searchData.forEach((item) => {
+      let score = 0
+      let exactMatchFound = false
+
+      // Check for exact matches first (highest priority)
+      if (item.exactMatch && item.exactMatch.some((exact) => exact === query)) {
+        score += 100
+        exactMatchFound = true
+      }
+
+      // If not an exact match, check if any query terms match keywords
+      if (!exactMatchFound) {
+        // Check each query word against each keyword
+        queryWords.forEach((queryWord) => {
+          item.query.forEach((keyword) => {
+            // Exact keyword match
+            if (keyword === queryWord) {
+              score += 10
+            }
+            // Keyword contains query word
+            else if (keyword.includes(queryWord)) {
+              score += 5
+            }
+            // Query word contains keyword
+            else if (queryWord.includes(keyword)) {
+              score += 3
+            }
+          })
+        })
+
+        // Check if title contains query words for additional relevance
+        queryWords.forEach((queryWord) => {
+          if (item.title.toLowerCase().includes(queryWord)) {
+            score += 2
+          }
+        })
+      }
+
+      // Only include results with a score above 0
+      if (score > 0) {
+        matchesWithScores.push({
+          item: item,
+          score: score,
+        })
       }
     })
 
-    return results
+    // Sort by score (highest first) and extract just the items
+    return matchesWithScores.sort((a, b) => b.score - a.score).map((match) => match.item)
   }
 
   function createResultElement(result) {
@@ -137,5 +180,5 @@ document.addEventListener("DOMContentLoaded", () => {
     performSearch()
   }
 
-  console.log("Search functionality initialized successfully")
+  console.log("Enhanced search functionality initialized successfully")
 })
