@@ -151,8 +151,14 @@ document.addEventListener("DOMContentLoaded", () => {
     const resultElement = document.createElement("div")
     resultElement.className = "search-result"
 
-    // Use the exact URL as provided in the data - no modifications
-    const url = result.url
+    // Get the URL from the result
+    let url = result.url
+
+    // Handle internal links (those starting with #)
+    if (url.startsWith("#")) {
+      // For internal links, we need to make sure they point to the current page
+      url = window.location.pathname + url
+    }
 
     const titleElement = document.createElement("a")
     titleElement.href = url
