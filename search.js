@@ -4,11 +4,23 @@ document.addEventListener("DOMContentLoaded", () => {
   const searchButton = document.getElementById("search-button")
   const searchResults = document.getElementById("search-results")
   const searchContainer = document.getElementById("search-container")
+  const headerSearchButton = document.getElementById("header-search-button")
 
   // Check if elements exist (prevent errors if not found)
   if (!searchInput || !searchButton || !searchResults || !searchContainer) {
     console.error("Search elements not found in the DOM")
     return
+  }
+
+  if (headerSearchButton) {
+    headerSearchButton.addEventListener("click", () => {
+      // Toggle the search container visibility
+      searchContainer.classList.toggle("hidden")
+      // Focus the search input when shown
+      if (!searchContainer.classList.contains("hidden")) {
+        searchInput.focus()
+      }
+    })
   }
 
   // Make sure searchData is defined (from search-data.js)
@@ -21,7 +33,8 @@ document.addEventListener("DOMContentLoaded", () => {
 
   // Toggle search results visibility when clicking outside
   document.addEventListener("click", (event) => {
-    if (!searchContainer.contains(event.target)) {
+    const searchWrapper = searchInput.closest(".search-wrapper")
+    if (searchWrapper && !searchWrapper.contains(event.target)) {
       searchResults.classList.add("hidden")
     }
   })
@@ -50,7 +63,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (searchInput.value.trim() === "") {
-      searchResults.classList.remove("hidden")
+      searchResults.classList.add("hidden")
     }
   })
 
@@ -64,8 +77,11 @@ document.addEventListener("DOMContentLoaded", () => {
     // Clear previous results
     searchResults.innerHTML = ""
 
+    // Check if this is an entertainment-related query
+    const isEntertainmentQuery = checkIfEntertainmentQuery(query)
+
     // Find matching results with improved algorithm
-    const matches = findMatches(query)
+    const matches = findMatches(query, isEntertainmentQuery)
 
     if (matches.length === 0) {
       // Show no results message
@@ -85,10 +101,71 @@ document.addEventListener("DOMContentLoaded", () => {
     searchResults.classList.remove("hidden")
 
     // Log search activity for debugging
-    console.log(`Search query: "${query}" - Found ${matches.length} results`)
+    console.log(`Search query: "${query}" - Found ${matches.length} results - Entertainment: ${isEntertainmentQuery}`)
   }
 
-  function findMatches(query) {
+  // Check if a query is entertainment-related
+  function checkIfEntertainmentQuery(query) {
+    // List of entertainment-related keywords
+    const entertainmentKeywords = [
+      "movie",
+      "film",
+      "show",
+      "series",
+      "episode",
+      "season",
+      "watch",
+      "stream",
+      "actor",
+      "actress",
+      "director",
+      "cast",
+      "character",
+      "netflix",
+      "disney",
+      "hulu",
+      "amazon",
+      "prime",
+      "hbo",
+      "max",
+      "peacock",
+      "paramount",
+      "apple tv",
+    ]
+
+    // Check if query contains any entertainment keywords
+    for (const keyword of entertainmentKeywords) {
+      if (query.includes(keyword)) {
+        return true
+      }
+    }
+
+    // Check if query matches any popular titles
+    const popularTitleEntries = window.searchData.filter(
+      (item) =>
+        item.url === "https://app.vpnflix.online" &&
+        item.exactMatch &&
+        item.exactMatch.some((match) => match === query),
+    )
+
+    return popularTitleEntries.length > 0
+  }
+
+  function findMatches(query, isEntertainmentQuery) {
+    // If it's an entertainment query, prioritize the app.vpnflix.online results
+    if (isEntertainmentQuery) {
+      const entertainmentResults = window.searchData.filter(
+        (item) =>
+          item.url === "https://app.vpnflix.online" &&
+          (item.query.some((keyword) => query.includes(keyword)) ||
+            (item.exactMatch && item.exactMatch.some((match) => query.includes(match)))),
+      )
+
+      if (entertainmentResults.length > 0) {
+        return entertainmentResults
+      }
+    }
+
     // Split query into individual words for better matching
     const queryWords = query.split(" ").filter((word) => word.length > 1)
 
@@ -137,6 +214,11 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
 
+      // Boost score for entertainment queries if the result is from app.vpnflix.online
+      if (isEntertainmentQuery && item.url === "https://app.vpnflix.online") {
+        score *= 2
+      }
+
       // Only include results with a score above 0
       if (score > 0) {
         matchesWithScores.push({
@@ -148,15 +230,36 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // If no matches found or only low-scoring matches, add the wildcard internal search
     if (matchesWithScores.length === 0 || matchesWithScores.every((match) => match.score < 10)) {
-      const wildcardItem = window.searchData.find((item) => item.query[0] === "*")
-      if (wildcardItem) {
-        // Clone the wildcard item and customize it for this search
-        const customizedItem = JSON.parse(JSON.stringify(wildcardItem))
-        customizedItem.title += `"${query}"`
-        matchesWithScores.push({
-          item: customizedItem,
-          score: 1, // Low score so it appears after any better matches
-        })
+      // For entertainment queries, redirect to app.vpnflix.online even if no exact match
+      if (isEntertainmentQuery) {
+        const entertainmentItem = window.searchData.find(
+          (item) => item.url === "https://app.vpnflix.online" && item.query.includes("movies"),
+        )
+
+        if (entertainmentItem) {
+          // Clone the item and customize it for this search
+          const customizedItem = JSON.parse(JSON.stringify(entertainmentItem))
+          customizedItem.title = `Find where to watch "${query}"`
+          customizedItem.snippet =
+            "Discover which streaming services offer this title in your region with VPN location options."
+
+          matchesWithScores.push({
+            item: customizedItem,
+            score: 50, // High enough to be prioritized
+          })
+        }
+      } else {
+        // For non-entertainment queries, use the wildcard internal search
+        const wildcardItem = window.searchData.find((item) => item.query[0] === "*")
+        if (wildcardItem) {
+          // Clone the wildcard item and customize it for this search
+          const customizedItem = JSON.parse(JSON.stringify(wildcardItem))
+          customizedItem.title += `"${query}"`
+          matchesWithScores.push({
+            item: customizedItem,
+            score: 1, // Low score so it appears after any better matches
+          })
+        }
       }
     }
 
@@ -382,8 +485,6 @@ document.addEventListener("DOMContentLoaded", () => {
           // Create a span for the highlighted word
           const highlightSpan = document.createElement("span")
           highlightSpan.className = "vpnflix-highlight"
-          highlightSpan.style.backgroundColor = "#ffff00"
-          highlightSpan.style.color = "#000"
           highlightSpan.appendChild(document.createTextNode(text.substring(index, index + word.length)))
 
           // Add the highlight to our collection
