@@ -7,22 +7,16 @@ document.addEventListener("DOMContentLoaded", () => {
   // Sample search data (replace with your actual data source)
   const searchData = [
     {
-      query: ["example", "first"],
-      title: "Example Page 1",
-      url: "/example1",
-      snippet: "This is an example page about the first topic.",
+      query: ["example", "page"],
+      title: "Example Page",
+      url: "example.html",
+      snippet: "This is an example page with some content.",
     },
     {
-      query: ["second", "demo"],
-      title: "Demo Page 2",
-      url: "/demo2",
-      snippet: "A demonstration page covering the second topic.",
-    },
-    {
-      query: ["third", "tutorial"],
-      title: "Tutorial Page 3",
-      url: "/tutorial3",
-      snippet: "A tutorial page explaining the third topic.",
+      query: ["another", "test"],
+      title: "Another Test Page",
+      url: "another.html",
+      snippet: "This is another test page for searching.",
     },
   ]
 
@@ -126,7 +120,7 @@ document.addEventListener("DOMContentLoaded", () => {
 
     const urlElement = document.createElement("div")
     urlElement.className = "search-result-url"
-    urlElement.textContent = result.url
+    urlElement.textContent = window.location.origin + "/" + result.url
 
     resultElement.appendChild(titleElement)
     resultElement.appendChild(snippetElement)
