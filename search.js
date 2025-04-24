@@ -50,7 +50,7 @@ document.addEventListener("DOMContentLoaded", () => {
     }
 
     if (searchInput.value.trim() === "") {
-      searchResults.classList.add("hidden")
+      searchResults.classList.remove("hidden")
     }
   })
 
@@ -76,7 +76,7 @@ document.addEventListener("DOMContentLoaded", () => {
     } else {
       // Display results
       matches.forEach((result) => {
-        const resultElement = createResultElement(result)
+        const resultElement = createResultElement(result, query)
         searchResults.appendChild(resultElement)
       })
     }
@@ -97,6 +97,9 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // Search through our data with improved matching
     window.searchData.forEach((item) => {
+      // Skip the wildcard entry for now
+      if (item.query[0] === "*") return
+
       let score = 0
       let exactMatchFound = false
 
@@ -143,11 +146,25 @@ document.addEventListener("DOMContentLoaded", () => {
       }
     })
 
+    // If no matches found or only low-scoring matches, add the wildcard internal search
+    if (matchesWithScores.length === 0 || matchesWithScores.every((match) => match.score < 10)) {
+      const wildcardItem = window.searchData.find((item) => item.query[0] === "*")
+      if (wildcardItem) {
+        // Clone the wildcard item and customize it for this search
+        const customizedItem = JSON.parse(JSON.stringify(wildcardItem))
+        customizedItem.title += `"${query}"`
+        matchesWithScores.push({
+          item: customizedItem,
+          score: 1, // Low score so it appears after any better matches
+        })
+      }
+    }
+
     // Sort by score (highest first) and extract just the items
     return matchesWithScores.sort((a, b) => b.score - a.score).map((match) => match.item)
   }
 
-  function createResultElement(result) {
+  function createResultElement(result, query) {
     const resultElement = document.createElement("div")
     resultElement.className = "search-result"
 
@@ -160,16 +177,16 @@ document.addEventListener("DOMContentLoaded", () => {
     titleElement.className = "search-result-title"
     titleElement.textContent = result.title
 
-    // If this is a text search result (for internal content), add a click handler
-    if (result.searchText) {
+    // If this is an internal search result, add a click handler
+    if (result.type === "internal") {
       titleElement.addEventListener("click", (e) => {
         e.preventDefault()
 
+        // Store the search query in sessionStorage
+        sessionStorage.setItem("vpnflixSearchQuery", query)
+
         // Navigate to the page
         window.location.href = url
-
-        // Store the search text in sessionStorage to be used after page load
-        sessionStorage.setItem("vpnflixSearchText", result.searchText)
       })
     }
 
@@ -188,40 +205,247 @@ document.addEventListener("DOMContentLoaded", () => {
     return resultElement
   }
 
-  // Check if we need to search for text on page load (for internal content links)
+  // Check if we need to search for text on page load (for internal searches)
   function checkForStoredSearch() {
-    const searchText = sessionStorage.getItem("vpnflixSearchText")
-    if (searchText) {
-      // Clear the stored search text
-      sessionStorage.removeItem("vpnflixSearchText")
+    const searchQuery = sessionStorage.getItem("vpnflixSearchQuery")
+    if (searchQuery) {
+      // Clear the stored search query
+      sessionStorage.removeItem("vpnflixSearchQuery")
 
       // Wait for page to fully load
       setTimeout(() => {
-        // Search for the text on the page
-        const textNodes = getTextNodesIn(document.body)
-        const searchTextLower = searchText.toLowerCase()
-
-        // Find the first occurrence of the search text
-        for (let i = 0; i < textNodes.length; i++) {
-          const node = textNodes[i]
-          const text = node.nodeValue.toLowerCase()
-
-          if (text.includes(searchTextLower)) {
-            // Found the text, scroll to it
-            node.parentElement.scrollIntoView({ behavior: "smooth", block: "center" })
-
-            // Optionally highlight the element temporarily
-            const originalBackground = node.parentElement.style.backgroundColor
-            node.parentElement.style.backgroundColor = "#ffff99"
-            setTimeout(() => {
-              node.parentElement.style.backgroundColor = originalBackground
-            }, 2000)
-
-            break
-          }
-        }
+        // Create a search overlay
+        createSearchOverlay(searchQuery)
       }, 1000) // Wait 1 second for page to load
     }
+  }
+
+  // Create a search overlay similar to browser's find functionality
+  function createSearchOverlay(query) {
+    // Create overlay container
+    const overlay = document.createElement("div")
+    overlay.className = "vpnflix-search-overlay"
+    overlay.style.position = "fixed"
+    overlay.style.top = "10px"
+    overlay.style.right = "10px"
+    overlay.style.zIndex = "9999"
+    overlay.style.background = "white"
+    overlay.style.padding = "10px"
+    overlay.style.borderRadius = "5px"
+    overlay.style.boxShadow = "0 2px 10px rgba(0,0,0,0.2)"
+    overlay.style.display = "flex"
+    overlay.style.flexDirection = "column"
+    overlay.style.gap = "10px"
+
+    // Create header
+    const header = document.createElement("div")
+    header.style.display = "flex"
+    header.style.justifyContent = "space-between"
+    header.style.alignItems = "center"
+
+    // Create title
+    const title = document.createElement("div")
+    title.textContent = `Searching for: "${query}"`
+    title.style.fontWeight = "bold"
+
+    // Create close button
+    const closeButton = document.createElement("button")
+    closeButton.textContent = "×"
+    closeButton.style.background = "none"
+    closeButton.style.border = "none"
+    closeButton.style.fontSize = "20px"
+    closeButton.style.cursor = "pointer"
+    closeButton.style.padding = "0 5px"
+    closeButton.onclick = () => {
+      // Remove all highlights
+      removeHighlights()
+      // Remove the overlay
+      document.body.removeChild(overlay)
+    }
+
+    header.appendChild(title)
+    header.appendChild(closeButton)
+    overlay.appendChild(header)
+
+    // Create controls
+    const controls = document.createElement("div")
+    controls.style.display = "flex"
+    controls.style.gap = "5px"
+
+    // Create previous button
+    const prevButton = document.createElement("button")
+    prevButton.textContent = "Previous"
+    prevButton.style.padding = "5px 10px"
+    prevButton.style.background = "#f0f0f0"
+    prevButton.style.border = "1px solid #ccc"
+    prevButton.style.borderRadius = "3px"
+    prevButton.style.cursor = "pointer"
+
+    // Create next button
+    const nextButton = document.createElement("button")
+    nextButton.textContent = "Next"
+    nextButton.style.padding = "5px 10px"
+    nextButton.style.background = "#f0f0f0"
+    nextButton.style.border = "1px solid #ccc"
+    nextButton.style.borderRadius = "3px"
+    nextButton.style.cursor = "pointer"
+
+    // Create counter
+    const counter = document.createElement("div")
+    counter.style.marginLeft = "auto"
+    counter.style.padding = "5px 0"
+
+    controls.appendChild(prevButton)
+    controls.appendChild(nextButton)
+    controls.appendChild(counter)
+    overlay.appendChild(controls)
+
+    // Add the overlay to the page
+    document.body.appendChild(overlay)
+
+    // Perform the search
+    const words = query
+      .toLowerCase()
+      .split(" ")
+      .filter((word) => word.length > 1)
+    const highlights = []
+    let currentHighlightIndex = -1
+
+    // Highlight all occurrences of each word
+    words.forEach((word) => {
+      const newHighlights = highlightWord(word)
+      highlights.push(...newHighlights)
+    })
+
+    // Update counter
+    counter.textContent = highlights.length > 0 ? `${currentHighlightIndex + 1} of ${highlights.length}` : "No matches"
+
+    // If no highlights found
+    if (highlights.length === 0) {
+      prevButton.disabled = true
+      nextButton.disabled = true
+      return
+    }
+
+    // Navigate to the first highlight
+    currentHighlightIndex = 0
+    scrollToHighlight(highlights[currentHighlightIndex])
+
+    // Set up navigation buttons
+    prevButton.onclick = () => {
+      if (currentHighlightIndex > 0) {
+        currentHighlightIndex--
+        scrollToHighlight(highlights[currentHighlightIndex])
+        counter.textContent = `${currentHighlightIndex + 1} of ${highlights.length}`
+      }
+    }
+
+    nextButton.onclick = () => {
+      if (currentHighlightIndex < highlights.length - 1) {
+        currentHighlightIndex++
+        scrollToHighlight(highlights[currentHighlightIndex])
+        counter.textContent = `${currentHighlightIndex + 1} of ${highlights.length}`
+      }
+    }
+  }
+
+  // Highlight all occurrences of a word in the document
+  function highlightWord(word) {
+    const highlights = []
+    const textNodes = getTextNodesIn(document.body)
+
+    textNodes.forEach((node) => {
+      const text = node.nodeValue
+      const lowerText = text.toLowerCase()
+      let index = lowerText.indexOf(word)
+
+      if (index >= 0) {
+        // This text node contains the word
+        const parent = node.parentNode
+
+        // Skip if parent is a script, style, or already highlighted
+        if (parent.nodeName === "SCRIPT" || parent.nodeName === "STYLE" || parent.className === "vpnflix-highlight") {
+          return
+        }
+
+        // Create a document fragment to hold the new nodes
+        const fragment = document.createDocumentFragment()
+        let lastIndex = 0
+
+        // Find all occurrences of the word in this text node
+        while (index >= 0) {
+          // Add text before the match
+          if (index > lastIndex) {
+            fragment.appendChild(document.createTextNode(text.substring(lastIndex, index)))
+          }
+
+          // Create a span for the highlighted word
+          const highlightSpan = document.createElement("span")
+          highlightSpan.className = "vpnflix-highlight"
+          highlightSpan.style.backgroundColor = "#ffff00"
+          highlightSpan.style.color = "#000"
+          highlightSpan.appendChild(document.createTextNode(text.substring(index, index + word.length)))
+
+          // Add the highlight to our collection
+          highlights.push(highlightSpan)
+
+          // Add the highlight to the fragment
+          fragment.appendChild(highlightSpan)
+
+          // Move past this word
+          lastIndex = index + word.length
+
+          // Find the next occurrence
+          index = lowerText.indexOf(word, lastIndex)
+        }
+
+        // Add any remaining text
+        if (lastIndex < text.length) {
+          fragment.appendChild(document.createTextNode(text.substring(lastIndex)))
+        }
+
+        // Replace the original text node with our fragment
+        parent.replaceChild(fragment, node)
+      }
+    })
+
+    return highlights
+  }
+
+  // Remove all highlights from the document
+  function removeHighlights() {
+    const highlights = document.querySelectorAll(".vpnflix-highlight")
+
+    highlights.forEach((highlight) => {
+      const parent = highlight.parentNode
+      const text = highlight.textContent
+
+      // Replace the highlight with a text node
+      const textNode = document.createTextNode(text)
+      parent.replaceChild(textNode, highlight)
+
+      // Normalize the parent to merge adjacent text nodes
+      parent.normalize()
+    })
+  }
+
+  // Scroll to a highlighted element
+  function scrollToHighlight(highlight) {
+    // Remove active class from all highlights
+    document.querySelectorAll(".vpnflix-highlight-active").forEach((el) => {
+      el.classList.remove("vpnflix-highlight-active")
+      el.style.backgroundColor = "#ffff00"
+    })
+
+    // Add active class to this highlight
+    highlight.classList.add("vpnflix-highlight-active")
+    highlight.style.backgroundColor = "#ff9632"
+
+    // Scroll to the highlight
+    highlight.scrollIntoView({
+      behavior: "smooth",
+      block: "center",
+    })
   }
 
   // Helper function to get all text nodes in an element
