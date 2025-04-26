@@ -1,5 +1,5 @@
 # vpnflix.online - Secure Robots.txt
-# Last Updated: 2025-04-11
+# Last Updated: 2025-04-26
 
 User-agent: *
 Allow: /
@@ -14,7 +14,7 @@ Disallow: /*.json$
 # Special Rules for Search Engines
 User-agent: Googlebot
 Allow: /
-Crawl-delay: 2
+Crawl-delay: 1
 
 User-agent: Bingbot
 Allow: /
@@ -30,14 +30,41 @@ Disallow: /
 User-agent: DotBot
 Disallow: /
 
-# Block AI Scrapers
+# AI Crawlers - MODIFIED TO ALLOW SPECIFIC PATHS
 User-agent: GPTBot
+Allow: /nordvpn-vs-expressvpn-2025
+Allow: /mullvad-vs-protonvpn-2025
+Allow: /nordvpn-vs-protonvpn-2025
+Allow: /nordvpn-vs-Surfshark-2025
+Allow: /Mullvad-vs-NordVPN-2025
+Allow: /Surfshark-vs-Expressvpn-2025
 Disallow: /
+
 User-agent: ChatGPT-User
+Allow: /nordvpn-vs-expressvpn-2025
+Allow: /mullvad-vs-protonvpn-2025
+Allow: /nordvpn-vs-protonvpn-2025
+Allow: /nordvpn-vs-Surfshark-2025
+Allow: /Mullvad-vs-NordVPN-2025
+Allow: /Surfshark-vs-Expressvpn-2025
 Disallow: /
+
 User-agent: CCBot
+Allow: /nordvpn-vs-expressvpn-2025
+Allow: /mullvad-vs-protonvpn-2025
+Allow: /nordvpn-vs-protonvpn-2025
+Allow: /nordvpn-vs-Surfshark-2025
+Allow: /Mullvad-vs-NordVPN-2025
+Allow: /Surfshark-vs-Expressvpn-2025
 Disallow: /
+
 User-agent: anthropic-ai
+Allow: /nordvpn-vs-expressvpn-2025
+Allow: /mullvad-vs-protonvpn-2025
+Allow: /nordvpn-vs-protonvpn-2025
+Allow: /nordvpn-vs-Surfshark-2025
+Allow: /Mullvad-vs-NordVPN-2025
+Allow: /Surfshark-vs-Expressvpn-2025
 Disallow: /
 
 # Security Protections
