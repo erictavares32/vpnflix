@@ -89,6 +89,3 @@ Accessing international streaming content is not just about watching movies or s
 
 ---
 
-This version incorporates **Vpnflixonline** as your brand name and includes specific, SEO-targeted long-tail keywords that will help your project rank higher for both **VPN** and **streaming** searches. By integrating this branding throughout your repository and README, you'll increase visibility and traffic to both your main site and subdomain.
-
-If you'd like to make any additional tweaks or adjustments, feel free to let me know!
