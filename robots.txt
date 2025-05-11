@@ -1,86 +1,8 @@
 # vpnflix.online - Secure Robots.txt
-# Last Updated: 2025-04-26
+# Last Updated: 2025-05-11
 
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
-Disallow: /cgi-bin/
-Disallow: /wp-admin/
-Disallow: /*.php$
-Disallow: /*.json$
-
-# Special Rules for Search Engines
-User-agent: Googlebot
-Allow: /
-Crawl-delay: 1
-
-User-agent: Bingbot
-Allow: /
-Crawl-delay: 2
-
-# Block Bad Bots
-User-agent: MJ12bot
-Disallow: /
-User-agent: AhrefsBot
-Disallow: /
-User-agent: SemrushBot
-Disallow: /
-User-agent: DotBot
-Disallow: /
-
-# AI Crawlers - MODIFIED TO ALLOW SPECIFIC PATHS
-User-agent: GPTBot
-Allow: /nordvpn-vs-expressvpn-2025
-Allow: /mullvad-vs-protonvpn-2025
-Allow: /nordvpn-vs-protonvpn-2025
-Allow: /nordvpn-vs-Surfshark-2025
-Allow: /Mullvad-vs-NordVPN-2025
-Allow: /Surfshark-vs-Expressvpn-2025
-Allow: /privacyguides
-Allow: /Streaming-Guide-2025
-Disallow: /
-
-User-agent: ChatGPT-User
-Allow: /nordvpn-vs-expressvpn-2025
-Allow: /mullvad-vs-protonvpn-2025
-Allow: /nordvpn-vs-protonvpn-2025
-Allow: /nordvpn-vs-Surfshark-2025
-Allow: /Mullvad-vs-NordVPN-2025
-Allow: /Surfshark-vs-Expressvpn-2025
-Allow: /privacyguides
-Allow: /Streaming-Guide-2025
-Disallow: /
-
-User-agent: CCBot
-Allow: /nordvpn-vs-expressvpn-2025
-Allow: /mullvad-vs-protonvpn-2025
-Allow: /nordvpn-vs-protonvpn-2025
-Allow: /nordvpn-vs-Surfshark-2025
-Allow: /Mullvad-vs-NordVPN-2025
-Allow: /Surfshark-vs-Expressvpn-2025
-Allow: /privacyguides
-Allow: /Streaming-Guide-2025
-Disallow: /
-
-User-agent: anthropic-ai
-Allow: /nordvpn-vs-expressvpn-2025
-Allow: /mullvad-vs-protonvpn-2025
-Allow: /nordvpn-vs-protonvpn-2025
-Allow: /nordvpn-vs-Surfshark-2025
-Allow: /Mullvad-vs-NordVPN-2025
-Allow: /Surfshark-vs-Expressvpn-2025
-Allow: /privacyguides
-Allow: /Streaming-Guide-2025
-Disallow: /
-
-# Security Protections
-Disallow: /*?*
-Disallow: /*.env$
-Disallow: /*.bak$
-Disallow: /*.sql$
-Disallow: /*.git/
 
 # Sitemap
 Sitemap: https://www.vpnflix.online/sitemap.xml
