@@ -1,7 +1,7 @@
 # Welcome to the Vpnflixonline Project
 
 [![Visit www.vpnflix.online](https://img.shields.io/badge/Website-vpnflix.online-blue)](https://www.vpnflix.online)
-[![Visit the App](https://img.shields.io/badge/Try%20the%20App-app.vpnflix.online-green)](https://app.vpnflix.online)
+[![Visit the App](https://img.shields.io/badge/Try%20the%20App-wheretowatch.stream-green)](https://www.wheretowatch.stream)
 
 ## Discover Vpnflixonline: Your Ultimate Streaming and VPN Comparison Tool 🌍
 
@@ -45,7 +45,7 @@ Our **Vpnflixonline app** allows you to explore and compare available content fr
 - **Unblock Netflix and Hulu**: Know exactly what’s streaming in each country.
 - **Free VPN guides**: Learn how to choose the best VPN for **streaming Netflix**, **unblocking Hulu**, or accessing **international content**.
 
-[![Try the App](https://img.shields.io/badge/Try%20the%20App-app.vpnflix.online-green)](https://app.vpnflix.online)
+[![Try the App](https://img.shields.io/badge/Try%20the%20App-wheretowatch.stream-green)](https://www.wheretowatch.stream)
 
 ---
 
@@ -73,19 +73,16 @@ Accessing international streaming content is not just about watching movies or s
 - **Maximize VPN potential**: Use VPNs to access content from different regions and save money.
 - **Get the latest data**: Our constantly updated database gives you the **most accurate information** about streaming availability.
 
-[![Visit the App](https://img.shields.io/badge/Try%20the%20App-app.vpnflix.online-green)](https://app.vpnflix.online)
+[![Try the App](https://img.shields.io/badge/Try%20the%20App-wheretowatch.stream-green)](https://www.wheretowatch.stream)
 
 ---
 
 ## 🌐 Links and Resources
 
 - Visit the **main website**: [vpnflix.online](https://www.vpnflix.online)
-- Try the **streaming comparison app**: [app.vpnflix.online](https://app.vpnflix.online)
+- Try the **streaming comparison app**: [wheretowatch.stream](https://www.wheretowatch.stream)
 - **GitHub repository**: [GitHub - Vpnflixonline](https://github.com/erictavares32/vpnflix)
 
 ---
 
 > *Vpnflixonline is constantly evolving to give you the best VPN and streaming comparison tools. Help us improve by contributing to our project on GitHub and give your feedback on how we can serve you better in your streaming journey.*
-
----
-
