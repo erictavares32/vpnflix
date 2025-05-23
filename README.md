@@ -1,7 +1,7 @@
 # Welcome to the Vpnflixonline Project
 
 [![Visit www.vpnflix.online](https://img.shields.io/badge/Website-vpnflix.online-blue)](https://www.vpnflix.online)
-[![Visit the App](https://img.shields.io/badge/Try%20the%20App-wheretowatch.stream-green)](https://www.wheretowatch.stream)
+[![where to watch](https://img.shields.io/badge/Try%20the%20App-wheretowatch.stream-green)](https://www.wheretowatch.stream)
 
 ## Discover Vpnflixonline: Your Ultimate Streaming and VPN Comparison Tool 🌍
 
