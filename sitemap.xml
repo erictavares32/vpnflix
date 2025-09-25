@@ -9,12 +9,7 @@
   </url>
   
   <!-- Key Comparison Pages -->
-  <url>
-    <loc>https://www.vpnflix.online/nordvpn-vs-expressvpn-2025</loc>
-    <lastmod>2025-09-25</lastmod>
-    <changefreq>weekly</changefreq>
-     <priority>0.9</priority>
-  </url>
+
     <url>
     <loc>https://vpnflixonline.wixsite.com/wheretowatch</loc>
     <lastmod>2025-09-25</lastmod>
@@ -85,4 +80,5 @@
     <priority>0.5</priority>
   </url>
 </urlset>
+
 
