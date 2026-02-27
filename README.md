@@ -1,4 +1,4 @@
-www.vpnflix.stream
+vpnflix.stream
 
 About:
 

@@ -48,4 +48,4 @@ Disallow: /*.sql$
 Disallow: /*.git/
 
 # Sitemap
-Sitemap: https://www.vpnflix.stream/sitemap.xml
+Sitemap: https://vpnflix.stream/sitemap.xml
