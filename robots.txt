@@ -1,7 +1,4 @@
 User-agent: *
 Allow: /
-Disallow: /private/
-Disallow: /admin/
-Disallow: /temp/
 
 Sitemap: https://vpnflix.stream/sitemap.xml
