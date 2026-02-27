@@ -143,7 +143,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // Check if query matches any popular titles
     const popularTitleEntries = window.searchData.filter(
       (item) =>
-        item.url === "https://app.vpnflix.online" &&
+        item.url === "https://app.vpnflix.stream" &&
         item.exactMatch &&
         item.exactMatch.some((match) => match === query),
     )
@@ -152,11 +152,11 @@ document.addEventListener("DOMContentLoaded", () => {
   }
 
   function findMatches(query, isEntertainmentQuery) {
-    // If it's an entertainment query, prioritize the app.vpnflix.online results
+    // If it's an entertainment query, prioritize the app.vpnflix.stream results
     if (isEntertainmentQuery) {
       const entertainmentResults = window.searchData.filter(
         (item) =>
-          item.url === "https://app.vpnflix.online" &&
+          item.url === "https://app.vpnflix.stream" &&
           (item.query.some((keyword) => query.includes(keyword)) ||
             (item.exactMatch && item.exactMatch.some((match) => query.includes(match)))),
       )
@@ -214,8 +214,8 @@ document.addEventListener("DOMContentLoaded", () => {
         })
       }
 
-      // Boost score for entertainment queries if the result is from app.vpnflix.online
-      if (isEntertainmentQuery && item.url === "https://app.vpnflix.online") {
+      // Boost score for entertainment queries if the result is from app.vpnflix.stream
+      if (isEntertainmentQuery && item.url === "https://app.vpnflix.stream") {
         score *= 2
       }
 
@@ -230,10 +230,10 @@ document.addEventListener("DOMContentLoaded", () => {
 
     // If no matches found or only low-scoring matches, add the wildcard internal search
     if (matchesWithScores.length === 0 || matchesWithScores.every((match) => match.score < 10)) {
-      // For entertainment queries, redirect to app.vpnflix.online even if no exact match
+      // For entertainment queries, redirect to app.vpnflix.stream even if no exact match
       if (isEntertainmentQuery) {
         const entertainmentItem = window.searchData.find(
-          (item) => item.url === "https://app.vpnflix.online" && item.query.includes("movies"),
+          (item) => item.url === "https://app.vpnflix.stream" && item.query.includes("movies"),
         )
 
         if (entertainmentItem) {
