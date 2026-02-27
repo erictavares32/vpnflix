@@ -1,5 +1,5 @@
 # vpnflix.xyz - Secure Robots.txt
-# Last Updated: 2025-04-11
+# Last Updated: 2026-04-11
 
 User-agent: *
 Allow: /
