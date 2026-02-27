@@ -1,5 +1,5 @@
-# vpnflix.xyz - Secure Robots.txt
-# Last Updated: 2026-04-11
+# vpnflix.stream - Secure Robots.txt
+# Last Updated: 2026-02-27
 
 User-agent: *
 Allow: /
