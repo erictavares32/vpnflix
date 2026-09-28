@@ -1,5 +1,5 @@
 {
-  "lastUpdated": "2026-09-28T08:33:13.644Z",
+  "lastUpdated": "2026-09-28T08:40:00.178Z",
   "source": "The Hacker News",
   "articles": [
     {
@@ -43,6 +43,20 @@
       "link": "https://thehackernews.com/2026/09/sharepoint-rce-and-mikrotik-routeros.html",
       "pubDate": "Sep 26, 2026",
       "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Microsoft SharePoint and Mikrotik Router..."
+    },
+    {
+      "id": 7,
+      "title": "Kiteworks Urges Customers to Shut Down Systems for 9 Hours Over Possible Cyber Attack",
+      "link": "https://thehackernews.com/2026/09/kiteworks-urges-customers-to-shut-down.html",
+      "pubDate": "Sep 26, 2026",
+      "excerpt": "Kiteworks (formerly Accellion) is urging customers to shut down their systems as a precautionary measure for nine hours over the weekend after it rece..."
+    },
+    {
+      "id": 8,
+      "title": "Compromised GitHub Actions Came Back Online and Resumed Executing Mini Shai-Hulud Malware",
+      "link": "https://thehackernews.com/2026/09/compromised-github-actions-came-back.html",
+      "pubDate": "Sep 25, 2026",
+      "excerpt": "Two actions-cool GitHub Actions have been disabled for a second time after the repositories became accessible last week, months after they were compro..."
     }
   ]
 }

@@ -14,7 +14,7 @@ const CONFIG = {
   rssFeedUrl: 'https://feeds.feedburner.com/TheHackersNews',
   apiEndpoint: 'https://api.rss2json.com/v1/api.json',
   apiKey: 'eyyyuhvyxn3182c4f41mxoq1t7knrmechkxj6nbi',
-  maxArticles: 6,
+  maxArticles: 8,
   outputFile: path.join(__dirname, 'news-data.json')
 };
 
