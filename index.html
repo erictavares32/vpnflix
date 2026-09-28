@@ -111,6 +111,22 @@
     .mt-4{margin-top:1rem}.mt-8{margin-top:2rem}.mb-4{margin-bottom:1rem}.mb-8{margin-bottom:2rem}
     .py-16{padding-top:4rem;padding-bottom:4rem}
     .bg-gray-50{background:#f9fafb}.bg-white{background:#fff}
+
+    /* News Cards */
+    .news-section{background:#f8fafc;padding:3rem 0}
+    .news-section .container{max-width:1280px;margin:0 auto;padding:0 1rem}
+    @media(min-width:640px){.news-section .container{padding:0 1.5rem}}
+    @media(min-width:1024px){.news-section .container{padding:0 2rem}}
+    .news-grid{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:1.5rem;margin-top:2rem}
+    .news-card{background:#fff;border-radius:0.75rem;padding:1.5rem;box-shadow:0 1px 3px rgba(0,0,0,0.1);transition:transform .2s,box-shadow .2s;border:1px solid #e5e7eb}
+    .news-card:hover{transform:translateY(-2px);box-shadow:0 4px 6px -1px rgba(0,0,0,0.1)}
+    .news-card h3{font-size:1.125rem;color:#111827;margin-bottom:0.5rem;line-height:1.4;font-weight:600}
+    .news-card .news-date{font-size:0.75rem;color:#6b7280;margin-bottom:0.75rem;display:block}
+    .news-card p{font-size:0.875rem;color:#4b5563;line-height:1.5;margin-bottom:1rem}
+    .news-card a{color:#2563eb;font-size:0.875rem;font-weight:500;text-decoration:none}
+    .news-card a:hover{text-decoration:underline}
+    .news-header h2{font-size:1.75rem;color:#111827;margin-bottom:0.5rem}
+    .news-header p{color:#6b7280;font-size:0.875rem}
     
     /* Mobile menu */
     #mobile-menu{display:none;position:absolute;top:64px;left:0;right:0;background:#fff;box-shadow:0 4px 6px -1px rgba(0,0,0,0.1);padding:1rem}
@@ -399,6 +415,21 @@
               <source type="image/webp" srcset="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80&fm=webp" sizes="(max-width: 1024px) 100vw, 50vw">
               <img src="https://images.unsplash.com/photo-1563986768609-322da13575f3?w=800&q=80" alt="Person using secure VPN on laptop for online privacy protection" width="800" height="533" fetchpriority="high" decoding="async" style="aspect-ratio:3/2;object-fit:cover;width:100%">
             </picture>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Cybersecurity News Section -->
+    <section class="news-section" id="news">
+      <div class="container">
+        <div class="news-header text-center">
+          <h2>Latest Cybersecurity News</h2>
+          <p>Stay informed with real-time threat intelligence from The Hacker News</p>
+        </div>
+        <div class="news-grid" id="news-grid">
+          <div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #6b7280;">
+            Loading news...
           </div>
         </div>
       </div>
@@ -738,7 +769,7 @@
       menu.classList.toggle('active');
       this.setAttribute('aria-expanded', menu.classList.contains('active'));
     });
-    
+
     // Close mobile menu on link click
     document.querySelectorAll('#mobile-menu a').forEach(link => {
       link.addEventListener('click', () => {
@@ -746,6 +777,46 @@
         document.getElementById('mobile-menu-btn').setAttribute('aria-expanded', 'false');
       });
     });
+
+    // Load cybersecurity news from static JSON
+    (function() {
+      const newsGrid = document.getElementById('news-grid');
+      if (!newsGrid) return;
+
+      fetch('/news-data.json')
+        .then(response => {
+          if (!response.ok) throw new Error('Failed to load news');
+          return response.json();
+        })
+        .then(data => {
+          if (!data.articles || data.articles.length === 0) {
+            throw new Error('No articles found');
+          }
+
+          let html = '';
+          data.articles.forEach(article => {
+            html += `
+              <article class="news-card">
+                <h3>${article.title}</h3>
+                <span class="news-date">${article.pubDate}</span>
+                <p>${article.excerpt}</p>
+                <a href="${article.link}" target="_blank" rel="noopener noreferrer">Read More →</a>
+              </article>
+            `;
+          });
+
+          newsGrid.innerHTML = html;
+        })
+        .catch(error => {
+          console.error('News loading error:', error);
+          newsGrid.innerHTML = `
+            <div style="grid-column: 1/-1; text-align: center; padding: 2rem; color: #6b7280;">
+              <p>Unable to load news at this time.</p>
+              <a href="/cybersecuritynews" style="color: #2563eb; text-decoration: underline;">View all news →</a>
+            </div>
+          `;
+        });
+    })();
   </script>
 </body>
 </html>
