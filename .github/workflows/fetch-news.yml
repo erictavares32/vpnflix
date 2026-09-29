@@ -16,9 +16,6 @@ jobs:
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
-        with:
-          persist-credentials: false
-          token: ${{ secrets.PAT_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -37,8 +34,5 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update cybersecurity news data [skip ci]"
-            git remote set-url origin https://x-access-token:${GITHUB_TOKEN}@github.com/${GITHUB_REPOSITORY}.git
-            git push origin HEAD:${{ github.ref }}
+            git push
           fi
-        env:
-          GITHUB_TOKEN: ${{ secrets.PAT_TOKEN }}
