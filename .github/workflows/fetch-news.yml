@@ -17,7 +17,8 @@ jobs:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
-          persist-credentials: true
+          persist-credentials: false
+          token: ${{ secrets.GITHUB_TOKEN }}
       
       - name: Setup Node.js
         uses: actions/setup-node@v4
@@ -36,5 +37,7 @@ jobs:
             echo "No changes to commit"
           else
             git commit -m "chore: update cybersecurity news data [skip ci]"
-            git push
+            git push origin HEAD:${{ github.ref }}
           fi
+        env:
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}
