@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-09-29T17:18:15.102Z",
+  "lastUpdated": "2026-09-30T05:19:32.953Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "French Tax Data Theft Using Stolen Staff Passwords Went Undetected for Seven Weeks",
+      "link": "https://thehackernews.com/2026/09/french-tax-data-theft-using-stolen.html",
+      "pubDate": "Sep 29, 2026",
+      "excerpt": "An attacker used stolen passwords of staff at France&#039;s tax administration to take tax data on hundreds of thousands of taxpayers and businesses i..."
+    },
+    {
+      "id": 2,
+      "title": "New Spectre-v2 BTR Attack Leaks Linux Memory Despite Existing Defenses",
+      "link": "https://thehackernews.com/2026/09/new-spectre-v2-btr-attack-leaks-linux.html",
+      "pubDate": "Sep 29, 2026",
+      "excerpt": "A group of academics from VUSec and Scuola Superiore Sant&#039;Anna have disclosed details of a new Spectre CPU vulnerability variant that affects Jus..."
+    },
+    {
+      "id": 3,
+      "title": "Russia&#039;s Star Blizzard Targets 100+ Organizations With Fake Event Invites to Deliver Backdoor",
+      "link": "https://thehackernews.com/2026/09/russias-star-blizzard-targets-100.html",
+      "pubDate": "Sep 29, 2026",
+      "excerpt": "Russian state hackers known as Star Blizzard have been using fake event invitations to trick people into installing a backdoor on their Windows comput..."
+    },
+    {
+      "id": 4,
+      "title": "Kiteworks Fixes Critical Flaw Found During Nine-Hour Precautionary Shutdown",
+      "link": "https://thehackernews.com/2026/09/kiteworks-fixes-critical-flaw-found.html",
+      "pubDate": "Sep 29, 2026",
+      "excerpt": "Kiteworks on Monday said it worked with federal intelligence authorities over the weekend as it identified and addressed a critical security vulnerabi..."
+    },
+    {
+      "id": 5,
+      "title": "101 Malicious npm Packages Add Developers&#039; WhatsApp Accounts to Groups Without Consent",
+      "link": "https://thehackernews.com/2026/09/101-malicious-npm-packages-add.html",
+      "pubDate": "Sep 29, 2026",
+      "excerpt": "Cybersecurity researchers have identified a cluster of 101 npm packages that are used to trap developers into a WhatsApp group subscriber campaign dub..."
+    },
+    {
+      "id": 6,
       "title": "Dutch Police Arrest 24-Year-Old Amsterdam Man in ShinyHunters Investigation",
       "link": "https://thehackernews.com/2026/09/dutch-police-arrest-24-year-old.html",
       "pubDate": "Sep 29, 2026",
       "excerpt": "Dutch authorities have confirmed that they arrested a 24-year-old man from Amsterdam in connection with the ShinyHunters group.\n\n&quot;It is true that..."
     },
     {
-      "id": 2,
+      "id": 7,
       "title": "Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials",
       "link": "https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html",
       "pubDate": "Sep 29, 2026",
       "excerpt": "A malicious MCP server could trick an application built on the official MCP Python SDK into handing over the OAuth credentials it uses to log in to a ..."
     },
     {
-      "id": 3,
+      "id": 8,
       "title": "OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions",
       "link": "https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html",
       "pubDate": "Sep 29, 2026",
       "excerpt": "OpenAI on Monday shelved plans to release GPT-6.1 Astra, a next-generation artificial intelligence (AI) model that was planned for an October launch, ..."
-    },
-    {
-      "id": 4,
-      "title": "OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot",
-      "link": "https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html",
-      "pubDate": "Sep 29, 2026",
-      "excerpt": "OpenAI said it has made the decision to pause training of its most powerful models after one of its agents during reinforcement learning (RL) training..."
-    },
-    {
-      "id": 5,
-      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
-      "link": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "Apple has released security updates to address a vulnerability in older versions of iOS, iPadOS, and macOS that it said may have been exploited in tar..."
-    },
-    {
-      "id": 6,
-      "title": "Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks",
-      "link": "https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "Hackers have used a malware family called NeedyMantis to maintain long-term access to networks they had already breached, Microsoft said in a technica..."
-    },
-    {
-      "id": 7,
-      "title": "IAM for AI agents: A Practical Enterprise Framework",
-      "link": "https://thehackernews.com/2026/09/iam-for-ai-agent.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "What is IAM for AI agents?\n\nAI agents authenticate, invoke tools, and act across enterprise systems with delegated authority. IAM for AI Agents is the..."
-    },
-    {
-      "id": 8,
-      "title": "Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M",
-      "link": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "The attacker who stole about $388 million from the cryptocurrency exchange Bitget gained access through a vulnerability in a third-party security prod..."
     }
   ]
 }
