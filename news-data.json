@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-09-29T17:18:15.102Z",
+  "lastUpdated": "2026-10-02T07:50:29.322Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Dutch Police Arrest 24-Year-Old Amsterdam Man in ShinyHunters Investigation",
-      "link": "https://thehackernews.com/2026/09/dutch-police-arrest-24-year-old.html",
-      "pubDate": "Sep 29, 2026",
-      "excerpt": "Dutch authorities have confirmed that they arrested a 24-year-old man from Amsterdam in connection with the ShinyHunters group.\n\n&quot;It is true that..."
+      "title": "Police Arrest 16-Year-Old Suspected of Running KillSec, Seize Ransomware Leak Site and Servers",
+      "link": "https://thehackernews.com/2026/10/police-arrest-16-year-old-suspected-of.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "Police in Spain have arrested a 16-year-old whom investigators suspect of running the KillSec ransomware group. KillSec is accused of stealing data fr..."
     },
     {
       "id": 2,
-      "title": "Official MCP Python SDK Flaw Can Let Malicious Servers Steal OAuth Credentials",
-      "link": "https://thehackernews.com/2026/09/official-mcp-python-sdk-flaw-can-let.html",
-      "pubDate": "Sep 29, 2026",
-      "excerpt": "A malicious MCP server could trick an application built on the official MCP Python SDK into handing over the OAuth credentials it uses to log in to a ..."
+      "title": "ThreatsDay: AI-Powered Zero-Day Chain, 543K Live Secrets, Model Inspection RCE and 13 More Stories",
+      "link": "https://thehackernews.com/2026/10/threatsday-ai-powered-zero-day-chain.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "This week, the useful words are boring ones: inspect, cache, compile, store, trust. Each sounds harmless. Each can become an attack path when a system..."
     },
     {
       "id": 3,
-      "title": "OpenAI Shelves GPT-6.1 Astra After Tests Find Deception and Unauthorized Actions",
-      "link": "https://thehackernews.com/2026/09/openai-shelves-gpt-61-astra-after-tests.html",
-      "pubDate": "Sep 29, 2026",
-      "excerpt": "OpenAI on Monday shelved plans to release GPT-6.1 Astra, a next-generation artificial intelligence (AI) model that was planned for an October launch, ..."
+      "title": "WordPress Backdoor Rebuilds Itself After Cleanup Using Files, Database, and Shared Memory",
+      "link": "https://thehackernews.com/2026/10/wordpress-backdoor-rebuilds-itself.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "Cybersecurity researchers have shed light on a WordPress compromise in which threat actors deployed multiple persistence mechanisms to ensure that the..."
     },
     {
       "id": 4,
-      "title": "OpenAI Pauses Tool Use After Agent Bypasses Internet Controls to Reach External Chatbot",
-      "link": "https://thehackernews.com/2026/09/openai-pauses-tool-use-after-agent.html",
-      "pubDate": "Sep 29, 2026",
-      "excerpt": "OpenAI said it has made the decision to pause training of its most powerful models after one of its agents during reinforcement learning (RL) training..."
+      "title": "How Financial Services Companies Can Modernize Their Software Supply Chain",
+      "link": "https://thehackernews.com/2026/10/how-financial-services-companies-can.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "Every security leader at a bank, insurer, or asset manager has had a version of this conversation: Security wants to eliminate a class of vulnerabilit..."
     },
     {
       "id": 5,
-      "title": "Apple Patches CoreGraphics Flaw Possibly Exploited in Targeted Attacks",
-      "link": "https://thehackernews.com/2026/09/apple-patches-coregraphics-flaw.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "Apple has released security updates to address a vulnerability in older versions of iOS, iPadOS, and macOS that it said may have been exploited in tar..."
+      "title": "OpenAI Disrupts Reasoning Extraction Campaign Linked to Moonshot AI Associates",
+      "link": "https://thehackernews.com/2026/10/openai-disrupts-reasoning-extraction.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "OpenAI on Wednesday said it identified and disrupted a coordinated distillation campaign that was designed to illicitly extract protected reasoning fr..."
     },
     {
       "id": 6,
-      "title": "Hackers Use NeedyMantis to Maintain Long-Term Access in Breached Networks",
-      "link": "https://thehackernews.com/2026/09/hackers-use-needymantis-to-maintain.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "Hackers have used a malware family called NeedyMantis to maintain long-term access to networks they had already breached, Microsoft said in a technica..."
+      "title": "CISA Adds Exploited Cisco Catalyst SD-WAN Manager Auth Bypass to KEV",
+      "link": "https://thehackernews.com/2026/10/cisa-adds-exploited-cisco-catalyst-sd.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a critical authentication bypass flaw impacting Cisco Catalyst SD-..."
     },
     {
       "id": 7,
-      "title": "IAM for AI agents: A Practical Enterprise Framework",
-      "link": "https://thehackernews.com/2026/09/iam-for-ai-agent.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "What is IAM for AI agents?\n\nAI agents authenticate, invoke tools, and act across enterprise systems with delegated authority. IAM for AI Agents is the..."
+      "title": "Google Rolls Out Gemini 4 Argon to Trusted Cyber Defenders, Plans Guardrail-Free Version",
+      "link": "https://thehackernews.com/2026/10/google-rolls-out-gemini-4-argon-to.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "Google on Wednesday announced its latest frontier artificial intelligence (AI) model, Gemini 4 Argon, that it said is being rolled out to a set of tru..."
     },
     {
       "id": 8,
-      "title": "Bitget Says Attacker Exploited Third-Party Security Product Flaw to Steal $388M",
-      "link": "https://thehackernews.com/2026/09/bitget-says-attacker-exploited-third.html",
-      "pubDate": "Sep 28, 2026",
-      "excerpt": "The attacker who stole about $388 million from the cryptocurrency exchange Bitget gained access through a vulnerability in a third-party security prod..."
+      "title": "Apple CoreGraphics PoC Emerges as WhatsApp PDF Checks Hint at Possible Delivery Path",
+      "link": "https://thehackernews.com/2026/10/apple-coregraphics-poc-emerges-as.html",
+      "pubDate": "Oct 1, 2026",
+      "excerpt": "Security researchers have published the first public proof-of-concept for CVE-2026-86950, an Apple CoreGraphics flaw Apple says may have been used in ..."
     }
   ]
 }
