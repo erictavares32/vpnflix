@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-06T06:04:20.923Z",
+  "lastUpdated": "2026-10-07T05:39:47.378Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Microsoft Exchange Flaw Lets Authenticated Attackers Read Other Users&#039; Mailboxes",
-      "link": "https://thehackernews.com/2026/10/microsoft-exchange-flaw-lets.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "Microsoft has released out-of-band security updates to address a high-severity flaw in Microsoft Exchange Server that could allow an attacker to escal..."
+      "title": "Fake ChatGPT, Gemini, and Claude Ad Portals Capture Credentials and MFA Codes",
+      "link": "https://thehackernews.com/2026/10/fake-chatgpt-gemini-and-claude-ad.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of a &quot;human-operated phishing platform&quot; that impersonates advertising products for artifici..."
     },
     {
       "id": 2,
-      "title": "⚡ Weekly Recap: NetScaler and FortiMail 0-Days, AI Coding Leaks, Spectre v2 and Ransomware Arrests",
-      "link": "https://thehackernews.com/2026/10/weekly-recap-netscaler-and-fortimail-0.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "A blank field. A public repo. One reply to an email. A box left exposed. None of this sounds dramatic, which is partly the problem. This week’s threat..."
+      "title": "Linux Backdoors Impersonate Email Security Tools to Evade Detection in Korea and Taiwan",
+      "link": "https://thehackernews.com/2026/10/linux-backdoors-impersonate-email.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "Linux backdoors targeting telecom and network appliances in South Korea and Taiwan have been disguising their traffic as email services and seemingly ..."
     },
     {
       "id": 3,
-      "title": "The Credential Layer Is Expanding Faster Than Security Teams Can See It",
-      "link": "https://thehackernews.com/2026/10/the-credential-layer-is-expanding.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "Every modern enterprise depends on credentials. This is how humans, systems, and now AI, all connect to data, services, and each other securely. GitGu..."
+      "title": "LibreOffice and OpenOffice Flaws Let Malicious Spreadsheets Run Code Without Macro Warnings",
+      "link": "https://thehackernews.com/2026/10/libreoffice-and-openoffice-flaws-let.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "A malicious spreadsheet can make LibreOffice and Apache OpenOffice run an attacker&#039;s code as soon as the file is opened, security researchers hav..."
     },
     {
       "id": 4,
-      "title": "Realtek Jungle SDK Exploit Attempts Deliver Cling Botnet With STUN-Based C2",
-      "link": "https://thehackernews.com/2026/10/realtek-jungle-sdk-exploit-attempts.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "Threat actors have been observed attempting to exploit a now-patched critical security flaw impacting the Realtek Jungle software development kit (SDK..."
+      "title": "Wikimedia Says OpenAI Agents Tried to Compromise Etherpad and Use Wiki Tools as Proxies",
+      "link": "https://thehackernews.com/2026/10/wikimedia-says-openai-agents-tried-to.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "The Wikimedia Foundation, which hosts Wikipedia, has confirmed that it has discovered activity by rogue OpenAI agents on its platforms, including unsu..."
     },
     {
       "id": 5,
-      "title": "Apple Plans Tighter macOS Full Disk Access Controls Over AI Agent Data Access",
-      "link": "https://thehackernews.com/2026/10/apple-plans-tighter-macos-full-disk.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "Apple has announced that it&#039;s taking steps to tighten controls around a macOS setting called Full Disk Access (FDA) due to security risks posed b..."
+      "title": "Welcome to the Jungle: What We Found Inside 15,465 Public MCP Servers",
+      "link": "https://thehackernews.com/2026/10/welcome-to-jungle-what-we-found-inside.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "In 2024, MCP (Model Context Protocol) set out to become the USB-C of AI: one standard for connecting models, agents, and IDEs to tools and data. The p..."
     },
     {
       "id": 6,
-      "title": "Attackers Target Rejetto HFS Flaw That Enables Admin Session Forgery and RCE",
-      "link": "https://thehackernews.com/2026/10/attackers-target-rejetto-hfs-flaw-that.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "A critical security flaw impacting Rejetto HTTP File Server (HFS) is witnessing active exploitation attempts, according to VulnCheck.\n\nThe vulnerabili..."
+      "title": "Google Pauses OSS Product Bug Bounty Rewards After Surge in Invalid Automated Reports",
+      "link": "https://thehackernews.com/2026/10/google-pauses-oss-product-bug-bounty.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "Google has stopped accepting product vulnerability reports through its bug bounty program for its open-source software.\n\nThe change, in effect since O..."
     },
     {
       "id": 7,
-      "title": "New NetScaler Zero-Day Exploited in Targeted Attacks Can Knock SAML Deployments Offline",
-      "link": "https://thehackernews.com/2026/10/new-netscaler-zero-day-exploited-in.html",
-      "pubDate": "Oct 5, 2026",
-      "excerpt": "Citrix has released security updates for a high-severity security flaw in NetScaler ADC and NetScaler Gateway that has been exploited as part of targe..."
+      "title": "Critical Atlassian Flaw Lets Unauthenticated Attackers Read Known Files Across 8 Products",
+      "link": "https://thehackernews.com/2026/10/critical-atlassian-flaw-lets.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "A critical flaw in 8 Atlassian Data Center products, which customers host themselves, allows an attacker with no login access to read specific files i..."
     },
     {
       "id": 8,
-      "title": "ShinyHunters Suspect Rey Reportedly Detained in Jordan, Helping FBI Identify Group Members",
-      "link": "https://thehackernews.com/2026/10/shinyhunters-suspect-rey-reportedly.html",
-      "pubDate": "Oct 4, 2026",
-      "excerpt": "A suspected member of the ShinyHunters digital extortion group, who goes by the online alias &quot;Rey,&quot; has been allegedly detained by authoriti..."
+      "title": "FBI Removes Accenture Contractor After Patch Failure Led to ShinyHunters Breach",
+      "link": "https://thehackernews.com/2026/10/fbi-removes-accenture-contractor-after.html",
+      "pubDate": "Oct 6, 2026",
+      "excerpt": "The U.S. Federal Bureau of Investigation (FBI) has removed an Accenture contractor for their alleged role in a ShinyHunters-breach that led to the the..."
     }
   ]
 }
