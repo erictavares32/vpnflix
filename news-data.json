@@ -1,41 +1,41 @@
 {
-  "lastUpdated": "2026-10-11T05:31:21.350Z",
+  "lastUpdated": "2026-10-12T05:41:37.368Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
+      "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
+      "pubDate": "Oct 11, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of a previously unseen variant of the DarkSword iOS exploit kit called P7 DarkSword.\n\n&quot;Compared ..."
+    },
+    {
+      "id": 2,
       "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn&#039;t",
       "link": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
       "pubDate": "Oct 10, 2026",
       "excerpt": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind sin..."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws",
       "link": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
       "pubDate": "Oct 10, 2026",
       "excerpt": "Anthropic on Friday said it&#039;s cutting off live internet access for all its internal evaluations following the discovery of new incidents in which..."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
       "link": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
       "pubDate": "Oct 9, 2026",
       "excerpt": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer ..."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
       "link": "https://thehackernews.com/2026/10/fbi-arrests-another-shinyhunters.html",
       "pubDate": "Oct 9, 2026",
       "excerpt": "The FBI has arrested another suspected co-conspirator of ShinyHunters, FBI Director Kash Patel said on October 9 in a post on X.\n\nShinyHunters is the ..."
-    },
-    {
-      "id": 5,
-      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
-      "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a previously unseen variant of the DarkSword iOS exploit kit called P7 DarkSword.\n\n&quot;Compared ..."
     },
     {
       "id": 6,
