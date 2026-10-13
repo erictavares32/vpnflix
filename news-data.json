@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-12T05:41:37.368Z",
+  "lastUpdated": "2026-10-13T06:37:24.381Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, ShinyHunters Arrest, AI-Fooling Malware and More",
+      "link": "https://thehackernews.com/2026/10/weekly-recap-helpdesk-0-days-rogue.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "Some meetings last longer than it took attackers to jump on a newly disclosed security flaw this week. Within hours, they were already testing it. Tha..."
+    },
+    {
+      "id": 2,
+      "title": "Bring Your Own Agent: Your Employees&#039; Assistants Are Already Logged In",
+      "link": "https://thehackernews.com/2026/10/bring-your-own-agent-your-employees.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "The personal AI agents rollout is going about as smoothly as expected: Amazon now blocks Meta&#039;s Muse because it doesn&#039;t identify itself as a..."
+    },
+    {
+      "id": 3,
+      "title": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis-Sold Wallet Amid Fund Theft Reports",
+      "link": "https://thehackernews.com/2026/10/ledger-finds-unauthorized-hardware.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices ..."
+    },
+    {
+      "id": 4,
+      "title": "Critical SonicWall SMA 1000 Flaw Targeted in 135 Exploitation Attempts After Patch",
+      "link": "https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "Threat actors have been observed exploiting a recently disclosed critical security flaw in SonicWall Secure Mobile Access (SMA) 1000 appliances within..."
+    },
+    {
+      "id": 5,
+      "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
+      "link": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstac..."
+    },
+    {
+      "id": 6,
+      "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
+      "link": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
+      "pubDate": "Oct 12, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress s..."
+    },
+    {
+      "id": 7,
       "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
       "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
       "pubDate": "Oct 11, 2026",
       "excerpt": "Cybersecurity researchers have disclosed details of a previously unseen variant of the DarkSword iOS exploit kit called P7 DarkSword.\n\n&quot;Compared ..."
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn&#039;t",
       "link": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
       "pubDate": "Oct 10, 2026",
       "excerpt": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind sin..."
-    },
-    {
-      "id": 3,
-      "title": "Anthropic Cuts Live Internet Access for Internal AI Tests After Claude Exploits Injection Flaws",
-      "link": "https://thehackernews.com/2026/10/anthropic-cuts-live-internet-access-for.html",
-      "pubDate": "Oct 10, 2026",
-      "excerpt": "Anthropic on Friday said it&#039;s cutting off live internet access for all its internal evaluations following the discovery of new incidents in which..."
-    },
-    {
-      "id": 4,
-      "title": "Credential-Stealing GitHub Actions Workflows Planted in Tens of Thousands of Repositories",
-      "link": "https://thehackernews.com/2026/10/credential-stealing-github-actions.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of an ongoing credential-theft campaign that has compromised two high-profile open-source maintainer ..."
-    },
-    {
-      "id": 5,
-      "title": "FBI Arrests Another ShinyHunters Suspect Reportedly Involved in Its Jobs Portal Hack",
-      "link": "https://thehackernews.com/2026/10/fbi-arrests-another-shinyhunters.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "The FBI has arrested another suspected co-conspirator of ShinyHunters, FBI Director Kash Patel said on October 9 in a post on X.\n\nShinyHunters is the ..."
-    },
-    {
-      "id": 6,
-      "title": "TP-Link Sued by Four More U.S. States Over Router Security and China Ties",
-      "link": "https://thehackernews.com/2026/10/tp-link-sued-by-four-more-us-states.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "Four more U.S. states sued router maker TP-Link Systems on October 6, bringing the total to five, with  Texas filing a suit in February. Florida, Iowa..."
-    },
-    {
-      "id": 7,
-      "title": "Researchers Publish Working Exploit for Pre-Auth AnyDesk Linux Flaw That Gives Root Access",
-      "link": "https://thehackernews.com/2026/10/researchers-publish-working-exploit-for.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "Security researchers have published a full working exploit for a pre-authentication remote code execution flaw in AnyDesk Linux that gives attackers r..."
-    },
-    {
-      "id": 8,
-      "title": "Anthropic Launches Free AI Vulnerability Scanner for Open-Source Projects",
-      "link": "https://thehackernews.com/2026/10/anthropic-launches-free-ai.html",
-      "pubDate": "Oct 9, 2026",
-      "excerpt": "Anthropic on Thursday unveiled OSS Scanner as an opt-in vulnerability scanner to help secure the open-source ecosystem using artificial intelligence (..."
     }
   ]
 }
