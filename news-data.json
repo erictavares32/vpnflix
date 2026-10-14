@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-13T06:37:24.381Z",
+  "lastUpdated": "2026-10-14T04:38:52.395Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "⚡ Weekly Recap: Helpdesk 0-Days, Rogue Certs, ShinyHunters Arrest, AI-Fooling Malware and More",
-      "link": "https://thehackernews.com/2026/10/weekly-recap-helpdesk-0-days-rogue.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "Some meetings last longer than it took attackers to jump on a newly disclosed security flaw this week. Within hours, they were already testing it. Tha..."
+      "title": "Anthropic Warns Small AI Models Could Soon Form Self-Propagating IoT Botnets",
+      "link": "https://thehackernews.com/2026/10/anthropic-warns-small-ai-models-could.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "Small artificial intelligence (AI) models may be months away from developing capabilities to self-replicate on IoT devices like smart ovens and off-br..."
     },
     {
       "id": 2,
-      "title": "Bring Your Own Agent: Your Employees&#039; Assistants Are Already Logged In",
-      "link": "https://thehackernews.com/2026/10/bring-your-own-agent-your-employees.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "The personal AI agents rollout is going about as smoothly as expected: Amazon now blocks Meta&#039;s Muse because it doesn&#039;t identify itself as a..."
+      "title": "Docker Fixes Critical Two-Year-Old Hub Flaw That Let One User Push Images as Another",
+      "link": "https://thehackernews.com/2026/10/docker-fixes-critical-two-year-old-hub.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "A flaw in Docker Hub, the registry where container images are published and downloaded, let one user push, pull, or delete images as another user. Doc..."
     },
     {
       "id": 3,
-      "title": "Ledger Finds Unauthorized Hardware Implant in CryptoBilis-Sold Wallet Amid Fund Theft Reports",
-      "link": "https://thehackernews.com/2026/10/ledger-finds-unauthorized-hardware.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "Cryptocurrency hardware maker Ledger has temporarily paused sales of its products via CryptoBilis following reports of stolen funds linked to devices ..."
+      "title": "Attacker Chains Three Ivanti Connect Secure Zero-Days for Root Access, Only Two Patched So Far",
+      "link": "https://thehackernews.com/2026/10/attacker-chains-three-ivanti-connect.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "An attacker chained three zero-day flaws in Ivanti Connect Secure, a VPN appliance, to run commands as root without logging in, security firm Volexity..."
     },
     {
       "id": 4,
-      "title": "Critical SonicWall SMA 1000 Flaw Targeted in 135 Exploitation Attempts After Patch",
-      "link": "https://thehackernews.com/2026/10/critical-sonicwall-sma-1000-flaw.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "Threat actors have been observed exploiting a recently disclosed critical security flaw in SonicWall Secure Mobile Access (SMA) 1000 appliances within..."
+      "title": "SAP Discloses Critical CVSS 10 Flaw in Cloud SDK for Python Allowing OAuth2 Credential Theft",
+      "link": "https://thehackernews.com/2026/10/sap-discloses-critical-cvss-10-flaw-in.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "A flaw in SAP&#039;s Cloud SDK for Python can send an application&#039;s OAuth2 client credentials to a server an attacker controls, SAP said in a sec..."
     },
     {
       "id": 5,
-      "title": "Attackers Exploit CVSS 10.0 Bricksforge WordPress Flaw Enabling Unauthenticated RCE",
-      "link": "https://thehackernews.com/2026/10/attackers-exploit-cvss-100-bricksforge.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "A maximum-severity security flaw impacting the Bricksforge plugin for WordPress has come under active exploitation in the wild, according to Patchstac..."
+      "title": "GitHub Tightens npm Publishing After Flaw Left 1,500+ Packages Vulnerable to Hijacking",
+      "link": "https://thehackernews.com/2026/10/github-tightens-npm-publishing-after.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "GitHub has taken the step of expiring unvalidated npm trusted publishing configurations 48 hours after creation after researchers found that it was po..."
     },
     {
       "id": 6,
-      "title": "CyberXero Uses Claude Code in Campaign That Stole Over 628,000 Ukrainian Records",
-      "link": "https://thehackernews.com/2026/10/cyberxero-uses-claude-code-in-campaign.html",
-      "pubDate": "Oct 12, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a two-pronged artificial intelligence (AI)-augmented initial access campaign targeting WordPress s..."
+      "title": "Xandr Fined a Record €8.6 Million for Relaying Grindr Data Revealing Sexual Orientation",
+      "link": "https://thehackernews.com/2026/10/xandr-fined-record-86-million-for.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "The Norwegian Data Protection Authority (DPA) has fined Xandr, an advertising unit owned by Microsoft, €8.6 million ($9.62 million) for illegally rela..."
     },
     {
       "id": 7,
-      "title": "P7 DarkSword iOS Exploit Kit Adds Crypto Wallet Data Theft and Remote Commands",
-      "link": "https://thehackernews.com/2026/10/p7-darksword-ios-exploit-kit-adds.html",
-      "pubDate": "Oct 11, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a previously unseen variant of the DarkSword iOS exploit kit called P7 DarkSword.\n\n&quot;Compared ..."
+      "title": "[Webinar] How to Stop AI-Driven Privilege Escalation With Runtime Identity Controls",
+      "link": "https://thehackernews.com/2026/10/webinar-how-to-stop-ai-driven-privilege.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "The dangerous part of a stolen identity isn&#039;t always the initial login. It&#039;s what an attacker can do with that access next.\n\nWith AI acceler..."
     },
     {
       "id": 8,
-      "title": "The Third-Party Agent Problem: Why Security Built for AI You Chose Misses the Agents You Didn&#039;t",
-      "link": "https://thehackernews.com/2026/10/the-third-party-agent-problem-why.html",
-      "pubDate": "Oct 10, 2026",
-      "excerpt": "In environments studied for the 2026 State of Agent Security Report, roughly 1,280 third-party products now embed AI. About 282 of them sit behind sin..."
+      "title": "LG Smart TVs Vulnerable to Pre-Auth Root Takeover From Local Network",
+      "link": "https://thehackernews.com/2026/10/lg-smart-tvs-vulnerable-to-pre-auth.html",
+      "pubDate": "Oct 13, 2026",
+      "excerpt": "Three vulnerabilities in LG&#039;s webOS can be chained to give an attacker on the same local network root access to certain smart TVs without a PIN o..."
     }
   ]
 }
