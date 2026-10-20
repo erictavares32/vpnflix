@@ -2,9 +2,13 @@ name: Fetch Cybersecurity News
 
 on:
   schedule:
-    # Run daily at 00:00 UTC
-    - cron: '0 0 * * *'
+    # Run every 6 hours
+    - cron: '0 */6 * * *'
   workflow_dispatch: # Allow manual trigger
+  push:
+    branches: ["main"]
+    paths:
+      - '.github/workflows/fetch-news.yml'
 
 concurrency:
   group: fetch-news-main
@@ -12,26 +16,28 @@ concurrency:
 
 permissions:
   contents: write
+  pages: write
+  id-token: write
 
 jobs:
   fetch-news:
     runs-on: ubuntu-latest
-    
+
     steps:
       - name: Checkout repository
         uses: actions/checkout@v4
         with:
           ref: main
           fetch-depth: 0
-      
+
       - name: Setup Node.js
         uses: actions/setup-node@v4
         with:
           node-version: '22'
-      
+
       - name: Fetch news from API
         run: node fetch-news.js
-      
+
       - name: Commit and push changes
         shell: bash
         run: |
@@ -69,3 +75,23 @@ jobs:
 
           echo "Failed to push after 3 attempts."
           exit 1
+
+  deploy:
+    needs: fetch-news
+    if: success()
+    environment:
+      name: github-pages
+      url: ${{ steps.deployment.outputs.page_url }}
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+      - name: Setup Pages
+        uses: actions/configure-pages@v5
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: '.'
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
