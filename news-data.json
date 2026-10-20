@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-20T04:34:11.185Z",
+  "lastUpdated": "2026-10-20T15:33:59.427Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Hackers Exploit Plex2Shell Flaws to Install Crypto Miners and Linux Proxy Backdoor",
-      "link": "https://thehackernews.com/2026/10/hackers-exploit-plex2shell-flaws-to.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "Threat actors have begun to exploit a chain of vulnerabilities in Plex Media Server to deploy cryptocurrency miners and reverse proxy software, a day ..."
+      "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
+      "link": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "A Chinese-speaking criminal pointed autonomous AI agents at company websites and let them break in with almost no help, and a security researcher watc..."
     },
     {
       "id": 2,
-      "title": "Popular WordPress SEO Plugin Rank Math PRO Hijacked to Deliver Self-Restoring Backdoor",
-      "link": "https://thehackernews.com/2026/10/popular-wordpress-seo-plugin-rank-math.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "Copies of Rank Math PRO, the paid version of the Rank Math SEO plugin for WordPress, that were downloaded from rankmath.com or delivered as updates be..."
+      "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector&#039;s iPhone Days Before Election",
+      "link": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "The iPhone of Vladan Đokić, rector of the University of Belgrade and a prominent supporter of Serbia&#039;s student protest movement, was infected wit..."
     },
     {
       "id": 3,
-      "title": "⚡ Weekly Recap: 98 Zero-Days, Rogue AI Agents, $100M Crypto Theft, 700 Supermarkets Hit and More",
-      "link": "https://thehackernews.com/2026/10/weekly-recap-98-zero-days-rogue-ai.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "The worst problems don&#039;t always come with a warning. Sometimes they arrive through a service everyone trusts, a device someone bought, or a syste..."
+      "title": "WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators",
+      "link": "https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "WhatsApp&#039;s help pages carried hidden instructions for its support chatbot that told it not to recommend a data protection authority or regulator ..."
     },
     {
       "id": 4,
-      "title": "GhostAction Attackers Plant Credential Stealer Disguised as Font in 94 GitHub Repositories",
-      "link": "https://thehackernews.com/2026/10/ghostaction-attackers-plant-credential.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "The threat actor behind the GhostAction supply chain attack has expanded beyond injecting malicious GitHub Actions workflows into compromised projects..."
+      "title": "What Security Teams Can Do To Tame Wild Code",
+      "link": "https://thehackernews.com/2026/10/what-security-teams-can-do-to-tame-wild.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "A sales manager builds an AI-assisted workflow to route leads. It connects to customer records, summarizes inbound requests, and posts updates to a sh..."
     },
     {
       "id": 5,
-      "title": "From Email-to-Case to the Boardroom: How Inherited Agents Break Governance Built for Software",
-      "link": "https://thehackernews.com/2026/10/from-email-to-case-to-boardroom-how.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "In Salesforce Agentforce, the recommended way to make an agent respond to events is a Flow: a record is created or a case is updated, and the Flow pas..."
+      "title": "Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns",
+      "link": "https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "Go 1.27.3 and Go 1.26.10, released on October 20, make Go&#039;s certificate verifier reject any certificate chain that passes through one of eight in..."
     },
     {
       "id": 6,
-      "title": "Fake Web3 Accelerator Uses npm Packages to Spread Malware and Hijack AI Agent Traffic",
-      "link": "https://thehackernews.com/2026/10/fake-web3-accelerator-uses-npm-packages.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "A fake Web3 accelerator has been observed pushing information stealers and backdoors to Windows and macOS systems using malicious npm packages under t..."
+      "title": "Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader",
+      "link": "https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "The Russia-linked state-sponsored threat actor tracked as APT28 (aka BlueDelta, Fancy Bear, and Forest Blizzard) has been attributed to attacks target..."
     },
     {
       "id": 7,
-      "title": "Unpatched Broadcom Wi-Fi Flaw Lets Attackers in Range Run Code as Root on Routers",
-      "link": "https://thehackernews.com/2026/10/unpatched-broadcom-wi-fi-flaw-lets.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "A flaw in Broadcom&#039;s Wi-Fi setup software lets an attacker within radio range run code as root on Broadcom-based routers, without the network pas..."
+      "title": "ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident",
+      "link": "https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "ConnectWise on Monday said it has taken remediation measures, including strengthening administrative-access protections and resetting accounts and rep..."
     },
     {
       "id": 8,
-      "title": "OpenCode Console Breach May Have Exposed OpenAI, Anthropic, and Google API Keys",
-      "link": "https://thehackernews.com/2026/10/opencode-console-breach-may-have.html",
-      "pubDate": "Oct 19, 2026",
-      "excerpt": "An intruder reached a legacy system at OpenCode on the night of October 16 and may have exposed the third-party AI provider keys that users had saved ..."
+      "title": "Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware",
+      "link": "https://thehackernews.com/2026/10/hackers-hijack-five-ovhcloud-cli.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "An attacker used a contributor&#039;s GitHub account to replace the download archives on five existing releases of OVHcloud&#039;s command-line tool o..."
     }
   ]
 }
