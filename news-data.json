@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-20T15:33:59.427Z",
+  "lastUpdated": "2026-10-20T21:24:25.534Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
+      "link": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "The private keys of eight eMudhra intermediate certificate authority (CA) certificates are compromised, Mozilla and Google&#039;s Chrome Root Program ..."
+    },
+    {
+      "id": 2,
+      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
+      "link": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM th..."
+    },
+    {
+      "id": 3,
+      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
+      "link": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
+      "pubDate": "Oct 20, 2026",
+      "excerpt": "Palo Alto Networks has disclosed that it&#039;s continuing to observe exploitation of a now-patched security flaw impacting  PAN-OS and Prisma Access ..."
+    },
+    {
+      "id": 4,
       "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
       "link": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "A Chinese-speaking criminal pointed autonomous AI agents at company websites and let them break in with almost no help, and a security researcher watc..."
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector&#039;s iPhone Days Before Election",
       "link": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "The iPhone of Vladan Đokić, rector of the University of Belgrade and a prominent supporter of Serbia&#039;s student protest movement, was infected wit..."
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators",
       "link": "https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "WhatsApp&#039;s help pages carried hidden instructions for its support chatbot that told it not to recommend a data protection authority or regulator ..."
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "What Security Teams Can Do To Tame Wild Code",
       "link": "https://thehackernews.com/2026/10/what-security-teams-can-do-to-tame-wild.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "A sales manager builds an AI-assisted workflow to route leads. It connects to customer records, summarizes inbound requests, and posts updates to a sh..."
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns",
       "link": "https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "Go 1.27.3 and Go 1.26.10, released on October 20, make Go&#039;s certificate verifier reject any certificate chain that passes through one of eight in..."
-    },
-    {
-      "id": 6,
-      "title": "Russian APT28 Breaches NATO Naval Shipbuilder in NATO Country, Deploys New Reflective Loader",
-      "link": "https://thehackernews.com/2026/10/russian-apt28-breaches-nato-naval.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "The Russia-linked state-sponsored threat actor tracked as APT28 (aka BlueDelta, Fancy Bear, and Forest Blizzard) has been attributed to attacks target..."
-    },
-    {
-      "id": 7,
-      "title": "ConnectWise Resets Credentials as Cloud Backup Remains Offline After Security Incident",
-      "link": "https://thehackernews.com/2026/10/connectwise-resets-credentials-as-cloud.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "ConnectWise on Monday said it has taken remediation measures, including strengthening administrative-access protections and resetting accounts and rep..."
-    },
-    {
-      "id": 8,
-      "title": "Hackers Hijack Five OVHcloud CLI Releases to Distribute Secret-Stealing Malware",
-      "link": "https://thehackernews.com/2026/10/hackers-hijack-five-ovhcloud-cli.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "An attacker used a contributor&#039;s GitHub account to replace the download archives on five existing releases of OVHcloud&#039;s command-line tool o..."
     }
   ]
 }
