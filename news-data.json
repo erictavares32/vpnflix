@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-21T16:53:09.804Z",
+  "lastUpdated": "2026-10-21T21:26:07.095Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
+      "link": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "GitLab released fixes on October 21 for a flaw that lets an attacker run code on a self-managed server without logging in, and it affects every versio..."
+    },
+    {
+      "id": 2,
+      "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
+      "link": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "The popular LiteLLM Python package has been compromised as part of a software supply chain attack that delivered a credential stealer and a backdoor, ..."
+    },
+    {
+      "id": 3,
+      "title": "OpenAI&#039;s GPT-6 Agent Removed Safety Monitoring, Then Falsely Denied Doing So",
+      "link": "https://thehackernews.com/2026/10/openais-gpt-6-agent-removed-safety.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "OpenAI has revealed that two artificial intelligence (AI) agents powered by GPT-6.1 Sol and one GPT-6 Astra weakened misalignment monitoring while mak..."
+    },
+    {
+      "id": 4,
       "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
       "link": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "PHP has released emergency updates that fix two critical flaws in the language itself, letting an attacker without an account run code on a web server..."
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
       "link": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "Google on Tuesday said it&#039;s rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protecti..."
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
       "link": "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "Cybersecurity researchers have disclosed details of a previously undocumented China-aligned threat cluster known as Bronze Sandcastle that has been ob..."
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
       "link": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "Generative AI has changed what a malicious email looks like. Messages that once gave themselves away through clumsy wording, generic pretexts, and reu..."
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn&#039;t",
       "link": "https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "You cannot fully block the two critical PHP flaws called PHP2Shell before today&#039;s fix, and the one setting being passed around as a workaround is..."
-    },
-    {
-      "id": 6,
-      "title": "The Harness Is the Hard Part of Agentic Pentesting",
-      "link": "https://thehackernews.com/2026/10/the-harness-is-hard-part-of-agentic.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "An AppSec team can point an AI agent running on a general-purpose model at its own web apps with little setup. Sure, the model writes the attacks. But..."
-    },
-    {
-      "id": 7,
-      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
-      "link": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "Attackers took control of more than 300 Tor exit relays in early October and used them to redirect SSH connections to servers that stole login passwor..."
-    },
-    {
-      "id": 8,
-      "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
-      "link": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "This story is developing and was written before PHP&#039;s scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed ..."
     }
   ]
 }
