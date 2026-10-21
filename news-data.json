@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-21T03:57:44.593Z",
+  "lastUpdated": "2026-10-21T11:26:12.480Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
+      "link": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "This story is developing and was written before PHP&#039;s scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed ..."
+    },
+    {
+      "id": 2,
+      "title": "Attackers Abuse UpdraftCentral Keys to Plant Backdoors on WordPress Sites",
+      "link": "https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "Unknown threat actors breached TeamUpdraft&#039;s website and potentially gained unauthorized access to customers&#039; connection keys for UpdraftCen..."
+    },
+    {
+      "id": 3,
+      "title": "U.S. Orders DeepSeek Removed From Federal Civilian Systems, Bans New Purchases",
+      "link": "https://thehackernews.com/2026/10/us-orders-deepseek-removed-from-federal.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "U.S. federal civilian agencies must remove DeepSeek products from their information technology systems, along with any third-party products or service..."
+    },
+    {
+      "id": 4,
+      "title": "State Bank of India Confirms Data Leak After 3,897 Customer Records Found on Dark Web",
+      "link": "https://thehackernews.com/2026/10/state-bank-of-india-confirms-data-leak.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "State Bank of India has identified 3,897 customer records containing personal information in a set of about 375,000 records available on the dark web,..."
+    },
+    {
+      "id": 5,
+      "title": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
+      "link": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four vulnerabilities to its Known Exploited Vulnerabilities (KEV) ca..."
+    },
+    {
+      "id": 6,
+      "title": "Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion",
+      "link": "https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "A Belarus-aligned hacktivist group spent nearly two years within the network of a Russian healthcare organization.\n\nAccording to a report published by..."
+    },
+    {
+      "id": 7,
       "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
       "link": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "The private keys of eight eMudhra intermediate certificate authority (CA) certificates are compromised, Mozilla and Google&#039;s Chrome Root Program ..."
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
       "link": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
       "pubDate": "Oct 20, 2026",
       "excerpt": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM th..."
-    },
-    {
-      "id": 3,
-      "title": "Qilin and INC Ransomware Groups Exploit Palo Alto Networks Flaw to Bypass MFA",
-      "link": "https://thehackernews.com/2026/10/qilin-and-inc-ransomware-groups-exploit.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "Palo Alto Networks has disclosed that it&#039;s continuing to observe exploitation of a now-patched security flaw impacting  PAN-OS and Prisma Access ..."
-    },
-    {
-      "id": 4,
-      "title": "Hackers Use Autonomous AI Agents to Breach Company Websites, Target Over 1,200 Sites",
-      "link": "https://thehackernews.com/2026/10/hackers-use-autonomous-ai-agents-to.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "A Chinese-speaking criminal pointed autonomous AI agents at company websites and let them break in with almost no help, and a security researcher watc..."
-    },
-    {
-      "id": 5,
-      "title": "Pegasus Spyware Infection Confirmed on Serbian University Rector&#039;s iPhone Days Before Election",
-      "link": "https://thehackernews.com/2026/10/pegasus-spyware-infection-confirmed-on.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "The iPhone of Vladan Đokić, rector of the University of Belgrade and a prominent supporter of Serbia&#039;s student protest movement, was infected wit..."
-    },
-    {
-      "id": 6,
-      "title": "WhatsApp Hid Instructions in Help Pages Telling Its AI Chatbot Not to Recommend Privacy Regulators",
-      "link": "https://thehackernews.com/2026/10/whatsapp-hid-instructions-in-help-pages.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "WhatsApp&#039;s help pages carried hidden instructions for its support chatbot that told it not to recommend a data protection authority or regulator ..."
-    },
-    {
-      "id": 7,
-      "title": "What Security Teams Can Do To Tame Wild Code",
-      "link": "https://thehackernews.com/2026/10/what-security-teams-can-do-to-tame-wild.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "A sales manager builds an AI-assisted workflow to route leads. It connects to customer records, summarizes inbound requests, and posts updates to a sh..."
-    },
-    {
-      "id": 8,
-      "title": "Go Issues Emergency Update Blocking Eight CA Keys Over Undisclosed Security Concerns",
-      "link": "https://thehackernews.com/2026/10/go-issues-emergency-update-blocking.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "Go 1.27.3 and Go 1.26.10, released on October 20, make Go&#039;s certificate verifier reject any certificate chain that passes through one of eight in..."
     }
   ]
 }
