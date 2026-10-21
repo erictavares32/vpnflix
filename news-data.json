@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-21T11:26:12.480Z",
+  "lastUpdated": "2026-10-21T16:53:09.804Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
+      "link": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "PHP has released emergency updates that fix two critical flaws in the language itself, letting an attacker without an account run code on a web server..."
+    },
+    {
+      "id": 2,
+      "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
+      "link": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "Google on Tuesday said it&#039;s rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protecti..."
+    },
+    {
+      "id": 3,
+      "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
+      "link": "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of a previously undocumented China-aligned threat cluster known as Bronze Sandcastle that has been ob..."
+    },
+    {
+      "id": 4,
+      "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
+      "link": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "Generative AI has changed what a malicious email looks like. Messages that once gave themselves away through clumsy wording, generic pretexts, and reu..."
+    },
+    {
+      "id": 5,
+      "title": "PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn&#039;t",
+      "link": "https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "You cannot fully block the two critical PHP flaws called PHP2Shell before today&#039;s fix, and the one setting being passed around as a workaround is..."
+    },
+    {
+      "id": 6,
+      "title": "The Harness Is the Hard Part of Agentic Pentesting",
+      "link": "https://thehackernews.com/2026/10/the-harness-is-hard-part-of-agentic.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "An AppSec team can point an AI agent running on a general-purpose model at its own web apps with little setup. Sure, the model writes the attacks. But..."
+    },
+    {
+      "id": 7,
+      "title": "Attackers Hijacked Over 300 Tor Exit Relays to Intercept SSH Connections",
+      "link": "https://thehackernews.com/2026/10/attackers-hijacked-over-300-tor-exit.html",
+      "pubDate": "Oct 21, 2026",
+      "excerpt": "Attackers took control of more than 300 Tor exit relays in early October and used them to redirect SSH connections to servers that stole login passwor..."
+    },
+    {
+      "id": 8,
       "title": "PHP2Shell: Two Unpatched Critical PHP RCE Flaws (CVSS 9.2) Trigger Emergency Security Alert",
       "link": "https://thehackernews.com/2026/10/php2shell-two-unpatched-critical-php.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "This story is developing and was written before PHP&#039;s scheduled 14:00 UTC release on October 21. Once the release is out, the affected and fixed ..."
-    },
-    {
-      "id": 2,
-      "title": "Attackers Abuse UpdraftCentral Keys to Plant Backdoors on WordPress Sites",
-      "link": "https://thehackernews.com/2026/10/attackers-abuse-updraftcentral-keys-to.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "Unknown threat actors breached TeamUpdraft&#039;s website and potentially gained unauthorized access to customers&#039; connection keys for UpdraftCen..."
-    },
-    {
-      "id": 3,
-      "title": "U.S. Orders DeepSeek Removed From Federal Civilian Systems, Bans New Purchases",
-      "link": "https://thehackernews.com/2026/10/us-orders-deepseek-removed-from-federal.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "U.S. federal civilian agencies must remove DeepSeek products from their information technology systems, along with any third-party products or service..."
-    },
-    {
-      "id": 4,
-      "title": "State Bank of India Confirms Data Leak After 3,897 Customer Records Found on Dark Web",
-      "link": "https://thehackernews.com/2026/10/state-bank-of-india-confirms-data-leak.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "State Bank of India has identified 3,897 customer records containing personal information in a set of about 375,000 records available on the dark web,..."
-    },
-    {
-      "id": 5,
-      "title": "CISA Orders Federal Agencies to Patch Exploited Plex2Shell, Siemens, and SiteGuard Flaws",
-      "link": "https://thehackernews.com/2026/10/cisa-orders-federal-agencies-to-patch.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added four vulnerabilities to its Known Exploited Vulnerabilities (KEV) ca..."
-    },
-    {
-      "id": 6,
-      "title": "Hackers Hid Vasilek Backdoor in VMware Tools During 2-Year Russian Healthcare Intrusion",
-      "link": "https://thehackernews.com/2026/10/hackers-hid-vasilek-backdoor-in-vmware.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "A Belarus-aligned hacktivist group spent nearly two years within the network of a Russian healthcare organization.\n\nAccording to a report published by..."
-    },
-    {
-      "id": 7,
-      "title": "Eight eMudhra CA Keys Compromised, Triggering Emergency Fixes Across Browsers and Software",
-      "link": "https://thehackernews.com/2026/10/eight-emudhra-ca-keys-compromised.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "The private keys of eight eMudhra intermediate certificate authority (CA) certificates are compromised, Mozilla and Google&#039;s Chrome Root Program ..."
-    },
-    {
-      "id": 8,
-      "title": "Critical FortiSIEM Flaw Gets Public Exploit PoC for Unauthenticated Remote Code Execution",
-      "link": "https://thehackernews.com/2026/10/critical-fortisiem-flaw-gets-public.html",
-      "pubDate": "Oct 20, 2026",
-      "excerpt": "Cybersecurity researchers have released a proof-of-concept (PoC) exploit for a recently patched critical security flaw impacting Fortinet FortiSIEM th..."
     }
   ]
 }
