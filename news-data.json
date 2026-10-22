@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-22T03:58:00.259Z",
+  "lastUpdated": "2026-10-22T11:26:10.134Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation",
+      "link": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Platform-as-a-Service (PaaS) provider Railway on Wednesday disclosed &quot;anomalous activity&quot; related to systems that store customer environment..."
+    },
+    {
+      "id": 2,
+      "title": "OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL",
+      "link": "https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "A flaw in the OpenCode AI coding agent allowed a malicious or hijacked MCP server to run code on a developer&#039;s Windows or WSL machine when the de..."
+    },
+    {
+      "id": 3,
+      "title": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
+      "link": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "LiteLLM on Wednesday disclosed that threat actors compromised &quot;multiple independent security controls&quot; to push a malicious version of the Py..."
+    },
+    {
+      "id": 4,
+      "title": "Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions",
+      "link": "https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Node.js released security updates on October 21 for its three supported release lines, 22.x, 24.x and 26.x, fixing 10 flaws. The most serious is a bug..."
+    },
+    {
+      "id": 5,
+      "title": "New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification",
+      "link": "https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "A remote attacker who has not logged in can crash many HTTP/3 web servers with a single connection, security firm FoxIO disclosed, releasing working p..."
+    },
+    {
+      "id": 6,
+      "title": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
+      "link": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Amazon&#039;s Threat Intelligence team on Wednesday said it detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities on October 17..."
+    },
+    {
+      "id": 7,
+      "title": "China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack",
+      "link": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Microsoft on Wednesday disclosed that a China state-aligned actor dubbed Storm-0940 was behind the recent supply chain compromise of the ConnectWise C..."
+    },
+    {
+      "id": 8,
       "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
       "link": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
       "pubDate": "Oct 21, 2026",
       "excerpt": "GitLab released fixes on October 21 for a flaw that lets an attacker run code on a self-managed server without logging in, and it affects every versio..."
-    },
-    {
-      "id": 2,
-      "title": "LiteLLM Compromised in Supply Chain Attack Delivering Credential Stealer and Backdoor",
-      "link": "https://thehackernews.com/2026/10/litellm-compromised-in-supply-chain.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "The popular LiteLLM Python package has been compromised as part of a software supply chain attack that delivered a credential stealer and a backdoor, ..."
-    },
-    {
-      "id": 3,
-      "title": "OpenAI&#039;s GPT-6 Agent Removed Safety Monitoring, Then Falsely Denied Doing So",
-      "link": "https://thehackernews.com/2026/10/openais-gpt-6-agent-removed-safety.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "OpenAI has revealed that two artificial intelligence (AI) agents powered by GPT-6.1 Sol and one GPT-6 Astra weakened misalignment monitoring while mak..."
-    },
-    {
-      "id": 4,
-      "title": "PHP Issues Emergency Patches for Two Critical PHP2Shell RCE Flaws as Exploit Attempts Emerge",
-      "link": "https://thehackernews.com/2026/10/php-issues-emergency-patches-for-two.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "PHP has released emergency updates that fix two critical flaws in the language itself, letting an attacker without an account run code on a web server..."
-    },
-    {
-      "id": 5,
-      "title": "Google Chrome Adds ClickFix Warnings to Stop Users From Running Malicious Commands",
-      "link": "https://thehackernews.com/2026/10/google-chrome-adds-clickfix-warnings-to.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "Google on Tuesday said it&#039;s rolling out improved safeguards in its Chrome browser to secure users against ClickFix attacks when Enhanced Protecti..."
-    },
-    {
-      "id": 6,
-      "title": "China-Aligned Bronze Sandcastle Abuses Sandboxie DLL Sideloading to Deploy Backdoors",
-      "link": "https://thehackernews.com/2026/10/china-aligned-bronze-sandcastle-abuses.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a previously undocumented China-aligned threat cluster known as Bronze Sandcastle that has been ob..."
-    },
-    {
-      "id": 7,
-      "title": "Generative AI Is Erasing Behavioral Tells, Weakening Behavior-Only Detection, Proofpoint Reports",
-      "link": "https://thehackernews.com/2026/10/generative-ai-is-erasing-behavioral.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "Generative AI has changed what a malicious email looks like. Messages that once gave themselves away through clumsy wording, generic pretexts, and reu..."
-    },
-    {
-      "id": 8,
-      "title": "PHP2Shell: What Actually Protects You Before the 14:00 UTC PHP RCE Patch, and What Doesn&#039;t",
-      "link": "https://thehackernews.com/2026/10/php2shell-what-actually-protects-you.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "You cannot fully block the two critical PHP flaws called PHP2Shell before today&#039;s fix, and the one setting being passed around as a workaround is..."
     }
   ]
 }
