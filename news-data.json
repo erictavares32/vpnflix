@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-22T11:26:10.134Z",
+  "lastUpdated": "2026-10-22T16:53:08.327Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Meta Ordered to Pay $25 Billion After Court Finds 43 Million Privacy Violations",
+      "link": "https://thehackernews.com/2026/10/meta-ordered-to-pay-25-billion-after.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Social media giant Meta was ordered to pay 25 billion in penalties by a New Mexico court on Wednesday as part of a data privacy lawsuit that sprang fr..."
+    },
+    {
+      "id": 2,
+      "title": "INTERPOL Arrests 1,462 Suspects, Disrupts 10,909 Cybercrime Networks in Global Crackdown",
+      "link": "https://thehackernews.com/2026/10/interpol-arrests-1462-suspects-disrupts.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "INTERPOL on Thursday announced that a coordinated law enforcement action has disrupted 10,909 malicious networks and recovered more than $105 million ..."
+    },
+    {
+      "id": 3,
+      "title": "The AI Agent Nobody Owns: Watch Expert Webinar On Your Newest Insider Threat",
+      "link": "https://thehackernews.com/2026/10/the-ai-agent-nobody-owns-watch-expert.html",
+      "pubDate": "Oct 22, 2026",
+      "excerpt": "Right now, there is probably an AI agent running on a laptop somewhere in your network. It stores API keys and database passwords, can access your int..."
+    },
+    {
+      "id": 4,
       "title": "Railway Says Intruder May Have Accessed Customer Secrets, Urges Credential Rotation",
       "link": "https://thehackernews.com/2026/10/railway-says-intruder-may-have-accessed.html",
       "pubDate": "Oct 22, 2026",
       "excerpt": "Platform-as-a-Service (PaaS) provider Railway on Wednesday disclosed &quot;anomalous activity&quot; related to systems that store customer environment..."
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "OpenCode Flaw Lets Malicious MCP Servers Execute Code During Sign-In on Windows and WSL",
       "link": "https://thehackernews.com/2026/10/opencode-flaw-lets-malicious-mcp.html",
       "pubDate": "Oct 22, 2026",
       "excerpt": "A flaw in the OpenCode AI coding agent allowed a malicious or hijacked MCP server to run code on a developer&#039;s Windows or WSL machine when the de..."
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "LiteLLM Suspects GitHub Token Leak in AI Gateway Logs Behind Malicious Package Release",
       "link": "https://thehackernews.com/2026/10/litellm-suspects-github-token-leak-in.html",
       "pubDate": "Oct 22, 2026",
       "excerpt": "LiteLLM on Wednesday disclosed that threat actors compromised &quot;multiple independent security controls&quot; to push a malicious version of the Py..."
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "Node.js Brotli Decoder Bug Could Allow Remote Code Execution in All Supported Versions",
       "link": "https://thehackernews.com/2026/10/nodejs-brotli-decoder-bug-could-allow.html",
       "pubDate": "Oct 22, 2026",
       "excerpt": "Node.js released security updates on October 21 for its three supported release lines, 22.x, 24.x and 26.x, fixing 10 flaws. The most serious is a bug..."
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "New QPACK Flaws Can Crash HTTP/3 Servers, Trigger Up to 4,000-Fold Memory Amplification",
       "link": "https://thehackernews.com/2026/10/new-qpack-flaws-can-crash-http3-servers.html",
       "pubDate": "Oct 22, 2026",
       "excerpt": "A remote attacker who has not logged in can crash many HTTP/3 web servers with a single connection, security firm FoxIO disclosed, releasing working p..."
-    },
-    {
-      "id": 6,
-      "title": "Someone Tried to Exploit PHP2Shell 4 Days Before the Vulnerabilities Were Publicly Disclosed",
-      "link": "https://thehackernews.com/2026/10/someone-tried-to-exploit-php2shell-4.html",
-      "pubDate": "Oct 22, 2026",
-      "excerpt": "Amazon&#039;s Threat Intelligence team on Wednesday said it detected an attempt to exploit the newly disclosed PHP2Shell vulnerabilities on October 17..."
-    },
-    {
-      "id": 7,
-      "title": "China-Linked Hackers Use ARTEX AI Agents in ConnectWise Supply Chain Attack",
-      "link": "https://thehackernews.com/2026/10/china-linked-hackers-use-artex-ai.html",
-      "pubDate": "Oct 22, 2026",
-      "excerpt": "Microsoft on Wednesday disclosed that a China state-aligned actor dubbed Storm-0940 was behind the recent supply chain compromise of the ConnectWise C..."
-    },
-    {
-      "id": 8,
-      "title": "Critical GitLab Flaw (CVSS 10.0) Could Allow Unauthenticated RCE Across 12 Years of Releases",
-      "link": "https://thehackernews.com/2026/10/critical-gitlab-flaw-cvss-100-could.html",
-      "pubDate": "Oct 21, 2026",
-      "excerpt": "GitLab released fixes on October 21 for a flaw that lets an attacker run code on a self-managed server without logging in, and it affects every versio..."
     }
   ]
 }
