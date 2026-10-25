@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-25T15:48:49.358Z",
+  "lastUpdated": "2026-10-25T20:36:16.327Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
+      "link": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
+      "pubDate": "Oct 25, 2026",
+      "excerpt": "A single hacked device on a Tailscale network can be used to gain root access to other servers it can reach, according to a security researcher who pu..."
+    },
+    {
+      "id": 2,
+      "title": "PHP2Shell Exploitation Hits Government Entity Amid Global Scanning and Signs of AI-Assisted Hacking",
+      "link": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
+      "pubDate": "Oct 25, 2026",
+      "excerpt": "Threat actors have been observed using agentic artificial intelligence (AI) platforms for post-exploitation activity following the abuse of the PHP2Sh..."
+    },
+    {
+      "id": 3,
       "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
       "link": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
       "pubDate": "Oct 25, 2026",
       "excerpt": "OpenAI has announced plans to conduct frontier model training with no live internet access, as it resumes reinforcement learning (RL) training and int..."
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "Brotli Decoder Flaw Behind Node.js RCE Also Affects Bun, Python and Other Widely Used Software",
       "link": "https://thehackernews.com/2026/10/brotli-decoder-flaw-behind-nodejs-rce.html",
       "pubDate": "Oct 24, 2026",
       "excerpt": "A memory-corruption flaw in Google&#039;s Brotli decoder sits in many programs that unpack Brotli-compressed data, among them Bun, the Python Brotli a..."
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Leaked LiteLLM Master Key Let Attackers Steal GitHub Tokens and Hijack Release Pipeline",
       "link": "https://thehackernews.com/2026/10/leaked-litellm-master-key-let-attackers.html",
       "pubDate": "Oct 24, 2026",
       "excerpt": "LiteLLM on Friday revealed that an Agent Platform master key accidentally published to a public GitHub repository in late May 2026 ultimately allowed ..."
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Google Says Gmail and Photos Data Shared With AI Search Could Be Used for Targeted Ads",
       "link": "https://thehackernews.com/2026/10/google-says-gmail-and-photos-data.html",
       "pubDate": "Oct 24, 2026",
       "excerpt": "Google has updated its privacy policy to spell out that using personalized artificial intelligence (AI) features in Search or Gemini could allow the c..."
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Researchers Push Over 2 Million Updates to Remotely Disable Popcorn Time Updater That Could Fuel a Botnet",
       "link": "https://thehackernews.com/2026/10/researchers-push-over-2-million-updates.html",
       "pubDate": "Oct 24, 2026",
       "excerpt": "Between November 2025 and March 2026, the Dutch security firm Eye Security pushed more than 2 million updates to computers it did not own to switch of..."
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "CISA Flags Two Actively Exploited Critical Flaws in Collabora Online and Arista VeloCloud",
       "link": "https://thehackernews.com/2026/10/cisa-flags-two-actively-exploited.html",
       "pubDate": "Oct 24, 2026",
       "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two vulnerabilities impacting Collabora Online Built-in CODE Server a..."
-    },
-    {
-      "id": 7,
-      "title": "BlackX UEFI Bootkit Bypasses Secure Boot on Patched Windows Systems Missing Revocations",
-      "link": "https://thehackernews.com/2026/10/blackx-uefi-bootkit-bypasses-secure.html",
-      "pubDate": "Oct 23, 2026",
-      "excerpt": "Diplomatic organizations in Central Asia have been targeted by a sophisticated new Unified Extensible Firmware Interface (UEFI) bootkit called BlackX...."
-    },
-    {
-      "id": 8,
-      "title": "Ruby Fixes Three Regex Engine Bugs Responsible for Four Critical GitLab RCE Flaws",
-      "link": "https://thehackernews.com/2026/10/ruby-fixes-three-regex-engine-bugs.html",
-      "pubDate": "Oct 23, 2026",
-      "excerpt": "Ruby has released versions 4.0.9, 3.4.12, and 3.3.13 to fix three bugs in Onigmo, the regular expression engine built into the language. The bugs lie ..."
     }
   ]
 }
