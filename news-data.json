@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-26T12:32:13.444Z",
+  "lastUpdated": "2026-10-26T22:27:09.369Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
+      "link": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
+      "pubDate": "Oct 26, 2026",
+      "excerpt": "An unknown threat actor has infected 953 online stores, most of them running Magento, as part of a long-running campaign active since July 2025.\n\nAcco..."
+    },
+    {
+      "id": 2,
+      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
+      "link": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
+      "pubDate": "Oct 26, 2026",
+      "excerpt": "PHP has rebuilt its official Windows packages for PHP 8.2 through 8.5 to fix CVE-2026-111497, a flaw in the Brotli compression library that the packag..."
+    },
+    {
+      "id": 3,
+      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
+      "link": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
+      "pubDate": "Oct 26, 2026",
+      "excerpt": "Cybersecurity researchers are calling attention to what they say is a &quot;recurring social engineering pattern&quot; across hundreds of cases in whi..."
+    },
+    {
+      "id": 4,
+      "title": "⚡ Weekly Recap: This2Shell, That2Shell, Everything&#039;s an RCE? Rogue AI, Supply Chain Chaos and More",
+      "link": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
+      "pubDate": "Oct 26, 2026",
+      "excerpt": "This2Shell, That2Shell, Everything2Shell. That&#039;s pretty much how the last week went. Critical bugs that let attackers run code remotely are showi..."
+    },
+    {
+      "id": 5,
+      "title": "Two Critical Wasmtime Flaws Could Let Malicious WebAssembly Modules Escape Sandboxes",
+      "link": "https://thehackernews.com/2026/10/two-critical-wasmtime-flaws-could-let.html",
+      "pubDate": "Oct 26, 2026",
+      "excerpt": "Two critical flaws in Wasmtime, a WebAssembly runtime that can be built into other software, could allow a malicious WebAssembly module to escape the ..."
+    },
+    {
+      "id": 6,
       "title": "Between alerts: What Attackers Do in the Spaces Ordinary Detection Misses",
       "link": "https://thehackernews.com/2026/10/between-alerts-what-attackers-do-in.html",
       "pubDate": "Oct 26, 2026",
       "excerpt": "Every SOC struggles with a pile of alerts. Very few of those alerts explain how an attack started or how it progressed. Network data, like that from a..."
     },
     {
-      "id": 2,
+      "id": 7,
       "title": "uCreator Android Spyware Can Steal Telegram 2FA Passwords and Clone WeChat Accounts",
       "link": "https://thehackernews.com/2026/10/ucreator-android-spyware-can-steal.html",
       "pubDate": "Oct 26, 2026",
       "excerpt": "A rentable Android spyware kit called uCreator takes over Telegram and WeChat accounts by hiding its code inside working copies of the two apps, resea..."
     },
     {
-      "id": 3,
+      "id": 8,
       "title": "Microsoft 365 Token-Replay Attacks Compromise 97 Accounts at 79 Organizations",
       "link": "https://thehackernews.com/2026/10/microsoft-365-token-replay-attacks.html",
       "pubDate": "Oct 26, 2026",
       "excerpt": "Cybersecurity researchers have disclosed a Microsoft 365 campaign that has been observed leveraging an adversary-in-the-middle (AitM) relay to capture..."
-    },
-    {
-      "id": 4,
-      "title": "Gheist Uses Stolen GitHub Tokens to Steal Private Repository Secrets via Actions Logs",
-      "link": "https://thehackernews.com/2026/10/gheist-uses-stolen-github-tokens-to.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "An automated campaign is using stolen GitHub tokens to plant workflows that print a repository&#039;s secrets into its GitHub Actions logs, which the ..."
-    },
-    {
-      "id": 5,
-      "title": "Malicious File in Downloads Folder Tries to Trick AI Coding Agent Into Installing Malware",
-      "link": "https://thehackernews.com/2026/10/malicious-file-in-downloads-folder.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "A malicious instruction file sitting in a developer&#039;s Downloads folder tried to make their AI coding agent install a known-malicious npm package,..."
-    },
-    {
-      "id": 6,
-      "title": "Unpatched Tailscale SSH Flaws Could Let a Hacked Device Reach Root on Other Servers",
-      "link": "https://thehackernews.com/2026/10/unpatched-tailscale-ssh-flaws-could-let.html",
-      "pubDate": "Oct 25, 2026",
-      "excerpt": "A single hacked device on a Tailscale network can be used to gain root access to other servers it can reach, according to a security researcher who pu..."
-    },
-    {
-      "id": 7,
-      "title": "PHP2Shell Exploitation Attempts Continue Amid Suspected N. Korea Global Scanning Activity",
-      "link": "https://thehackernews.com/2026/10/php2shell-exploitation-hits-government.html",
-      "pubDate": "Oct 25, 2026",
-      "excerpt": "In an update, Palo Alto Networks Unit 42 said it&#039;s retracting its earlier assessment that the post-compromise activity targeting the European gov..."
-    },
-    {
-      "id": 8,
-      "title": "OpenAI AI Agents Demonstrate VM Escapes and Secret Cross-Sandbox Communication",
-      "link": "https://thehackernews.com/2026/10/openai-ai-agents-demonstrate-vm-escapes.html",
-      "pubDate": "Oct 25, 2026",
-      "excerpt": "OpenAI has announced plans to conduct frontier model training with no live internet access, as it resumes reinforcement learning (RL) training and int..."
     }
   ]
 }
