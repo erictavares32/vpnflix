@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-27T11:50:01.626Z",
+  "lastUpdated": "2026-10-27T17:43:53.006Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "GoAhead TLS Flaws Allow Revoked Client Certificates and Enable Session Decryption",
+      "link": "https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "The GoAhead embedded web server loaded a certificate revocation list into its default TLS backend but never turned revocation checking on, so a revoke..."
+    },
+    {
+      "id": 2,
+      "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
+      "link": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "Apple on Monday backported fixes for a high-severity security flaw that was exploited in real-world cyber attacks to older devices.\n\nThe vulnerability..."
+    },
+    {
+      "id": 3,
+      "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
+      "link": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "Microsoft has fixed a flaw in its Authenticator app for Android that let a malicious app with no permissions pose as a trusted Microsoft app, such as ..."
+    },
+    {
+      "id": 4,
+      "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
+      "link": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "An attacker who gained access to Keystone&#039;s website obtained the key that its hardware wallets use to prove they are genuine, the company said in..."
+    },
+    {
+      "id": 5,
+      "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
+      "link": "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "Fake login pages are nothing new, but generative AI is making them easier to build and more convincing. Attackers can recreate familiar login screens,..."
+    },
+    {
+      "id": 6,
+      "title": "Lazarus Abuses South Korean Security Software to Deploy Malware Using Post-Quantum Encryption",
+      "link": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "The North Korea-linked Lazarus Group has been attributed to a cyber espionage campaign dubbed Operation FlashHole targeting at least three organizatio..."
+    },
+    {
+      "id": 7,
       "title": "Australia Gets Into Amadey Malware Backend, Cuts Off Access to 180,000 Infected Computers",
       "link": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "A criminal using the Amadey malware can no longer access or steal data from 180,000 infected computers around the world, including some in Australia, ..."
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections",
       "link": "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "OpenAI&#039;s compaction feature, which shrinks a long conversation to save space, could be turned into a way to copy a model&#039;s hidden reasoning ..."
-    },
-    {
-      "id": 3,
-      "title": "Attackers Hijack Dahua IP Cameras in Ukraine Using P2P Access and Auth Weaknesses",
-      "link": "https://thehackernews.com/2026/10/attackers-hijack-dahua-ip-cameras-in.html",
-      "pubDate": "Oct 27, 2026",
-      "excerpt": "The Computer Emergency Response Team of Ukraine (CERT-UA) has issued an alert warning of unauthorized remote access to video surveillance systems manu..."
-    },
-    {
-      "id": 4,
-      "title": "CISA Confirms Active Exploitation of Two PHP2Shell Flaws Enabling Remote Code Execution",
-      "link": "https://thehackernews.com/2026/10/cisa-confirms-active-exploitation-of.html",
-      "pubDate": "Oct 27, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday confirmed active exploitation of the recently patched PHP2Shell flaws by ad..."
-    },
-    {
-      "id": 5,
-      "title": "Hackers Infect 953 Online Stores With Scanner-Evading JavaScript, Mostly on Magento",
-      "link": "https://thehackernews.com/2026/10/hackers-infect-953-online-stores-with.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "An unknown threat actor has infected 953 online stores, most of them running Magento, as part of a long-running campaign active since July 2025.\n\nAcco..."
-    },
-    {
-      "id": 6,
-      "title": "PHP Issues Second Windows Security Update in Five Days to Fix Brotli Code Execution Flaw",
-      "link": "https://thehackernews.com/2026/10/php-issues-second-windows-security.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "PHP has rebuilt its official Windows packages for PHP 8.2 through 8.5 to fix CVE-2026-111497, a flaw in the Brotli compression library that the packag..."
-    },
-    {
-      "id": 7,
-      "title": "Attackers Use Microsoft Teams IT Support Scams to Deploy Malware and Ransomware",
-      "link": "https://thehackernews.com/2026/10/attackers-use-microsoft-teams-it.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "Cybersecurity researchers are calling attention to what they say is a &quot;recurring social engineering pattern&quot; across hundreds of cases in whi..."
-    },
-    {
-      "id": 8,
-      "title": "⚡ Weekly Recap: This2Shell, That2Shell, Everything&#039;s an RCE? Rogue AI, Supply Chain Chaos and More",
-      "link": "https://thehackernews.com/2026/10/weekly-recap-this2shell-that2shell.html",
-      "pubDate": "Oct 26, 2026",
-      "excerpt": "This2Shell, That2Shell, Everything2Shell. That&#039;s pretty much how the last week went. Critical bugs that let attackers run code remotely are showi..."
     }
   ]
 }
