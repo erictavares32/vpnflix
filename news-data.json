@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-27T17:43:53.006Z",
+  "lastUpdated": "2026-10-27T21:58:00.575Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "CyberStrikeAI Uses 44 AI Agents to Automate Hacking Operations Against Japan Targets",
+      "link": "https://thehackernews.com/2026/10/cyberstrikeai-uses-44-ai-agents-to.html",
+      "pubDate": "Oct 27, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of three cyber attacks targeting organizations in Japan in which artificial intelligence (AI) was a k..."
+    },
+    {
+      "id": 2,
       "title": "GoAhead TLS Flaws Allow Revoked Client Certificates and Enable Session Decryption",
       "link": "https://thehackernews.com/2026/10/goahead-tls-flaws-allow-revoked-client.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "The GoAhead embedded web server loaded a certificate revocation list into its default TLS backend but never turned revocation checking on, so a revoke..."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Apple Backports Fix for Exploited CoreGraphics Flaw to Older iPhones and iPads",
       "link": "https://thehackernews.com/2026/10/apple-backports-fix-for-exploited.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "Apple on Monday backported fixes for a high-severity security flaw that was exploited in real-world cyber attacks to older devices.\n\nThe vulnerability..."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "Microsoft Authenticator Flaw Let Permissionless Android Apps Steal Work Account Tokens",
       "link": "https://thehackernews.com/2026/10/microsoft-authenticator-flaw-let.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "Microsoft has fixed a flaw in its Authenticator app for Android that let a malicious app with no permissions pose as a trusted Microsoft app, such as ..."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Keystone to Destroy 18,835 Hardware Wallets After Hackers Steal Device Verification Key",
       "link": "https://thehackernews.com/2026/10/keystone-to-destroy-18835-hardware.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "An attacker who gained access to Keystone&#039;s website obtained the key that its hardware wallets use to prove they are genuine, the company said in..."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "AI-Generated Fake Login Pages Are Making Account Takeovers Easier",
       "link": "https://thehackernews.com/2026/10/ai-generated-fake-login-pages-are.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "Fake login pages are nothing new, but generative AI is making them easier to build and more convincing. Attackers can recreate familiar login screens,..."
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "Lazarus Abuses South Korean Security Software to Deploy Malware Using Post-Quantum Encryption",
       "link": "https://thehackernews.com/2026/10/lazarus-abuses-south-korean-security.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "The North Korea-linked Lazarus Group has been attributed to a cyber espionage campaign dubbed Operation FlashHole targeting at least three organizatio..."
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Australia Gets Into Amadey Malware Backend, Cuts Off Access to 180,000 Infected Computers",
       "link": "https://thehackernews.com/2026/10/australia-gets-into-amadey-malware.html",
       "pubDate": "Oct 27, 2026",
       "excerpt": "A criminal using the Amadey malware can no longer access or steal data from 180,000 infected computers around the world, including some in Australia, ..."
-    },
-    {
-      "id": 8,
-      "title": "OpenAI Compaction Flaw Let Researchers Bypass Hidden Reasoning Protections",
-      "link": "https://thehackernews.com/2026/10/openai-compaction-flaw-let-researchers.html",
-      "pubDate": "Oct 27, 2026",
-      "excerpt": "OpenAI&#039;s compaction feature, which shrinks a long conversation to save space, could be turned into a way to copy a model&#039;s hidden reasoning ..."
     }
   ]
 }
