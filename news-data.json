@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-28T12:24:48.906Z",
+  "lastUpdated": "2026-10-28T22:22:20.454Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
+      "link": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "The China-nexus cyber espionage group known as Volt Typhoon has been attributed to a now-disrupted covert access network dubbed Silent Train that has ..."
+    },
+    {
+      "id": 2,
+      "title": "Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.",
+      "link": "https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "Third-party Android app stores can now apply to Google for permission to install apps with one tap, without Android&#039;s usual confirmation screens,..."
+    },
+    {
+      "id": 3,
+      "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
+      "link": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "A chain of logic flaws, with no memory corruption, can turn a malicious web page into code running on a Windows computer outside Microsoft Edge&#039;s..."
+    },
+    {
+      "id": 4,
+      "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
+      "link": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of what appears to be an artificial intelligence (AI)-assisted attack orchestrated by a suspected Chi..."
+    },
+    {
+      "id": 5,
+      "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
+      "link": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "Threat actors are beginning to probe for a newly patched critical vulnerability in Oracle E-Business Suite (EBS), according to threat intelligence fir..."
+    },
+    {
+      "id": 6,
+      "title": "Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers",
+      "link": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "A critical 16-year-old flaw in EDK II, the open-source code that most hardware makers use to build UEFI firmware, can allow an attacker to run code on..."
+    },
+    {
+      "id": 7,
+      "title": "Wazuh and AI for Enhanced SOC Workflows",
+      "link": "https://thehackernews.com/2026/10/wazuh-and-ai-for-enhanced-soc-workflows.html",
+      "pubDate": "Oct 28, 2026",
+      "excerpt": "Artificial Intelligence (AI) has become one of this decade&#039;s defining technologies. From healthcare and finance to manufacturing and education, o..."
+    },
+    {
+      "id": 8,
       "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
       "link": "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html",
       "pubDate": "Oct 28, 2026",
       "excerpt": "Adobe has released patches to address multiple critical security flaws in Campaign Classic that, if successfully exploited, could result in arbitrary ..."
-    },
-    {
-      "id": 2,
-      "title": "American Organizations Under Attack: Skyw4lker Device Code Phishing Campaign Exposed",
-      "link": "https://thehackernews.com/2026/10/american-organizations-under-attack.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Modern phishing campaigns can compromise American businesses without relying on traditional credential theft. Attackers can abuse legitimate cloud ser..."
-    },
-    {
-      "id": 3,
-      "title": "Anthropic&#039;s Unreleased AI Model Chains Flaws Into Working Chrome, Safari, Windows and Linux Exploits",
-      "link": "https://thehackernews.com/2026/10/anthropics-unreleased-ai-model-chains.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "An unreleased Anthropic AI model found security flaws in Chrome, Safari, Android, Windows, and Linux and chained them into working proof-of-concept ex..."
-    },
-    {
-      "id": 4,
-      "title": "FBI Seizes Virtualine Domain Over Alleged Criminal Hosting and Bitcoin Money Laundering",
-      "link": "https://thehackernews.com/2026/10/fbi-seizes-virtualine-domain-over.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "The U.S. Department of Justice (DoJ) on Tuesday announced the seizure of a domain associated with a bulletproof hosting provider (BPH) named Virtualin..."
-    },
-    {
-      "id": 5,
-      "title": "Japan&#039;s GMO Offers $1 Million Bounty to Catch Hackers Behind FX Trading Cloud Breach",
-      "link": "https://thehackernews.com/2026/10/japans-gmo-offers-1-million-bounty-to.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Japan&#039;s GMO Internet Group is offering up to $1 million in total for tips that help catch the attackers who breached its Onamae.com Desktop Cloud..."
-    },
-    {
-      "id": 6,
-      "title": "Tailscale Patches SSH Flaws That Could Let Hacked Devices Gain Root Access on Other Servers",
-      "link": "https://thehackernews.com/2026/10/tailscale-patches-ssh-flaws-that-could.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Tailscale has released version 1.104.4 to fix flaws in its built-in SSH server that could let an attacker reach services and files on other servers th..."
-    },
-    {
-      "id": 7,
-      "title": "ShinyHunters-Exploited Oracle PeopleSoft Zero-Day Turns Out to Be Three Chained Flaws",
-      "link": "https://thehackernews.com/2026/10/shinyhunters-exploited-oracle.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "The critical Oracle PeopleSoft bug that ShinyHunters has exploited since May is not one flaw but three chained together, the researchers who reported ..."
-    },
-    {
-      "id": 8,
-      "title": "Adobe Commerce PolyShell Attacks Breach Hundreds of Stores as Brotli Exploit Traffic Emerges",
-      "link": "https://thehackernews.com/2026/10/adobe-commerce-polyshell-attacks-breach.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added two vulnerabilities impacting Adobe Commerce and Magento, and Google..."
     }
   ]
 }
