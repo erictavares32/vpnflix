@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-10-29T05:00:24.185Z",
+  "lastUpdated": "2026-10-29T12:34:29.808Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Volt Typhoon Used Covert Silent Train Network in Four Zero-Day Exploitation Campaigns",
-      "link": "https://thehackernews.com/2026/10/volt-typhoon-used-covert-silent-train.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "The China-nexus cyber espionage group known as Volt Typhoon has been attributed to a now-disrupted covert access network dubbed Silent Train that has ..."
+      "title": "Webinar: How to Build AI Threat Readiness Into Your Security Operations",
+      "link": "https://thehackernews.com/2026/08/learn-how-to-build-security-operations.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "Security teams have spent years trying to detect threats faster. AI is changing the harder part: how much time defenders have left to act.\n\nAdvanced A..."
     },
     {
       "id": 2,
-      "title": "Google to Allow One-Tap Android App Installs From Approved Third-Party Stores Outside U.S.",
-      "link": "https://thehackernews.com/2026/10/google-to-allow-one-tap-android-app.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Third-party Android app stores can now apply to Google for permission to install apps with one tap, without Android&#039;s usual confirmation screens,..."
+      "title": "Telegram Android Flaw Lets Attackers Run Code When Users Answer Voice Calls",
+      "link": "https://thehackernews.com/2026/10/telegram-android-flaw-lets-attackers.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "A flaw in Telegram for Android allowed an attacker to run code on a victim&#039;s phone via a voice call once the victim answered, according to securi..."
     },
     {
       "id": 3,
-      "title": "Researcher Reveals How Logic Bugs Alone Cracked Microsoft Edge in $175,000 Pwn2Own Win",
-      "link": "https://thehackernews.com/2026/10/researcher-reveals-how-logic-bugs-alone.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "A chain of logic flaws, with no memory corruption, can turn a malicious web page into code running on a Windows computer outside Microsoft Edge&#039;s..."
+      "title": "The Rise of the Threat Operator: How AI Will Redefine Security Operations and Careers",
+      "link": "https://thehackernews.com/2026/10/the-rise-of-threat-operator-how-ai-will.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "AI is beginning to take over much of the work that has traditionally defined the security analyst&#039;s job. Investigating alerts, collecting evidenc..."
     },
     {
       "id": 4,
-      "title": "PHP2Shell Attack Roots 25 Servers, Breaches U.S. Government-Affiliated Network",
-      "link": "https://thehackernews.com/2026/10/php2shell-attack-roots-25-servers.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of what appears to be an artificial intelligence (AI)-assisted attack orchestrated by a suspected Chi..."
+      "title": "26,400 Valid Cloud and AI Credentials Found Exposed in Public Gitee Repositories",
+      "link": "https://thehackernews.com/2026/10/26400-valid-cloud-and-ai-credentials.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "26,400 credentials that developers left in public code on Gitee, a Chinese code-hosting service, still worked when a researcher tested them. Anyone wh..."
     },
     {
       "id": 5,
-      "title": "Hackers Target Critical Oracle E-Business Suite RCE Flaw Days After Security Patch",
-      "link": "https://thehackernews.com/2026/10/hackers-target-critical-oracle-e.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Threat actors are beginning to probe for a newly patched critical vulnerability in Oracle E-Business Suite (EBS), according to threat intelligence fir..."
+      "title": "Cisco Patches Actively Exploited ASA and FTD VPN Flaw That Can Crash Firewalls",
+      "link": "https://thehackernews.com/2026/10/cisco-patches-actively-exploited-asa.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "Cisco has released patches to address a high-severity security flaw in Secure Firewall Adaptive Security Appliance (ASA) Software and Secure Firewall ..."
     },
     {
       "id": 6,
-      "title": "Critical 16-Year-Old UEFI Flaw Can Run Code Before Secure Boot on Network-Booting Servers",
-      "link": "https://thehackernews.com/2026/10/critical-16-year-old-uefi-flaw-can-run.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "A critical 16-year-old flaw in EDK II, the open-source code that most hardware makers use to build UEFI firmware, can allow an attacker to run code on..."
+      "title": "GitHub Launches npm Firewall to Block Malicious Packages Before Installation",
+      "link": "https://thehackernews.com/2026/10/github-launches-npm-firewall-to-block.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "GitHub has announced that it&#039;s introducing a new package firewall as a preview to block installation of suspicious npm packages during installati..."
     },
     {
       "id": 7,
-      "title": "Wazuh and AI for Enhanced SOC Workflows",
-      "link": "https://thehackernews.com/2026/10/wazuh-and-ai-for-enhanced-soc-workflows.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Artificial Intelligence (AI) has become one of this decade&#039;s defining technologies. From healthcare and finance to manufacturing and education, o..."
+      "title": "Attacker Tried to Exploit Alpine Linux’s GitLab via CVSS 10.0 Flaw Its Ruby Left Open",
+      "link": "https://thehackernews.com/2026/10/attacker-tried-to-exploit-alpine-linuxs.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "An attacker tried to exploit a critical GitLab vulnerability on the Alpine Linux project&#039;s own GitLab server a week after GitLab released a fix, ..."
     },
     {
       "id": 8,
-      "title": "Adobe Fixes 8 Critical Campaign Classic Flaws Allowing Code Execution and Security Bypass",
-      "link": "https://thehackernews.com/2026/10/adobe-fixes-8-critical-campaign-classic.html",
-      "pubDate": "Oct 28, 2026",
-      "excerpt": "Adobe has released patches to address multiple critical security flaws in Campaign Classic that, if successfully exploited, could result in arbitrary ..."
+      "title": "Hackers Exploited Cisco SD-WAN Flaw to Plant Malware Built to Steal Encryption Keys",
+      "link": "https://thehackernews.com/2026/10/hackers-exploited-cisco-sd-wan-flaw-to.html",
+      "pubDate": "Oct 29, 2026",
+      "excerpt": "Hackers exploited a critical Cisco Catalyst SD-WAN flaw, fixed in February, to plant custom malware inside the systems that control an organization&#0..."
     }
   ]
 }
