@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-01T05:11:11.495Z",
+  "lastUpdated": "2026-11-01T12:54:22.429Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
+      "link": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
+      "pubDate": "Nov 1, 2026",
+      "excerpt": "A critical flaw in Canonical&#039;s LXD and MicroCloud let an attacker log in as a trusted client without holding that client&#039;s private key. To d..."
+    },
+    {
+      "id": 2,
+      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
+      "link": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
+      "pubDate": "Nov 1, 2026",
+      "excerpt": "Malicious code on the website of prediction market Polymarket sold some signed-in traders&#039; positions and moved their funds to the hackers on Octo..."
+    },
+    {
+      "id": 3,
+      "title": "FBI Links North Korea&#039;s TraderTraitor to Record $6.43 Billion Binance Crypto Heist",
+      "link": "https://thehackernews.com/2026/11/fbi-links-north-koreas-tradertraitor-to.html",
+      "pubDate": "Nov 1, 2026",
+      "excerpt": "The U.S. Federal Bureau of Investigation (FBI) has officially attributed the theft of more than $6 billion in virtual assets to TraderTraitor, a North..."
+    },
+    {
+      "id": 4,
+      "title": "NetamLoader Malware Targets Government Windows 10 Systems in Asia via .NET Injection",
+      "link": "https://thehackernews.com/2026/11/netamloader-malware-targets-government.html",
+      "pubDate": "Nov 1, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of what has been described as a &quot;highly sophisticated infection chain&quot; targeting government..."
+    },
+    {
+      "id": 5,
       "title": "Chainalysis Confirms Intrusion Into Internal Tools and Exposure of Customer Identity Data",
       "link": "https://thehackernews.com/2026/10/chainalysis-confirms-intrusion-into.html",
       "pubDate": "Oct 31, 2026",
       "excerpt": "American blockchain analysis firm Chainalysis said it was the target of a cybersecurity incident in which an external actor accessed non-sensitive cus..."
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "Attackers Chain Three Ivanti Connect Secure Flaws to Gain Unauthenticated Root Access",
       "link": "https://thehackernews.com/2026/10/attackers-chain-three-ivanti-connect.html",
       "pubDate": "Oct 31, 2026",
       "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added two security flaws impacting Ivanti Connect Secure (ICS) to its Known..."
     },
     {
-      "id": 3,
+      "id": 7,
       "title": "A Shared ChatGPT Link Could Run Attacker Code in Your Session and Read Private Chats",
       "link": "https://thehackernews.com/2026/10/a-shared-chatgpt-link-could-run.html",
       "pubDate": "Oct 31, 2026",
       "excerpt": "A malicious ChatGPT share link could run an attacker&#039;s code in the logged-in session of anyone who opened it, allowing them to read their private..."
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "Cloudflare Reports 18.2 Million Network-Layer DDoS Attacks in Q3, Up 38%",
       "link": "https://thehackernews.com/2026/10/cloudflare-reports-182-million-network.html",
       "pubDate": "Oct 31, 2026",
       "excerpt": "Threat actors are launching about 8,226 network-layer distributed denial-of-service (DDoS) attacks per hour, Cloudflare revealed Thursday.\n\nThe web in..."
-    },
-    {
-      "id": 5,
-      "title": "Chinese Hackers Use AI-Powered ARTEX to Target Over 200 Organizations Worldwide",
-      "link": "https://thehackernews.com/2026/10/chinese-hackers-use-ai-powered-artex-to.html",
-      "pubDate": "Oct 30, 2026",
-      "excerpt": "Chinese state-sponsored threat actors have been observed using a Go-based artificial intelligence (AI)-powered penetration testing framework called AR..."
-    },
-    {
-      "id": 6,
-      "title": "TeamViewer Flaw Lets Remote Computers Attack Users Who Connect to Control Them",
-      "link": "https://thehackernews.com/2026/10/teamviewer-flaw-lets-remote-computers.html",
-      "pubDate": "Oct 30, 2026",
-      "excerpt": "TeamViewer has fixed a flaw that lets the machine being controlled in a remote session attack the computer that connected to control it. In a TeamView..."
-    },
-    {
-      "id": 7,
-      "title": "WordPress RCE Flaw Draws Nearly 63,000 Attack Attempts in Just 24 Hours",
-      "link": "https://thehackernews.com/2026/10/wordpress-rce-flaw-draws-nearly-63000.html",
-      "pubDate": "Oct 30, 2026",
-      "excerpt": "Threat actors have been observed attempting to exploit a high-severity security flaw in WordPress Core shortly after patches were released.\n\nThe vulne..."
-    },
-    {
-      "id": 8,
-      "title": "Trezor Warns of Suspected Hardware Implant in One of Its Wallets Sold by CryptoBilis",
-      "link": "https://thehackernews.com/2026/10/trezor-warns-of-suspected-hardware.html",
-      "pubDate": "Oct 30, 2026",
-      "excerpt": "A Trezor Safe 5 hardware wallet bought from the reseller CryptoBilis has an extra circuit board that sends out the recovery phrase over a mobile netwo..."
     }
   ]
 }
