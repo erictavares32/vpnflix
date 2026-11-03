@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-02T15:09:55.501Z",
+  "lastUpdated": "2026-11-03T00:45:41.264Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "⚡ Weekly Recap: Critical CVEs, Linux DDoS Botnet, Device-Code Phishing, Android Spyware and More",
+      "link": "https://thehackernews.com/2026/11/weekly-recap-critical-cves-linux-ddos.html",
+      "pubDate": "Nov 2, 2026",
+      "excerpt": "Some attacks this week didn&#039;t need much of a trick. A fake support call, a trusted extension, a shared link, or a device with no password. Small ..."
+    },
+    {
+      "id": 2,
+      "title": "Google Disrupts 1.3 Million-Device Android Botnet, Says TV Box Maker Sold Criminal Access",
+      "link": "https://thehackernews.com/2026/11/google-disrupts-13-million-device.html",
+      "pubDate": "Nov 2, 2026",
+      "excerpt": "A botnet of more than 1.3 million Android devices, mostly TV set-top boxes, lost control of its servers in late October in a takedown led by Google.\n\n..."
+    },
+    {
+      "id": 3,
       "title": "DarkBlinders Compromises Israeli Target and Iraqi Kurdish Government Cloud Environment",
       "link": "https://thehackernews.com/2026/11/darkblinders-compromises-israeli-target.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Cybersecurity researchers have disclosed details of a cyber espionage campaign targeting Israel and the Kurdistan Region of Iraq by an Iran state-alig..."
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "Critical Langflow Flaws Could Let Unauthenticated Attackers Run Code on Servers",
       "link": "https://thehackernews.com/2026/11/critical-langflow-flaws-could-let.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Two critical flaws in Langflow could let a remote attacker with no account bypass authentication or run arbitrary code, IBM said last week.\n\nLangflow ..."
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Is Your SOC Ready for AI Agents? A Maturity Check Before You Deploy",
       "link": "https://thehackernews.com/2026/11/is-your-soc-ready-for-ai-agents.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Forty percent of security teams now use AI every day, and another 56% are testing it. Only 4% have no plans to adopt it, according to Prophet Security..."
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Attackers Pose as IT Support on Microsoft Teams, Abuse AD CS to Steal Company Data",
       "link": "https://thehackernews.com/2026/11/attackers-pose-as-it-support-on.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Attackers posing as IT support on Microsoft Teams talked employees into giving them remote control of their PCs. They then used insecure Active Direct..."
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Government Linux Servers Targeted With SysGoRAT and Suspected AI-Generated Scripts",
       "link": "https://thehackernews.com/2026/11/government-linux-servers-targeted-with.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Cybersecurity researchers have disclosed details of a cyber espionage campaign specifically targeting Linux infrastructure associated with government ..."
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "New VOLTA Infostealer Uses Claude, Gemini, and Kimi AI to Rank Victims by Financial Value",
       "link": "https://thehackernews.com/2026/11/new-volta-infostealer-uses-claude.html",
       "pubDate": "Nov 2, 2026",
       "excerpt": "Cybersecurity researchers have discovered a new Windows infostealer malware called VOLTA-AUTODOXER (aka VOLTA) that makes use of a large language mode..."
-    },
-    {
-      "id": 7,
-      "title": "CVSS 10.0 LXD, MicroCloud Flaw Lets Attackers Impersonate Trusted Clients Without a Private Key",
-      "link": "https://thehackernews.com/2026/11/critical-lxd-and-microcloud-flaw-cvss.html",
-      "pubDate": "Nov 1, 2026",
-      "excerpt": "A critical flaw in Canonical&#039;s LXD and MicroCloud let an attacker log in as a trusted client without holding that client&#039;s private key. To d..."
-    },
-    {
-      "id": 8,
-      "title": "Hackers Steal About $2.7 Million From Polymarket Traders via Hijacked DebugBear Script",
-      "link": "https://thehackernews.com/2026/11/hackers-steal-about-27-million-from.html",
-      "pubDate": "Nov 1, 2026",
-      "excerpt": "Malicious code on the website of prediction market Polymarket sold some signed-in traders&#039; positions and moved their funds to the hackers on Octo..."
     }
   ]
 }
