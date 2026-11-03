@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-03T13:52:25.927Z",
+  "lastUpdated": "2026-11-03T23:01:49.990Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
+      "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing pa..."
+    },
+    {
+      "id": 2,
+      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
+      "link": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain a..."
+    },
+    {
+      "id": 3,
+      "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
+      "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world&#039;s largest cryptocurrency exchange was the culmination ..."
+    },
+    {
+      "id": 4,
+      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
+      "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "Barracuda has disclosed details of two vulnerabilities affecting its products that, if chained together, could allow an attacker to bypass authorizati..."
+    },
+    {
+      "id": 5,
+      "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
+      "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "Google on Monday warned that threat actors are hijacking enterprise access to Large Language Models (LLMs) to fraudulently leverage expensive computin..."
+    },
+    {
+      "id": 6,
+      "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
+      "link": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
+      "pubDate": "Nov 3, 2026",
+      "excerpt": "An attacker broke into the update system of the cPGuard security tool on November 2 and used it to send a malicious script to customers&#039; Linux se..."
+    },
+    {
+      "id": 7,
       "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
       "link": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
       "pubDate": "Nov 3, 2026",
       "excerpt": "Fixed kernels for a use-after-free vulnerability in the Linux kernel&#039;s IPv4 TCP code are now available for Red Hat Enterprise Linux 8, 9, and 10,..."
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "The 4 Elements of Exposure Prioritization and How to Operationalize Them",
       "link": "https://thehackernews.com/2026/11/the-4-elements-of-exposure.html",
       "pubDate": "Nov 3, 2026",
       "excerpt": "Your team is remediating more vulnerabilities than ever, yet your breach risk has barely changed. You’re spending too much time and effort on exposure..."
-    },
-    {
-      "id": 3,
-      "title": "Russia-Aligned Gorbag Hackers Exploit WinRAR Flaw to Deploy Data-Stealing Malware",
-      "link": "https://thehackernews.com/2026/11/russia-aligned-gorbag-hackers-exploit.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "A Russia-aligned threat actor known as Gorbag has been observed using simple information stealer malware in attacks targeting Ukrainian organizations...."
-    },
-    {
-      "id": 4,
-      "title": "Hackers Exploit BTCPay Server Flaw to Steal Bitcoin and Litecoin From Hot Wallets",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-btcpay-server-flaw-to.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "BTCPay Server, a self-hosted, open-source cryptocurrency payment processor, has urged users to install the latest version of its software in response ..."
-    },
-    {
-      "id": 5,
-      "title": "Synology NAS Devices Targeted in Ransomware Attacks Exploiting Patched DSM Flaw",
-      "link": "https://thehackernews.com/2026/11/synology-nas-devices-targeted-in.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Synology is urging customers to update the DiskStation Manager (DSM) software powering its Network Attached Storage (NAS) devices following ransomware..."
-    },
-    {
-      "id": 6,
-      "title": "New Wave of Refrigeration Cyberattacks Hits Supermarkets Across Europe, Forcing Stores to Pull Food",
-      "link": "https://thehackernews.com/2026/11/second-wave-of-cyberattacks-hits.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Attackers remotely changed the settings on refrigeration controls at supermarkets in Belgium, Sweden, Estonia and other European countries overnight i..."
-    },
-    {
-      "id": 7,
-      "title": "Attackers Exploit Critical Siemens IoT2050 Flaw to Plant Remote Command Backdoors",
-      "link": "https://thehackernews.com/2026/11/attackers-exploit-critical-siemens.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "A maximum-severity security flaw impacting Siemens SIMATIC IoT2050 Advanced devices has come under active exploitation, VulnCheck has revealed.\n\nThe v..."
-    },
-    {
-      "id": 8,
-      "title": "Attackers Target Unpatched CryptoPayment Gateway Flaw That Can Expose Wallet Credentials",
-      "link": "https://thehackernews.com/2026/11/attackers-target-unpatched.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Threat actors are attempting to exploit an unpatched maximum-severity security vulnerability in the CryptoPayment Gateway WordPress plugin, according ..."
     }
   ]
 }
