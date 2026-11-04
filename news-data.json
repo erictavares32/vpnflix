@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-04T14:00:10.921Z",
+  "lastUpdated": "2026-11-04T23:25:42.813Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root",
+      "link": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "A flaw in APT, the package manager for Debian and Ubuntu, allows an attacker who can modify package downloads to swap a checked package for their own...."
+    },
+    {
+      "id": 2,
+      "title": "SonicWall Won&#039;t Patch EoL GMS Flaws That Could Expose Files, Alter Database Records",
+      "link": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "SonicWall has warned of two vulnerabilities impacting end-of-life Global Management System (GMS) systems that it said will not be patched.\n\nDetails of..."
+    },
+    {
+      "id": 3,
+      "title": "Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit",
+      "link": "https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of an OpenAI Codex jailbreak bundle that&#039;s designed to modify an artificial intelligence (AI) ag..."
+    },
+    {
+      "id": 4,
+      "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
+      "link": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "The Russia-linked threat actor known as APT29 is said to be behind a large-scale watering hole campaign targeting iOS and Android users through compro..."
+    },
+    {
+      "id": 5,
       "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
       "link": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
       "pubDate": "Nov 4, 2026",
       "excerpt": "A critical flaw in Ruby on Rails could allow an unauthenticated attacker to write arbitrary files on an app&#039;s server by uploading a crafted file ..."
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM&#039;s Memory",
       "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
       "pubDate": "Nov 4, 2026",
       "excerpt": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom..."
     },
     {
-      "id": 3,
+      "id": 7,
       "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
       "link": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
       "pubDate": "Nov 4, 2026",
       "excerpt": "Nearly every agent security pitch now ends on the same promise: the product stops the bad action in real time. The promise holds for one kind of agent..."
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
       "link": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
       "pubDate": "Nov 4, 2026",
       "excerpt": "A China-aligned threat actor known as SlippyNunchucks has been attributed to a Domain Name System (DNS) hijacking operation abusing insecure HTTP comm..."
-    },
-    {
-      "id": 5,
-      "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
-      "link": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "Russian authorities have arrested three suspected members of a threat group known as VasyGrek and dismantled its criminal infrastructure.\n\nAlso known ..."
-    },
-    {
-      "id": 6,
-      "title": "Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction",
-      "link": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "A critical Android flaw could allow an attacker to run code on a phone without any user action remotely, Google said in its November security bulletin..."
-    },
-    {
-      "id": 7,
-      "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
-      "link": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw in WordPress Core to the Known Exploited Vulnerabilities (K..."
-    },
-    {
-      "id": 8,
-      "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
-      "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing pa..."
     }
   ]
 }
