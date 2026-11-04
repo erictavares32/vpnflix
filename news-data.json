@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-04T05:31:25.212Z",
+  "lastUpdated": "2026-11-04T14:00:10.921Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
+      "link": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "A critical flaw in Ruby on Rails could allow an unauthenticated attacker to write arbitrary files on an app&#039;s server by uploading a crafted file ..."
+    },
+    {
+      "id": 2,
+      "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM&#039;s Memory",
+      "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom..."
+    },
+    {
+      "id": 3,
+      "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
+      "link": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "Nearly every agent security pitch now ends on the same promise: the product stops the bad action in real time. The promise holds for one kind of agent..."
+    },
+    {
+      "id": 4,
+      "title": "China-Aligned Hackers Hijack Sogou Input Method DNS Requests to Deploy DarkVigil Backdoor",
+      "link": "https://thehackernews.com/2026/11/china-aligned-hackers-hijack-sogou.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "A China-aligned threat actor known as SlippyNunchucks has been attributed to a Domain Name System (DNS) hijacking operation abusing insecure HTTP comm..."
+    },
+    {
+      "id": 5,
+      "title": "Russian Police Arrest 3 Suspected VasyGrek Hackers, Dismantle Criminal Infrastructure",
+      "link": "https://thehackernews.com/2026/11/russian-police-arrest-3-suspected.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "Russian authorities have arrested three suspected members of a threat group known as VasyGrek and dismantled its criminal infrastructure.\n\nAlso known ..."
+    },
+    {
+      "id": 6,
+      "title": "Google Issues Patches for Critical Android Flaw That Could Allow RCE Without User Interaction",
+      "link": "https://thehackernews.com/2026/11/google-patches-critical-android-flaw.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "A critical Android flaw could allow an attacker to run code on a phone without any user action remotely, Google said in its November security bulletin..."
+    },
+    {
+      "id": 7,
+      "title": "CISA Confirms Hackers Exploiting WordPress Core Flaw During Software Upgrades",
+      "link": "https://thehackernews.com/2026/11/cisa-confirms-hackers-exploiting.html",
+      "pubDate": "Nov 4, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) has added a security flaw in WordPress Core to the Known Exploited Vulnerabilities (K..."
+    },
+    {
+      "id": 8,
       "title": "mSecure Warns Users to Change Passwords, Reset 2FA and Passkeys After Suspicious Activity",
       "link": "https://thehackernews.com/2026/11/msecure-warns-users-to-change-passwords.html",
       "pubDate": "Nov 3, 2026",
       "excerpt": "Customers of the mSecure password manager are being urged to act now to protect the confidential information they store in it, possibly by changing pa..."
-    },
-    {
-      "id": 2,
-      "title": "Chainstack Reports Production Systems Breach Exposing Customer Data and Password Hashes",
-      "link": "https://thehackernews.com/2026/11/chainstack-reports-production-systems.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Blockchain infrastructure provider Chainstack on Tuesday disclosed that it was targeted in a cyber attack that allowed an unauthorized party to gain a..."
-    },
-    {
-      "id": 3,
-      "title": "Binance Reveals How Fake Job Interviews and AI Tool Abuse Led to $6.43 Billion Theft",
-      "link": "https://thehackernews.com/2026/11/binance-reveals-how-fake-job-interviews.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Binance on Tuesday said the record-setting theft of $6.43 billion in assets from the world&#039;s largest cryptocurrency exchange was the culmination ..."
-    },
-    {
-      "id": 4,
-      "title": "Barracuda Flaws Could Be Chained to Bypass Authorization and Gain Root Access",
-      "link": "https://thehackernews.com/2026/11/barracuda-flaws-could-be-chained-to.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Barracuda has disclosed details of two vulnerabilities affecting its products that, if chained together, could allow an attacker to bypass authorizati..."
-    },
-    {
-      "id": 5,
-      "title": "Google Warns LLMjacking Attacks Are Costing Some Enterprises Up to $1 Million in Cloud Charges",
-      "link": "https://thehackernews.com/2026/11/google-warns-llmjacking-attacks-are.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Google on Monday warned that threat actors are hijacking enterprise access to Large Language Models (LLMs) to fraudulently leverage expensive computin..."
-    },
-    {
-      "id": 6,
-      "title": "cPGuard Update Channel Hijacked to Backdoor Linux Servers and Collect Password Hashes",
-      "link": "https://thehackernews.com/2026/11/cpguard-update-channel-hijacked-to.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "An attacker broke into the update system of the cPGuard security tool on November 2 and used it to send a malicious script to customers&#039; Linux se..."
-    },
-    {
-      "id": 7,
-      "title": "Red Hat Patches 9.8-Rated Linux TCP RCE Flaw While Ubuntu Releases Fixes for Testing",
-      "link": "https://thehackernews.com/2026/11/red-hat-patches-98-rated-linux-tcp-rce.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Fixed kernels for a use-after-free vulnerability in the Linux kernel&#039;s IPv4 TCP code are now available for Red Hat Enterprise Linux 8, 9, and 10,..."
-    },
-    {
-      "id": 8,
-      "title": "The 4 Elements of Exposure Prioritization and How to Operationalize Them",
-      "link": "https://thehackernews.com/2026/11/the-4-elements-of-exposure.html",
-      "pubDate": "Nov 3, 2026",
-      "excerpt": "Your team is remediating more vulnerabilities than ever, yet your breach risk has barely changed. You’re spending too much time and effort on exposure..."
     }
   ]
 }
