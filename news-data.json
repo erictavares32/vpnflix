@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-05T05:52:28.846Z",
+  "lastUpdated": "2026-11-05T14:21:48.090Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Is Your Exposure Management Platform Leaving You Exposed? Five Tests to Find Out",
+      "link": "https://thehackernews.com/2026/11/is-your-exposure-management-platform.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "A critical finding can move through several security tools and still leave the organization exposed. \n\nThe vulnerability has a severity score, and a t..."
+    },
+    {
+      "id": 2,
       "title": "OpenAI AI Pipeline Generates 948 Linux Root Escalation Exploits in 30-Hour Run",
       "link": "https://thehackernews.com/2026/11/openai-ai-pipeline-generates-948-linux.html",
       "pubDate": "Nov 5, 2026",
       "excerpt": "OpenAI on Wednesday detailed a pipeline that employed an upcoming cyber-focused artificial intelligence (AI) model to validate and patch 948 local pri..."
     },
     {
-      "id": 2,
+      "id": 3,
+      "title": "5 Active Cyber Threats That Put US Enterprises at Risk in October 2026",
+      "link": "https://thehackernews.com/2026/11/5-active-cyber-threats-that-put-us.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "October 2026 brought another wave of cyber threats targeting US businesses, with attackers exploiting trusted platforms, legitimate authentication pro..."
+    },
+    {
+      "id": 4,
+      "title": "Apple to Start Scanning Publicly Shared iCloud Photos and Files for Harmful Content",
+      "link": "https://thehackernews.com/2026/11/apple-to-start-scanning-publicly-shared.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "Apple has revealed that it plans to start checking public iCloud links for harmful content starting with iOS 27.3, iPadOS 27.3, macOS 27.3, and vision..."
+    },
+    {
+      "id": 5,
+      "title": "CERT-In Flags AI-Driven Attacks as Backdoored ARTEX Exposes 62 Consoles to Root Access",
+      "link": "https://thehackernews.com/2026/11/backdoored-docker-image-for-artex-ai.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "The Indian Computer Emergency Response Team (CERT-In) has disclosed that an artificial intelligence (AI)-assisted threat actor it tracks as Crafty Fal..."
+    },
+    {
+      "id": 6,
+      "title": "Zyxel GS1900 Patch Fails to Block Zero-Day Exploit Allowing Root Command Execution",
+      "link": "https://thehackernews.com/2026/11/zyxel-gs1900-patch-fails-to-block-zero.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "Zyxel GS1900 network switches that received the vendor&#039;s earlier fix for an actively exploited flaw are still open to the exploit attackers used,..."
+    },
+    {
+      "id": 7,
+      "title": "Hackers Exploit Patched Apple Flaw to Deliver Info-Stealing Malware, CISA Says",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-patched-apple-flaw-to.html",
+      "pubDate": "Nov 5, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added a medium-severity security flaw impacting multiple Apple operating..."
+    },
+    {
+      "id": 8,
       "title": "Debian and Ubuntu APT Flaw Lets MitM Attackers Swap Verified Packages and Run Code as Root",
       "link": "https://thehackernews.com/2026/11/debian-and-ubuntu-apt-flaw-lets-mitm.html",
       "pubDate": "Nov 4, 2026",
       "excerpt": "A flaw in APT, the package manager for Debian and Ubuntu, allows an attacker who can modify package downloads to swap a checked package for their own...."
-    },
-    {
-      "id": 3,
-      "title": "SonicWall Won&#039;t Patch EoL GMS Flaws That Could Expose Files, Alter Database Records",
-      "link": "https://thehackernews.com/2026/11/sonicwall-wont-patch-eol-gms-flaws-that.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "SonicWall has warned of two vulnerabilities impacting end-of-life Global Management System (GMS) systems that it said will not be patched.\n\nDetails of..."
-    },
-    {
-      "id": 4,
-      "title": "Researchers Uncover Prompt Adware Hidden in OpenAI Codex Jailbreak Toolkit",
-      "link": "https://thehackernews.com/2026/11/researchers-uncover-prompt-adware.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of an OpenAI Codex jailbreak bundle that&#039;s designed to modify an artificial intelligence (AI) ag..."
-    },
-    {
-      "id": 5,
-      "title": "APT29-Linked Hackers Hijack Web Analytics Script to Deliver iOS and Android Exploits",
-      "link": "https://thehackernews.com/2026/11/apt29-linked-hackers-hijack-web.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "The Russia-linked threat actor known as APT29 is presumed to be behind a large-scale watering hole campaign targeting iOS and Android users through co..."
-    },
-    {
-      "id": 6,
-      "title": "Critical Rails Flaw Lets Attackers Write Server Files via Crafted ImageMagick Uploads",
-      "link": "https://thehackernews.com/2026/11/critical-rails-flaw-lets-attackers.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "A critical flaw in Ruby on Rails could allow an unauthenticated attacker to write arbitrary files on an app&#039;s server by uploading a crafted file ..."
-    },
-    {
-      "id": 7,
-      "title": "Xen Hypervisor Flaws Let One Malicious VM Read and Write Any Other VM&#039;s Memory",
-      "link": "https://thehackernews.com/2026/11/xen-hypervisor-flaws-let-one-malicious.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "Two flaws in the Xen hypervisor allow a malicious guest virtual machine (VM) to read and write the memory of other VMs on the same host, including dom..."
-    },
-    {
-      "id": 8,
-      "title": "Radio With No Radar: Why Agent Runtime Security Fails Without the Layers Beneath It",
-      "link": "https://thehackernews.com/2026/11/radio-with-no-radar-why-agent-runtime.html",
-      "pubDate": "Nov 4, 2026",
-      "excerpt": "Nearly every agent security pitch now ends on the same promise: the product stops the bad action in real time. The promise holds for one kind of agent..."
     }
   ]
 }
