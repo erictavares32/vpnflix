@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-07T05:19:04.705Z",
+  "lastUpdated": "2026-11-07T12:42:14.296Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Claude Code&#039;s “Don&#039;t Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
+      "link": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
+      "pubDate": "Nov 7, 2026",
+      "excerpt": "Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can re..."
+    },
+    {
+      "id": 2,
       "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
       "link": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security res..."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
       "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no passwor..."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
       "link": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity c..."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won&#039;t Deliver It",
       "link": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store updat..."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users&#039; Computers",
       "link": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "A browser extension that can run scripts on claude.ai could make Claude Desktop run code on a person&#039;s computer, researchers at Forever Security,..."
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "The Flood is Coming And The Pipes Were Already Full",
       "link": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "An update on Athena, and some unsolicited predictions on what&#039;s coming next\n\nOn Saturday, Dario Amodei published We Must Pace the Frontier. I agr..."
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Chainalysis Breach Exposes All Users&#039; Credentials, Forces Shutdown of Key Services",
       "link": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
       "pubDate": "Nov 6, 2026",
       "excerpt": "Blockchain analysis firm Chainalysis has revealed that its ongoing investigation into the agentic cyber attack targeting its systems also exposed name..."
-    },
-    {
-      "id": 8,
-      "title": "Hackers Hide Linux Backdoor in Control Web Panel Server to Execute Commands Without Logs",
-      "link": "https://thehackernews.com/2026/11/hackers-hide-linux-backdoor-in-control.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "A backdoor has been found hiding in the web server that runs Control Web Panel (CWP), a free panel for managing Linux hosting servers, researchers at ..."
     }
   ]
 }
