@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-09T05:27:34.526Z",
+  "lastUpdated": "2026-11-09T15:40:21.263Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Claude Code&#039;s “Don&#039;t Ask Again” File Exposes Passwords and Keys in 1,122 Public Copies on GitHub",
-      "link": "https://thehackernews.com/2026/11/claude-codes-dont-ask-again-file.html",
-      "pubDate": "Nov 7, 2026",
-      "excerpt": "Passwords and API keys that developers typed into commands they approved in Claude Code are sitting in public GitHub repositories, where anyone can re..."
+      "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
+      "link": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeti..."
     },
     {
       "id": 2,
-      "title": "Installing the Fix for an Exploited WordPress Flaw Can Expose Some Sites One Last Time",
-      "link": "https://thehackernews.com/2026/11/installing-fix-for-exploited-wordpress.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "Some WordPress sites can still be attacked while they install the fix for an actively exploited flaw, according to Umut Bayram, the Picus Security res..."
+      "title": "⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More",
+      "link": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "A system doesn&#039;t always need a complicated bug to let someone in. Sometimes, a blank password is enough. That&#039;s one of the bigger stories th..."
     },
     {
       "id": 3,
-      "title": "Hackers Target OpenSSH SSHole Flaw Within Hours of Disclosure, Gain Root on Honeypot",
-      "link": "https://thehackernews.com/2026/11/hackers-exploited-openssh-sshole-flaw.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "Threat actors are attempting to exploit a recently disclosed security flaw impacting OpenSSH that can enable sign-ins to accounts that have no passwor..."
+      "title": "Default &#039;admin:admin&#039; Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
+      "link": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "The login systems behind two car brands&#039; mobile apps could be taken over completely, two security researchers found, allowing them to access any ..."
     },
     {
       "id": 4,
-      "title": "OpenAI Launches GPT-6 Cyber After AI Helps Find 81 Firefox Flaws, 948 Linux Exploits",
-      "link": "https://thehackernews.com/2026/11/openai-launches-gpt-6-cyber-after-ai.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "OpenAI on Thursday unveiled GPT‑6 Cyber, which it described as a major step forward in security research that brings together stronger cybersecurity c..."
+      "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
+      "link": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "Some people who set up a Keplr crypto wallet with their Google or Apple account have had money stolen by an attacker.\n\nKeplr uses a company called Web..."
     },
     {
       "id": 5,
-      "title": "Microsoft Paint RCE Fix Now Available, but Windows Update Won&#039;t Deliver It",
-      "link": "https://thehackernews.com/2026/11/microsoft-paint-rce-fix-now-available.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "A fix for CVE-2026-83844, a remote code execution flaw in Windows Paint, is now in the Microsoft Store. Paint gets this fix only through a Store updat..."
+      "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
+      "link": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "Everyone running LNbits, a free, open-source Bitcoin Lightning wallet system, should shut down their servers now because of a wave of attacks, the pro..."
     },
     {
       "id": 6,
-      "title": "Malicious Browser Extensions Could Use Claude Dispatch to Run Code on Users&#039; Computers",
-      "link": "https://thehackernews.com/2026/11/malicious-browser-extensions-could-use.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "A browser extension that can run scripts on claude.ai could make Claude Desktop run code on a person&#039;s computer, researchers at Forever Security,..."
+      "title": "Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records",
+      "link": "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "A single attacker using AI agents pulled emergency dispatch records covering seven Taipei districts, researchers at Acronis&#039;s Threat Research Uni..."
     },
     {
       "id": 7,
-      "title": "The Flood is Coming And The Pipes Were Already Full",
-      "link": "https://thehackernews.com/2026/11/the-flood-is-coming-and-pipes-were.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "An update on Athena, and some unsolicited predictions on what&#039;s coming next\n\nOn Saturday, Dario Amodei published We Must Pace the Frontier. I agr..."
+      "title": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
+      "link": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company&#039;s office has pleaded not ..."
     },
     {
       "id": 8,
-      "title": "Chainalysis Breach Exposes All Users&#039; Credentials, Forces Shutdown of Key Services",
-      "link": "https://thehackernews.com/2026/11/chainalysis-breach-exposes-all-users.html",
-      "pubDate": "Nov 6, 2026",
-      "excerpt": "Blockchain analysis firm Chainalysis has revealed that its ongoing investigation into the agentic cyber attack targeting its systems also exposed name..."
+      "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
+      "link": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally wit..."
     }
   ]
 }
