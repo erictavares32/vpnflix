@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-10T01:19:59.496Z",
+  "lastUpdated": "2026-11-10T14:35:18.607Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "Hackers Exploit Qubole&#039;s Trusted AWS Access to Breach Customer Accounts and Steal Data",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "An attacker broke into AWS accounts belonging to multiple Qubole customers between October 14 and October 26 and stole stored secrets and data, cloud ..."
+      "title": "Binance Warns of iOS Sandbox Escape That Could Expose Crypto Wallet Keys, No Fix Confirmed",
+      "link": "https://thehackernews.com/2026/11/binance-warns-of-ios-sandbox-escape.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "An iOS sandbox escape published on GitHub lets an app read other apps&#039; files on iPhones running iOS 26 and 27. That puts seed phrases, private ke..."
     },
     {
       "id": 2,
-      "title": "Hackers Compromise Ethersphere&#039;s bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
-      "link": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "Attackers used the Ethersphere project&#039;s own release automation to publish malicious versions of two of its tools for the Swarm decentralized sto..."
+      "title": "Beyond the Alert: The Case for Rich Network Data",
+      "link": "https://thehackernews.com/2026/11/beyond-alert-case-for-rich-network-data.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "At some point your security will fail. This isn’t pessimism. It’s not because your team and tools aren’t sophisticated enough. It’s the reason we have..."
     },
     {
       "id": 3,
-      "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
-      "link": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeti..."
+      "title": "Apple Patches iMessage Group Chat Privacy Flaws and Bluetooth Pairing Vulnerabilities",
+      "link": "https://thehackernews.com/2026/11/apple-patches-imessage-group-chat.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "An iMessage flaw could let a remote attacker join a group chat and receive its messages, Apple said yesterday, and it released updates to fix it. The ..."
     },
     {
       "id": 4,
-      "title": "⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More",
-      "link": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "A system doesn&#039;t always need a complicated bug to let someone in. Sometimes, a blank password is enough. That&#039;s one of the bigger stories th..."
+      "title": "Russian Turla Hackers Use New Cereal Malware to Steal Emails From Government Exchange Servers",
+      "link": "https://thehackernews.com/2026/11/russian-turla-hackers-use-new-cereal.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "The Russia-aligned state-sponsored threat actor known as Turla (aka Snake) is wielding a previously undocumented cyber espionage toolset called Cereal..."
     },
     {
       "id": 5,
-      "title": "Default &#039;admin:admin&#039; Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
-      "link": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "The login systems behind two car brands&#039; mobile apps could be taken over completely, two security researchers found, allowing them to access any ..."
+      "title": "SAP Patches Four CVSS 10.0 Flaws, Including Two Enabling Remote Code Execution",
+      "link": "https://thehackernews.com/2026/11/sap-patches-four-cvss-100-flaws.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "Four flaws that attackers could exploit without logging in were fixed today as part of SAP&#039;s monthly Security Patch Day—the vendor rates all four..."
     },
     {
       "id": 6,
-      "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
-      "link": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "Some people who set up a Keplr crypto wallet with their Google or Apple account have had money stolen by an attacker.\n\nKeplr uses a company called Web..."
+      "title": "France Blames Iran for Sabotage Attack on Refrigeration Controllers at About 700 Retail Sites",
+      "link": "https://thehackernews.com/2026/11/france-blames-iran-for-sabotage-attack.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "An October cyberattack on refrigeration controllers at about 700 French retail sites was carried out by a cyber unit of Iran&#039;s Islamic Revolution..."
     },
     {
       "id": 7,
-      "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
-      "link": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "Everyone running LNbits, a free, open-source Bitcoin Lightning wallet system, should shut down their servers now because of a wave of attacks, the pro..."
+      "title": "Anthropic&#039;s Claude Fable 5.2 Beats GPT-6 Cyber in Multi-Stage Cyberattack Benchmark",
+      "link": "https://thehackernews.com/2026/11/anthropics-claude-fable-52-beats-gpt-6.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "Anthropic on Monday released Claude Fable 5.2 and Claude Mythos 5.2 models, which it said exhibit improvements in coding, reasoning, and vision.\n\nDuri..."
     },
     {
       "id": 8,
-      "title": "Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records",
-      "link": "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "A single attacker using AI agents pulled emergency dispatch records covering seven Taipei districts, researchers at Acronis&#039;s Threat Research Uni..."
+      "title": "Google Issues Chrome Security Update for Eighth Actively Exploited Zero-Day of 2026",
+      "link": "https://thehackernews.com/2026/11/google-issues-chrome-security-update.html",
+      "pubDate": "Nov 10, 2026",
+      "excerpt": "Google on Monday released updates to patch nine security vulnerabilities, including one that has come under active exploitation in the wild.\n\nThe high..."
     }
   ]
 }
