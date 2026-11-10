@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-09T15:40:21.263Z",
+  "lastUpdated": "2026-11-10T01:19:59.496Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Hackers Exploit Qubole&#039;s Trusted AWS Access to Breach Customer Accounts and Steal Data",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-quboles-trusted-aws.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "An attacker broke into AWS accounts belonging to multiple Qubole customers between October 14 and October 26 and stole stored secrets and data, cloud ..."
+    },
+    {
+      "id": 2,
+      "title": "Hackers Compromise Ethersphere&#039;s bee-js and Swarm Desktop to Deliver Wallet-Stealing Malware",
+      "link": "https://thehackernews.com/2026/11/hackers-compromise-etherspheres-bee-js.html",
+      "pubDate": "Nov 9, 2026",
+      "excerpt": "Attackers used the Ethersphere project&#039;s own release automation to publish malicious versions of two of its tools for the Swarm decentralized sto..."
+    },
+    {
+      "id": 3,
       "title": "Bitter Hackers Deploy New PapRAT Backdoor in Cyberespionage Campaign Targeting South Asia",
       "link": "https://thehackernews.com/2026/11/bitter-hackers-deploy-new-paprat.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "The South Asian cyber espionage group known as Bitter (aka APT-C-08, APT-Q-37, Hazy Tiger, Orange Yali, T-APT-17, and TA397) has been observed targeti..."
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "⚡ Weekly Recap: SSHole Exploited, APT Root RCE, Robot Takeovers, 15K Hacked Sites, and More",
       "link": "https://thehackernews.com/2026/11/weekly-recap-sshole-exploited-apt-root.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "A system doesn&#039;t always need a complicated bug to let someone in. Sometimes, a blank password is enough. That&#039;s one of the bigger stories th..."
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Default &#039;admin:admin&#039; Server Password Helps Researchers Hack Two Automakers, Unlock and Start Cars",
       "link": "https://thehackernews.com/2026/11/default-adminadmin-server-password.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "The login systems behind two car brands&#039; mobile apps could be taken over completely, two security researchers found, allowing them to access any ..."
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Web3Auth Flaw Exploited to Steal Keplr Crypto, Provider Empties Other Wallets for Safety",
       "link": "https://thehackernews.com/2026/11/web3auth-flaw-exploited-to-steal-keplr.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "Some people who set up a Keplr crypto wallet with their Google or Apple account have had money stolen by an attacker.\n\nKeplr uses a company called Web..."
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "LNbits Urges All Operators to Shut Down Their Bitcoin Lightning Wallet Servers Amid Attacks",
       "link": "https://thehackernews.com/2026/11/lnbits-urges-all-operators-to-shut-down.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "Everyone running LNbits, a free, open-source Bitcoin Lightning wallet system, should shut down their servers now because of a wave of attacks, the pro..."
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "Taiwan-Based Hacker Used BOSSAI AI Agents to Steal Taipei Emergency Dispatch Records",
       "link": "https://thehackernews.com/2026/11/taiwan-based-hacker-used-bossai-ai.html",
       "pubDate": "Nov 9, 2026",
       "excerpt": "A single attacker using AI agents pulled emergency dispatch records covering seven Taipei districts, researchers at Acronis&#039;s Threat Research Uni..."
-    },
-    {
-      "id": 7,
-      "title": "Former OpenAI Engineer Pleads Not Guilty to Planting Covert Device in Executive Meeting Room",
-      "link": "https://thehackernews.com/2026/11/former-openai-engineer-pleads-not.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "The OpenAI engineer who was arrested and charged last month for planting a covert audio recording device in the company&#039;s office has pleaded not ..."
-    },
-    {
-      "id": 8,
-      "title": "U.S. Agencies Warn Refrigeration Controller Attacks Could Cause Fires and Inventory Losses",
-      "link": "https://thehackernews.com/2026/11/us-agencies-warn-refrigeration.html",
-      "pubDate": "Nov 9, 2026",
-      "excerpt": "U.S. government agencies have warned that threat actors are actively targeting industrial refrigeration and cold-chain monitoring systems globally wit..."
     }
   ]
 }
