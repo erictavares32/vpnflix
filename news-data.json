@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-11T05:25:53.778Z",
+  "lastUpdated": "2026-11-11T13:49:36.969Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
+      "link": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "Of the 37,571 Grok-built apps that security company Claroc found online, 35,578 were open to anyone without a sign-in, the researchers said yesterday...."
+    },
+    {
+      "id": 2,
+      "title": "We Built An Agent That Broke All of Our Security Rules. Here&#039;s What We Learned.",
+      "link": "https://thehackernews.com/2026/11/we-built-agent-that-broke-all-of-our.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "We tell customers three things about securing AI agents: they need their own identities, access that fits the job they’re given, and traceability that..."
+    },
+    {
+      "id": 3,
+      "title": "eMudhra Revokes 8 More CAs It Previously Declared Unaffected by Key Compromise",
+      "link": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "The in-house Python script behind eMudhra&#039;s October key compromise has now cost the company 8 more of its intermediate certificate authorities (C..."
+    },
+    {
+      "id": 4,
+      "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
+      "link": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "Microsoft on Tuesday released patches for a total of 1,259 vulnerabilities spanning its software portfolio, the second consecutive month where the pat..."
+    },
+    {
+      "id": 5,
+      "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
+      "link": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "AI provider keys that customers stored on Railway were stolen in an October breach and used to commit an estimated $740,000 in unauthorized spending, ..."
+    },
+    {
+      "id": 6,
+      "title": "Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons",
+      "link": "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "An AI model can be given a hidden backdoor by editing fewer than 10 of its rarely used neurons, without retraining the model, Microsoft researchers ha..."
+    },
+    {
+      "id": 7,
+      "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
+      "link": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) Tuesday added two security flaws impacting Cisco BroadWorks and Openwave Messaging We..."
+    },
+    {
+      "id": 8,
       "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
       "link": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
       "pubDate": "Nov 10, 2026",
       "excerpt": "A flaw in Git can let a malicious repository run an attacker&#039;s code on a computer that clones it recursively, together with its submodules. The G..."
-    },
-    {
-      "id": 2,
-      "title": "SGLang RCE Exploit Breaches NEAR AI, Steals Data From 18 Agents and About 100 Users",
-      "link": "https://thehackernews.com/2026/11/sglang-rce-exploit-breaches-near-ai.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "An attacker exploited a remote code execution flaw in SGLang, an open-source inference engine, and ran code on one of NEAR AI&#039;s inference servers..."
-    },
-    {
-      "id": 3,
-      "title": "Hackers Exploit Critical Xen Orchestra Auth Bypass Flaw to Gain Admin Access",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-xen-orchestra.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "French software company Vates VMS has warned of a critical security vulnerability in Xen Orchestra that it said is being actively exploited in the wil..."
-    },
-    {
-      "id": 4,
-      "title": "Three China-Nexus Espionage Campaigns Linked Through Sparrow Malware Ecosystem",
-      "link": "https://thehackernews.com/2026/11/three-china-nexus-espionage-campaigns.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "Three distinct threat activity clusters with shared infrastructure and malware code similarities have been observed targeting telecommunications provi..."
-    },
-    {
-      "id": 5,
-      "title": "Attackers Exploit AhsayCBS Flaws to Deploy Sandbox-Evading Python Backdoor",
-      "link": "https://thehackernews.com/2026/11/attackers-exploit-ahsaycbs-flaws-to.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of an attack that exploited two now-patched vulnerabilities in AhsayCBS to deliver a Python-based imp..."
-    },
-    {
-      "id": 6,
-      "title": "Blind Eagle Uses Fake Court Notices to Deliver Remote Access Trojan Across Latin America",
-      "link": "https://thehackernews.com/2026/11/blind-eagle-uses-fake-court-notices-to.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "The threat actor known as Blind Eagle has resurfaced with a new campaign targeting organizations in Latin America through judicial and administrative-..."
-    },
-    {
-      "id": 7,
-      "title": "Fireworks AI Confirms Wider Breach Affecting Customer Datasets, Model Weights and Notion AI Chats",
-      "link": "https://thehackernews.com/2026/11/fireworks-ai-breach-widens-to-expose.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "Fireworks AI disclosed on Monday that its investigation into a security incident first reported early last month  uncovered further malicious activity..."
-    },
-    {
-      "id": 8,
-      "title": "Binance Warns of iOS Sandbox Escape That Could Expose Crypto Wallet Keys, No Fix Confirmed",
-      "link": "https://thehackernews.com/2026/11/binance-warns-of-ios-sandbox-escape.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "An iOS sandbox escape published on GitHub lets an app read other apps&#039; files on iPhones running iOS 26 and 27. That puts seed phrases, private ke..."
     }
   ]
 }
