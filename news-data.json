@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-11T13:49:36.969Z",
+  "lastUpdated": "2026-11-12T00:16:04.949Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Critical Zoom Workplace Flaw Could Allow Unauthenticated Remote Privilege Escalation",
+      "link": "https://thehackernews.com/2026/11/critical-zoom-workplace-flaw-could.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "Zoom has released software updates to address two security flaws impacting Zoom Workplace for Windows, including a critical bug that could result in p..."
+    },
+    {
+      "id": 2,
+      "title": "AntiFox AI Pentesting Platform Linked to Attacks That Accessed AWS Production Secrets",
+      "link": "https://thehackernews.com/2026/11/antifox-ai-pentesting-platform-linked.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "Cybersecurity researchers have disclosed details of a campaign in which an emerging agentic penetration testing platform called AntiFox has been used ..."
+    },
+    {
+      "id": 3,
+      "title": "Hackers Target Qlik Sense Servers With Reverse Shells, Stage ActiveMQ and Veeam Exploits",
+      "link": "https://thehackernews.com/2026/11/hackers-target-qlik-sense-servers-with.html",
+      "pubDate": "Nov 11, 2026",
+      "excerpt": "Threat actors have been observed targeting Qlik Sense servers to unsuccessfully deliver PowerShell reverse shell commands against multiple environment..."
+    },
+    {
+      "id": 4,
       "title": "Over 35,000 Grok-Built Apps Exposed Online, Some Leaking Confidential Data and Passwords",
       "link": "https://thehackernews.com/2026/11/over-35000-grok-built-apps-exposed.html",
       "pubDate": "Nov 11, 2026",
       "excerpt": "Of the 37,571 Grok-built apps that security company Claroc found online, 35,578 were open to anyone without a sign-in, the researchers said yesterday...."
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "We Built An Agent That Broke All of Our Security Rules. Here&#039;s What We Learned.",
       "link": "https://thehackernews.com/2026/11/we-built-agent-that-broke-all-of-our.html",
       "pubDate": "Nov 11, 2026",
       "excerpt": "We tell customers three things about securing AI agents: they need their own identities, access that fits the job they’re given, and traceability that..."
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "eMudhra Revokes 8 More CAs It Previously Declared Unaffected by Key Compromise",
       "link": "https://thehackernews.com/2026/11/emudhra-revokes-8-more-cas-it.html",
       "pubDate": "Nov 11, 2026",
       "excerpt": "The in-house Python script behind eMudhra&#039;s October key compromise has now cost the company 8 more of its intermediate certificate authorities (C..."
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "Microsoft Patches 1,259 Flaws, Including Exploited Outlook Bug That May Expose NTLMv2 Hashes",
       "link": "https://thehackernews.com/2026/11/microsoft-patches-1259-flaws-including.html",
       "pubDate": "Nov 11, 2026",
       "excerpt": "Microsoft on Tuesday released patches for a total of 1,259 vulnerabilities spanning its software portfolio, the second consecutive month where the pat..."
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Railway Says Stolen Customer AI Keys Led to $740,000 in Estimated Unauthorized Usage Charges",
       "link": "https://thehackernews.com/2026/11/railway-says-stolen-customer-ai-keys.html",
       "pubDate": "Nov 11, 2026",
       "excerpt": "AI provider keys that customers stored on Railway were stolen in an October breach and used to commit an estimated $740,000 in unauthorized spending, ..."
-    },
-    {
-      "id": 6,
-      "title": "Microsoft Researchers Show AI Agents Can Be Backdoored by Editing Fewer Than 10 Neurons",
-      "link": "https://thehackernews.com/2026/11/microsoft-researchers-show-ai-agents.html",
-      "pubDate": "Nov 11, 2026",
-      "excerpt": "An AI model can be given a hidden backdoor by editing fewer than 10 of its rarely used neurons, without retraining the model, Microsoft researchers ha..."
-    },
-    {
-      "id": 7,
-      "title": "Cisco BroadWorks and Openwave Flaws Actively Exploited Despite Available Patches",
-      "link": "https://thehackernews.com/2026/11/cisco-broadworks-and-openwave-flaws.html",
-      "pubDate": "Nov 11, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) Tuesday added two security flaws impacting Cisco BroadWorks and Openwave Messaging We..."
-    },
-    {
-      "id": 8,
-      "title": "Git Patches Flaw That Lets Malicious Repositories Execute Code During Recursive Clones",
-      "link": "https://thehackernews.com/2026/11/git-patches-flaw-that-lets-malicious.html",
-      "pubDate": "Nov 10, 2026",
-      "excerpt": "A flaw in Git can let a malicious repository run an attacker&#039;s code on a computer that clones it recursively, together with its submodules. The G..."
     }
   ]
 }
