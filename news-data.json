@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-14T05:39:10.107Z",
+  "lastUpdated": "2026-11-14T13:13:00.604Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Attackers Exploit UnrealIRCd Flaw That Enables Server-Level Command Injection",
+      "link": "https://thehackernews.com/2026/11/attackers-exploit-unrealircd-flaw-that.html",
+      "pubDate": "Nov 14, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added a high-severity security flaw impacting UnrealIRCd, an open-source In..."
+    },
+    {
+      "id": 2,
       "title": "PostgreSQL Patches 52 Flaws, Including 22-Year-Old Bug Enabling Authenticated RCE",
       "link": "https://thehackernews.com/2026/11/postgresql-patches-52-flaws-including.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "A type confusion flaw in PostgreSQL lets a database user who can create objects run code on the server. Updates released yesterday fix it, along with ..."
     },
     {
-      "id": 2,
+      "id": 3,
       "title": "New Mior and Skyfall Attacks Let Rogue Cloud Hosts Steal Secrets From AMD SEV-SNP VMs",
       "link": "https://thehackernews.com/2026/11/new-mior-and-skyfall-attacks-let-rogue.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "Two attacks made public this week allow a malicious host to read data inside AMD SEV-SNP-protected virtual machines (VMs), which are built to keep the..."
     },
     {
-      "id": 3,
+      "id": 4,
       "title": "FBI Says North Korean Hackers Stole Over $400 Million in Crypto Using Deepfake Video Calls",
       "link": "https://thehackernews.com/2026/11/fbi-says-north-korean-hackers-stole.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "The U.S. Federal Bureau of Investigation (FBI) has established that threat actors tied to the Democratic People&#039;s Republic of Korea (DPRK aka Nor..."
     },
     {
-      "id": 4,
+      "id": 5,
       "title": "Trezor Confirms Hidden Implants in CryptoBilis-Sold Wallets That Can Steal Recovery Phrases",
       "link": "https://thehackernews.com/2026/11/trezor-confirms-hidden-hardware.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "Three Trezor Safe 5 wallets bought from the reseller CryptoBilis contain an implant, an extra circuit board that can copy their recovery phrases, hard..."
     },
     {
-      "id": 5,
+      "id": 6,
       "title": "When an AI Agent Goes Wrong, Can You Stop It?",
       "link": "https://thehackernews.com/2026/11/when-ai-agent-goes-wrong-can-you-stop-it.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "Suppose an AI agent is asked to sort support tickets and look up account details. A ticket contains instructions that lead the agent to export records..."
     },
     {
-      "id": 6,
+      "id": 7,
       "title": "SilentAir Hijacks Asian Telecom Networks to Intercept SMS 2FA Codes and Spy on Taiwanese Users",
       "link": "https://thehackernews.com/2026/11/silentair-hijacks-asian-telecom.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "A newly identified spying group used hacked equipment inside Asian mobile operators to intercept the calls and texts of selected people, mostly in Tai..."
     },
     {
-      "id": 7,
+      "id": 8,
       "title": "Operation Endgame Takes Down Gootloader, CastleRAT and StealC Servers, Seizes 6.4M Stolen Logins",
       "link": "https://thehackernews.com/2026/11/operation-endgame-takes-down-gootloader.html",
       "pubDate": "Nov 13, 2026",
       "excerpt": "An international police operation took down servers behind Gootloader, CastleRAT and StealC this week. Criminals used the three malware tools to gain ..."
-    },
-    {
-      "id": 8,
-      "title": "Hackers Exploit PHP2Shell Flaws in Check Point Gateways to Deploy TSGA Backdoor and Wipe ESXi Files",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-php2shell-flaws-in.html",
-      "pubDate": "Nov 13, 2026",
-      "excerpt": "An unknown threat actor has been observed targeting unpatched Check Point Security Gateways to obtain initial access via the PHP2Shell vulnerabilities..."
     }
   ]
 }
