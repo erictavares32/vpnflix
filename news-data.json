@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-17T01:44:35.975Z",
+  "lastUpdated": "2026-11-17T15:42:38.102Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
+      "link": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. At..."
+    },
+    {
+      "id": 2,
+      "title": "Researchers Detail iPhone Flaw That Let Apps Record Audio Despite Denied Microphone Permission",
+      "link": "https://thehackernews.com/2026/11/researchers-detail-iphone-flaw-that-let.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "A now-patched flaw in Apple&#039;s audio service let apps on iPhones and iPads record audio even after the user tapped &quot;Don&#039;t Allow&quot; on..."
+    },
+    {
+      "id": 3,
+      "title": "New GitDoor and GraphDoor Backdoors Turn GitHub and SharePoint Into Covert C2 Channels",
+      "link": "https://thehackernews.com/2026/11/new-gitdoor-and-graphdoor-backdoors.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "Government sectors in Asia and Africa have been targeted by an active cyber intrusion campaign that delivers to previously undocumented backdoors that..."
+    },
+    {
+      "id": 4,
+      "title": "Apple Tightens macOS App Permissions to Limit Data Access Amid AI Agent Security Risks",
+      "link": "https://thehackernews.com/2026/11/apple-tightens-macos-app-permissions-to.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "Apple on Monday introduced new controls that allow Mac users to give more granular access to data they give to apps, including those that use artifici..."
+    },
+    {
+      "id": 5,
+      "title": "Hijacked Optimizely Scripts Served Card Skimmer and iOS Exploit Kits to CNN, BBC and Zoom Visitors",
+      "link": "https://thehackernews.com/2026/11/hijacked-optimizely-scripts-served-card.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "An attacker exploited a flaw in Optimizely Web Experimentation to plant malicious code in some of the scripts that customers&#039; websites load from ..."
+    },
+    {
+      "id": 6,
+      "title": "ConnectWise Warns ScreenConnect Attacks Continue as SCKit Targets Unpatched Systems",
+      "link": "https://thehackernews.com/2026/11/connectwise-warns-screenconnect-attacks.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "ConnectWise on Monday said it completed its investigation into unauthorized access targeting partner ScreenConnect environments, and recommended custo..."
+    },
+    {
+      "id": 7,
+      "title": "N-able Patches 17 N-central Flaws as Attackers Exploit Earlier Bugs to Deploy Crypto Miners",
+      "link": "https://thehackernews.com/2026/11/n-able-patches-17-n-central-flaws-as.html",
+      "pubDate": "Nov 17, 2026",
+      "excerpt": "N-able has released a new security update to address additional critical security flaws impacting N-central.\n\nDescribing N-central 2026.4 Hotfix 3 as ..."
+    },
+    {
+      "id": 8,
       "title": "Google Finds Hackers Using AI Agents to Build and Run Exploits From Software Patches",
       "link": "https://thehackernews.com/2026/11/google-finds-hackers-using-ai-agents-to.html",
       "pubDate": "Nov 16, 2026",
       "excerpt": "Google on Monday revealed that adversarial use of artificial intelligence (AI) by threat actors has gone beyond manual prompting to deploying autonomo..."
-    },
-    {
-      "id": 2,
-      "title": "⚡ Weekly Recap: N-able 0-Days, Windows 0-Days, Chrome 0-Days, Fridge 0-Days, and More Bad Days",
-      "link": "https://thehackernews.com/2026/11/weekly-recap-n-able-0-days-windows-0.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "A default password opened doors it never should have. A trusted update delivered malware. Even a security feature became a way to break in. Different ..."
-    },
-    {
-      "id": 3,
-      "title": "Six Unpatched Danfoss Refrigeration Controller Flaws Could Allow Remote Takeover Without Login",
-      "link": "https://thehackernews.com/2026/11/six-unpatched-danfoss-refrigeration.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "Six flaws in Danfoss AK-SM800A refrigeration controllers could let a remote attacker take over a controller without logging in, Dutch security consult..."
-    },
-    {
-      "id": 4,
-      "title": "Retadup Worm Resurfaces 7 Years After Takedown to Spread CoffeeLoader Malware",
-      "link": "https://thehackernews.com/2026/11/retadup-worm-resurfaces-7-years-after.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a new variant of CoffeeLoader, a malware designed to deliver additional payloads to infected machi..."
-    },
-    {
-      "id": 5,
-      "title": "SANSAR Linux Cryptomining Malware Uses Modified NVIDIA Library to Hide GPU Activity",
-      "link": "https://thehackernews.com/2026/11/sansar-linux-cryptomining-malware-uses.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "A financially motivated threat activity cluster tracked as REF3364 has been attributed to a Linux-focused cryptocurrency mining operation that tampers..."
-    },
-    {
-      "id": 6,
-      "title": "Amazon Uncovers AI Agent Campaign Targeting LiteLLM, Dify, and Other Apps for API Keys",
-      "link": "https://thehackernews.com/2026/11/amazon-uncovers-ai-agent-campaign.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "Attackers&#039; AI agents have been hunting for weak spots in internet-exposed AI apps such as LiteLLM, One API, and Dify to steal the AI provider key..."
-    },
-    {
-      "id": 7,
-      "title": "BO Team Exploits Log4Shell in VMware vCenter, Compromises Russian Firm&#039;s Code-Signing Server",
-      "link": "https://thehackernews.com/2026/11/bo-team-exploits-log4shell-in-vmware.html",
-      "pubDate": "Nov 16, 2026",
-      "excerpt": "An investigation into suspicious activity within a Russian software developer&#039;s network has uncovered a months-long compromise of its development..."
-    },
-    {
-      "id": 8,
-      "title": "Italy Fines Meta €805 Million Over Facebook&#039;s Android Gallery Access Without Explicit Consent",
-      "link": "https://thehackernews.com/2026/11/italy-fines-meta-805-million-over.html",
-      "pubDate": "Nov 15, 2026",
-      "excerpt": "Meta was fined €805 million in Italy yesterday over a Facebook for Android feature that suggests photos and videos from users&#039; phone galleries fo..."
     }
   ]
 }
