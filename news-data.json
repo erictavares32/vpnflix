@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-22T05:51:41.274Z",
+  "lastUpdated": "2026-11-22T14:19:29.459Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
+      "link": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
+      "pubDate": "Nov 22, 2026",
+      "excerpt": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cyber..."
+    },
+    {
+      "id": 2,
+      "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
+      "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
+      "pubDate": "Nov 22, 2026",
+      "excerpt": "A now-patched flaw in Ghostscript allows a crafted file to escape the program&#039;s security sandbox and run commands on the server that processes it..."
+    },
+    {
+      "id": 3,
       "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
       "link": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
       "pubDate": "Nov 21, 2026",
       "excerpt": "A malicious webpage could extract a Meta Muse user&#039;s private conversations and stored memories from the assistant without triggering any approval..."
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
       "link": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
       "pubDate": "Nov 21, 2026",
       "excerpt": "A malicious OpenPGP key with an unusually long user ID can trigger a critical memory bug in GPGME, the standard library that programs use to work with..."
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Attackers&#039; AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
       "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
       "pubDate": "Nov 21, 2026",
       "excerpt": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and ..."
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
       "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
       "pubDate": "Nov 21, 2026",
       "excerpt": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android an..."
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
       "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
       "pubDate": "Nov 21, 2026",
       "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, ..."
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
       "link": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
       "pubDate": "Nov 20, 2026",
       "excerpt": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connec..."
-    },
-    {
-      "id": 7,
-      "title": "Bazuka Android Malware Uses Fake Screen Overlays to Hide Credential Theft and Device Control",
-      "link": "https://thehackernews.com/2026/11/bazuka-android-malware-uses-fake-screen.html",
-      "pubDate": "Nov 20, 2026",
-      "excerpt": "Cybersecurity researchers have disclosed details of a previously unknown Android malware framework called Bazuka that offers large language model (LLM..."
-    },
-    {
-      "id": 8,
-      "title": "Linux KVM Flaw CVE-2026-99312 Lets Guest VMs Access Host Memory on AMD Hosts",
-      "link": "https://thehackernews.com/2026/11/new-linux-kvm-flaw-cve-2026-99312-lets.html",
-      "pubDate": "Nov 20, 2026",
-      "excerpt": "A flaw in KVM, the hypervisor built into the Linux kernel, let researchers read about 127 GB of a cloud server&#039;s memory from inside a virtual mac..."
     }
   ]
 }
