@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-23T06:39:33.776Z",
+  "lastUpdated": "2026-11-23T23:36:49.964Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
-      "title": "OpenRouter Drops 3 Providers After Researchers Catch Months of Prompt Theft at AI Hosting Firms",
-      "link": "https://thehackernews.com/2026/11/openrouter-drops-3-providers-after.html",
-      "pubDate": "Nov 22, 2026",
-      "excerpt": "Attackers stole data from inside three AI inference providers for months, and none of the three knew until researchers told them, the industrial cyber..."
+      "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
+      "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt t..."
     },
     {
       "id": 2,
-      "title": "Researchers Demonstrate Ghostscript Sandbox-Escape RCE via Crafted File Uploads in Popular Apps",
-      "link": "https://thehackernews.com/2026/11/researchers-demonstrate-ghostscript.html",
-      "pubDate": "Nov 22, 2026",
-      "excerpt": "A now-patched flaw in Ghostscript allows a crafted file to escape the program&#039;s security sandbox and run commands on the server that processes it..."
+      "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
+      "link": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That&#039;s partly why they work. A..."
     },
     {
       "id": 3,
-      "title": "A Single Malicious Webpage Let Researchers Hijack Meta Muse and Access Private Chats",
-      "link": "https://thehackernews.com/2026/11/a-single-malicious-webpage-let.html",
-      "pubDate": "Nov 21, 2026",
-      "excerpt": "A malicious webpage could extract a Meta Muse user&#039;s private conversations and stored memories from the assistant without triggering any approval..."
+      "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
+      "link": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execu..."
     },
     {
       "id": 4,
-      "title": "GnuPG Warns Critical GPGME Flaw Could Expose App Data via Malicious OpenPGP Keys",
-      "link": "https://thehackernews.com/2026/11/gnupg-warns-critical-gpgme-flaw-could.html",
-      "pubDate": "Nov 21, 2026",
-      "excerpt": "A malicious OpenPGP key with an unusually long user ID can trigger a critical memory bug in GPGME, the standard library that programs use to work with..."
+      "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers.\n\nThe activity ..."
     },
     {
       "id": 5,
-      "title": "Attackers&#039; AI Agents Found a Zero-Day in Medical-Imaging Software and Gained Root Access",
-      "link": "https://thehackernews.com/2026/11/attackers-ai-agents-found-zero-day-in.html",
-      "pubDate": "Nov 21, 2026",
-      "excerpt": "Suspected China-linked hackers used autonomous AI agents to find a previously unknown flaw in MONAI Label, an open-source medical imaging server, and ..."
+      "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
+      "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering..."
     },
     {
       "id": 6,
-      "title": "Signal Blocks AI Agents From Reading Private Chats via Screenshots on Android and iOS",
-      "link": "https://thehackernews.com/2026/11/signal-blocks-ai-agents-from-reading.html",
-      "pubDate": "Nov 21, 2026",
-      "excerpt": "Signal has announced that it will restrict screenshots by default to stop artificial intelligence (AI) agents from reading private chats on Android an..."
+      "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (&quot;Idunno.AntiCsrf.dll&qu..."
     },
     {
       "id": 7,
-      "title": "Hackers Exploit Critical VMware, Cisco, and Apache Flaws as Espionage Attacks Emerge",
-      "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-vmware-cisco.html",
-      "pubDate": "Nov 21, 2026",
-      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Friday added four flaws impacting Apache Roller, Cisco Expressway, SAP NetWeaver, ..."
+      "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
+      "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "Hackers exploited a vulnerability in GL.iNet&#039;s GoodCloud remote management service to install malware on some customer routers and KVM devices, t..."
     },
     {
       "id": 8,
-      "title": "WhatsApp Patches 3 Security Flaws, Including Android Bug Suspected of Use in Scams",
-      "link": "https://thehackernews.com/2026/11/whatsapp-patches-3-security-flaws.html",
-      "pubDate": "Nov 20, 2026",
-      "excerpt": "Meta-owned WhatsApp has addressed security vulnerabilities, including one impacting its Android app that it suspects may have been exploited in connec..."
+      "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
+      "link": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
+      "pubDate": "Nov 23, 2026",
+      "excerpt": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attac..."
     }
   ]
 }
