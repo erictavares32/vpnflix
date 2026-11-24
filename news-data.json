@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-23T23:36:49.964Z",
+  "lastUpdated": "2026-11-24T09:07:18.690Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "OpenAI and Cisco Unveil AI-Assisted Linux Security Tool to Block Exploits Before Patching",
+      "link": "https://thehackernews.com/2026/11/openai-and-cisco-unveil-ai-assisted.html",
+      "pubDate": "Nov 24, 2026",
+      "excerpt": "OpenAI and Cisco have teamed up to launch Shirudo (meaning &quot;shield&quot; in Japanese), an open-source Linux runtime that allows artificial intell..."
+    },
+    {
+      "id": 2,
+      "title": "Hackers Exploit N-able MailAssure Flaw While AI Agents Exploit MONAI Label Zero-Day",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-n-able-mailassure-flaw.html",
+      "pubDate": "Nov 24, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Monday added two flaws impacting N-able MailAssure and MONAI Label to its Known Ex..."
+    },
+    {
+      "id": 3,
       "title": "Webworm Suspected of Modifying SoftEther VPN to Evade Detection and Hide Remote Access",
       "link": "https://thehackernews.com/2026/11/webworm-suspected-of-modifying.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "The China-aligned threat actor known as Webworm is suspected to be using a custom version of the open-source SoftEther VPN Bridge tool in an attempt t..."
     },
     {
-      "id": 2,
+      "id": 4,
       "title": "⚡ Weekly Recap: VMware 0-Day, Java4Shell, NGINX2Root, Ruby2Shell, and a Whole Lot of Shell Trouble",
       "link": "https://thehackernews.com/2026/11/weekly-recap-vmware-0-day-java4shell.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "A stolen key. A trusted message. A routine update. None of these looks like the start of a major security problem. That&#039;s partly why they work. A..."
     },
     {
-      "id": 3,
+      "id": 5,
       "title": "Critical binary-parser Flaw Enables JavaScript Injection via Malicious Parser Definitions",
       "link": "https://thehackernews.com/2026/11/critical-binary-parser-flaw-enables.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "A critical security flaw has been disclosed in the popular binary-parser library that could allow an attacker who controls parser definitions to execu..."
     },
     {
-      "id": 4,
+      "id": 6,
       "title": "Hackers Exploit Critical ScreenConnect Flaw to Hijack MSP Technician PCs Without Warning",
       "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-screenconnect.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "Threat actors are exploiting a now-patched security flaw in ConnectWise ScreenConnect to target managed service provider (MSP) servers.\n\nThe activity ..."
     },
     {
-      "id": 5,
+      "id": 7,
       "title": "N-able Discloses Critical Mail Assure Vulnerability Found During Breach Investigation",
       "link": "https://thehackernews.com/2026/11/n-able-discloses-critical-mail-assure.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "N-able yesterday disclosed a critical flaw it found while investigating the breach of its Mail Assure and SpamExperts Hosted Cloud, an email filtering..."
     },
     {
-      "id": 6,
+      "id": 8,
       "title": "Hackers Exploit Critical ASP.NET Anti-CSRF Library Flaw Allowing Unauthenticated RCE",
       "link": "https://thehackernews.com/2026/11/hackers-exploit-critical-aspnet-anti.html",
       "pubDate": "Nov 23, 2026",
       "excerpt": "Cybersecurity researchers have urged users to discontinue using a legacy ASP.NET anti-CSRF library named Idunno.AntiCsrf (&quot;Idunno.AntiCsrf.dll&qu..."
-    },
-    {
-      "id": 7,
-      "title": "Hackers Exploited GL.iNet Cloud Flaw to Install Malware on Routers and KVM Devices",
-      "link": "https://thehackernews.com/2026/11/hackers-exploited-glinet-cloud-flaw-to.html",
-      "pubDate": "Nov 23, 2026",
-      "excerpt": "Hackers exploited a vulnerability in GL.iNet&#039;s GoodCloud remote management service to install malware on some customer routers and KVM devices, t..."
-    },
-    {
-      "id": 8,
-      "title": "AI-Assisted Cyber Attacks Trigger Unauthorized Payments at Indian Banks and Fintech Firms",
-      "link": "https://thehackernews.com/2026/11/ai-assisted-cyberattacks-trigger.html",
-      "pubDate": "Nov 23, 2026",
-      "excerpt": "The Indian Computer Emergency Response Team (CERT-In) has warned that threat actors are carrying out artificial intelligence (AI)-assisted cyber attac..."
     }
   ]
 }
