@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-24T22:06:48.380Z",
+  "lastUpdated": "2026-11-25T07:43:32.962Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
+      "link": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management s..."
+    },
+    {
+      "id": 2,
+      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
+      "link": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "Palo Alto Networks Unit 42 has disclosed that it&#039;s tracking and has responded to &quot;numerous waves of vishing attacks&quot; orchestrated by Co..."
+    },
+    {
+      "id": 3,
+      "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
+      "link": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code executio..."
+    },
+    {
+      "id": 4,
       "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
       "link": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
       "pubDate": "Nov 24, 2026",
       "excerpt": "A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical..."
     },
     {
-      "id": 2,
+      "id": 5,
       "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
       "link": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
       "pubDate": "Nov 24, 2026",
       "excerpt": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one cr..."
     },
     {
-      "id": 3,
+      "id": 6,
       "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
       "link": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
       "pubDate": "Nov 24, 2026",
       "excerpt": "A threat cluster previously assessed to be affiliated with the ShinyHunters extortion crew may have rebranded and continued operations under a new nam..."
     },
     {
-      "id": 4,
+      "id": 7,
       "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
       "link": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
       "pubDate": "Nov 24, 2026",
       "excerpt": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. At..."
     },
     {
-      "id": 5,
+      "id": 8,
       "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
       "link": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
       "pubDate": "Nov 24, 2026",
       "excerpt": "A quirk in how the .NET Framework loads a program file let a local attacker run untrusted code past two separate protections on Windows built to block..."
-    },
-    {
-      "id": 6,
-      "title": "2027 SOC Budget Reset: 5 Priorities to Cut Costs and Reduce Cyber Risk",
-      "link": "https://thehackernews.com/2026/11/2027-soc-budget-reset-5-priorities-to.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "What if your biggest SOC budget problem isn&#039;t how much you spend, but how much analyst time you lose?\n\nAccording to ANY.RUN&#039;s estimates, SOC..."
-    },
-    {
-      "id": 7,
-      "title": "Microsoft Fixes Azure API Management Classic Flaw as Actor Targets Customer Secrets",
-      "link": "https://thehackernews.com/2026/11/microsoft-fixes-azure-api-management.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "Norway&#039;s National Security Authority (NSM) has disclosed that it became aware of a security vulnerability in Microsoft&#039;s Azure API Managemen..."
-    },
-    {
-      "id": 8,
-      "title": "WHMCS SQL Injection Could Expose Customer Data and Admin Password Hashes without Login",
-      "link": "https://thehackernews.com/2026/11/whmcs-sql-injection-flaw-could-expose.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "A flaw in WHMCS&#039;s shopping cart, the billing and automation platform many web hosting companies use to run their businesses, could allow anyone o..."
     }
   ]
 }
