@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-25T07:43:32.962Z",
+  "lastUpdated": "2026-11-25T21:22:46.404Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr.\n\nThe vulnerabilities in question are CVE-..."
+    },
+    {
+      "id": 2,
+      "title": "U.S. Treasury&#039;s Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
+      "link": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "The U.S. Treasury Department&#039;s Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in &quot;unau..."
+    },
+    {
+      "id": 3,
+      "title": "Credential Remediation Is Slow When You Don’t Know What Will Break",
+      "link": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "TL;DR\n\n\n  More than 64% still valid after four years: GitGuardian’s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 stil..."
+    },
+    {
+      "id": 4,
+      "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
+      "link": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilit..."
+    },
+    {
+      "id": 5,
+      "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
+      "link": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "A former OpenAI employee accused of concealing a covert recording device at the company&#039;s San Francisco offices will be allowed to be released fr..."
+    },
+    {
+      "id": 6,
+      "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
+      "link": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
+      "pubDate": "Nov 25, 2026",
+      "excerpt": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch ..."
+    },
+    {
+      "id": 7,
       "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
       "link": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management s..."
     },
     {
-      "id": 2,
+      "id": 8,
       "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
       "link": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "Palo Alto Networks Unit 42 has disclosed that it&#039;s tracking and has responded to &quot;numerous waves of vishing attacks&quot; orchestrated by Co..."
-    },
-    {
-      "id": 3,
-      "title": "WordPress Blocks Six Backdoored WP Connect Plugins Before Malicious Releases Go Live",
-      "link": "https://thehackernews.com/2026/11/wordpress-blocks-six-backdoored-wp.html",
-      "pubDate": "Nov 25, 2026",
-      "excerpt": "WordPress has removed six WordPress plugins developed by WP Connect after they were backdoored on November 22, 2026, to enable arbitrary code executio..."
-    },
-    {
-      "id": 4,
-      "title": "Iran-Aligned Volant Manticore Uses IPFS-Based KuboShell Backdoor in Espionage Campaigns",
-      "link": "https://thehackernews.com/2026/11/iran-aligned-volant-manticore-uses-ipfs.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "A previously undocumented Iran-aligned cyber espionage group called Volant Manticore has targeted telecommunications companies, airlines, and critical..."
-    },
-    {
-      "id": 5,
-      "title": "VMware vCenter Hit by Another Critical 9.8-Rated Auth Bypass Flaw After Zero-Day Exploitation",
-      "link": "https://thehackernews.com/2026/11/vmware-vcenter-hit-by-another-critical.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "Broadcom has shipped patches to address 23 vulnerabilities impacting VMware ESX, vCenter, Workstation, Fusion, and Avi Load Balancer, including one cr..."
-    },
-    {
-      "id": 6,
-      "title": "Okta Links ShinyHunters-Associated Vishing Group to New INCEPTION Data Leak Site",
-      "link": "https://thehackernews.com/2026/11/okta-links-shinyhunters-associated.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "A threat cluster previously assessed to be affiliated with the ShinyHunters extortion crew may have rebranded and continued operations under a new nam..."
-    },
-    {
-      "id": 7,
-      "title": "Hackers Found a Way Around GitHub SHA Pinning. This Webinar Explains How to Close the Gap",
-      "link": "https://thehackernews.com/2026/11/hackers-found-way-around-github-sha.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "Pinning GitHub Actions to an exact version of their code, known as SHA pinning, has become the go-to defense against software supply chain attacks. At..."
-    },
-    {
-      "id": 8,
-      "title": "Google Researcher Shows How a Single Bit Change in .NET Files Bypassed Windows Code Integrity",
-      "link": "https://thehackernews.com/2026/11/google-researcher-shows-how-single-bit.html",
-      "pubDate": "Nov 24, 2026",
-      "excerpt": "A quirk in how the .NET Framework loads a program file let a local attacker run untrusted code past two separate protections on Windows built to block..."
     }
   ]
 }
