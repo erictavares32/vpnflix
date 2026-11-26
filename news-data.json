@@ -1,62 +1,62 @@
 {
-  "lastUpdated": "2026-11-25T21:22:46.404Z",
+  "lastUpdated": "2026-11-26T07:34:36.890Z",
   "source": "The Hacker News",
   "articles": [
     {
       "id": 1,
+      "title": "Drupal Warns of New Highly Critical Site Takeover Vulnerability Under Active Exploitation",
+      "link": "https://thehackernews.com/2026/11/drupal-warns-of-new-highly-critical.html",
+      "pubDate": "Nov 26, 2026",
+      "excerpt": "Drupal has warned of a new &quot;highly critical&quot; security flaw impacting Drupal core that it said has been exploited in the wild.\n\nThe vulnerabi..."
+    },
+    {
+      "id": 2,
+      "title": "Hackers Exploit 10 Vulnerabilities Across Mitel, Juniper, Vates, and Danfoss Products",
+      "link": "https://thehackernews.com/2026/11/hackers-exploit-10-vulnerabilities.html",
+      "pubDate": "Nov 26, 2026",
+      "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Wednesday added 10 security flaws to its Known Exploited Vulnerabilities (KEV) cat..."
+    },
+    {
+      "id": 3,
+      "title": "1Password Hacked, Customer Data and Source Code Stolen in GitHub Account Breach",
+      "link": "https://thehackernews.com/2026/11/1password-hacked-customer-data-and.html",
+      "pubDate": "Nov 26, 2026",
+      "excerpt": "Popular password management software 1Password on Wednesday disclosed a security incident involving its backend systems that led to the unauthorized a..."
+    },
+    {
+      "id": 4,
+      "title": "13 Malicious NuGet Packages Turn Fake .NET Job Assessments Into Malware Delivery Traps",
+      "link": "https://thehackernews.com/2026/11/13-malicious-nuget-packages-turn-fake.html",
+      "pubDate": "Nov 26, 2026",
+      "excerpt": "Cybersecurity researchers have discovered 13 malicious NuGet packages that are designed to target Windows .NET developers under the guise of a fake ta..."
+    },
+    {
+      "id": 5,
       "title": "Hackers Exploit Two GeoServer Flaws as Researchers Warn of Unauthenticated RCE Chains",
       "link": "https://thehackernews.com/2026/11/hackers-exploit-two-geoserver-flaws-as.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "Threat actors are actively exploiting two newly patched security flaws in GeoServer, according to watchTowr.\n\nThe vulnerabilities in question are CVE-..."
     },
     {
-      "id": 2,
+      "id": 6,
       "title": "U.S. Treasury&#039;s Financial Crimes Agency Takes Some Systems Offline After Cyber Intrusion",
       "link": "https://thehackernews.com/2026/11/us-treasurys-fincen-takes-some-systems.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "The U.S. Treasury Department&#039;s Financial Crimes Enforcement Network (FinCEN) has been hit by a cybersecurity incident that resulted in &quot;unau..."
     },
     {
-      "id": 3,
+      "id": 7,
       "title": "Credential Remediation Is Slow When You Don’t Know What Will Break",
       "link": "https://thehackernews.com/2026/11/credential-remediation-is-slow-when-you.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "TL;DR\n\n\n  More than 64% still valid after four years: GitGuardian’s State of Secrets Sprawl 2026 found that most valid secrets discovered in 2022 stil..."
     },
     {
-      "id": 4,
+      "id": 8,
       "title": "Drupal Fail2Install Exploit Details Emerge as Critical RCE Flaw Faces Active Exploitation",
       "link": "https://thehackernews.com/2026/11/drupal-fail2install-exploit-details.html",
       "pubDate": "Nov 25, 2026",
       "excerpt": "The U.S. Cybersecurity and Infrastructure Security Agency (CISA) on Tuesday added a critical flaw impacting Drupal to its Known Exploited Vulnerabilit..."
-    },
-    {
-      "id": 5,
-      "title": "Ex-OpenAI Employee Accused of Bugging Company Offices Granted $1 Million Bail",
-      "link": "https://thehackernews.com/2026/11/ex-openai-employee-accused-of-bugging.html",
-      "pubDate": "Nov 25, 2026",
-      "excerpt": "A former OpenAI employee accused of concealing a covert recording device at the company&#039;s San Francisco offices will be allowed to be released fr..."
-    },
-    {
-      "id": 6,
-      "title": "Hackers Exploited CVSS 10.0 Hex.pm RCE Flaw to Compromise 6 Package Registry Servers",
-      "link": "https://thehackernews.com/2026/11/hackers-exploited-cvss-100-hexpm-rce.html",
-      "pubDate": "Nov 25, 2026",
-      "excerpt": "An attacker ran operating system commands on Monday on six production servers of Hex.pm, the package registry that Elixir and Erlang developers fetch ..."
-    },
-    {
-      "id": 7,
-      "title": "Hackers Compromise 24 Check Point Management Servers in Suspected AI-Driven Attack Campaign",
-      "link": "https://thehackernews.com/2026/11/hackers-compromise-24-check-point.html",
-      "pubDate": "Nov 25, 2026",
-      "excerpt": "An unknown threat actor has been using artificial intelligence (AI)-driven offensive tooling in a campaign targeting Check Point Security Management s..."
-    },
-    {
-      "id": 8,
-      "title": "Com-Affiliated Hackers Hijack Cloud Accounts via Vishing for Data Theft and Extortion",
-      "link": "https://thehackernews.com/2026/11/com-affiliated-hackers-hijack-cloud.html",
-      "pubDate": "Nov 25, 2026",
-      "excerpt": "Palo Alto Networks Unit 42 has disclosed that it&#039;s tracking and has responded to &quot;numerous waves of vishing attacks&quot; orchestrated by Co..."
     }
   ]
 }
